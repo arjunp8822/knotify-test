@@ -31,7 +31,7 @@ textarea {
 
 @font-face {
   font-family: "marley";
-  src: url("../src/assets/fonts/marley-marley-regular-lovely-script-400.otf")
+  src: url("/assets/fonts/marley-marley-regular-lovely-script-400.otf")
     format("opentype");
   font-weight: normal;
   font-style: normal;

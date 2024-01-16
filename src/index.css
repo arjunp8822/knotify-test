@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+button {
+  @apply w-fit rounded px-4 py-1.5;
+}
+
+input {
+  @apply w-full border text-gray-400 px-4 py-2 rounded text-sm sm:text-base;
+}
+
+input[type="date"]:in-range::-webkit-datetime-edit-year-field,
+input[type="date"]:in-range::-webkit-datetime-edit-month-field,
+input[type="date"]:in-range::-webkit-datetime-edit-day-field,
+input[type="date"]:in-range::-webkit-datetime-edit-text {
+  display: none;
+}
+
+textarea {
+  @apply w-full border text-gray-400 px-4 py-2 rounded text-sm sm:text-base;
+}
+
+.navbar {
+  @apply max-w-[1400px] mx-auto h-[60px] px-4 sm:px-8 md:px-12;
+}
+
+.container {
+  @apply max-w-[1400px] mx-auto px-4 py-8 sm:px-8 sm:py-12 md:px-12;
+}
+
+@font-face {
+  font-family: "marley";
+  src: url("../src/assets/fonts/marley-marley-regular-lovely-script-400.otf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}

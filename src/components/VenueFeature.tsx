@@ -1,11 +1,11 @@
-import accomodation from "../assets/features/accomodation.png";
-import beach from "../assets/features/beach.png";
-import car from "../assets/features/car.png";
-import catering from "../assets/features/catering.png";
-import ceremony from "../assets/features/ceremony.png";
-import lightdark from "../assets/features/lightdark.png";
-import other from "../assets/features/other.png";
-import reception from "../assets/features/reception.png";
+import accomodation from "/assets/features/accomodation.png";
+import beach from "/assets/features/beach.png";
+import car from "/assets/features/car.png";
+import catering from "/assets/features/catering.png";
+import ceremony from "/assets/features/ceremony.png";
+import lightdark from "/assets/features/lightdark.png";
+import other from "/assets/features/other.png";
+import reception from "/assets/features/reception.png";
 
 interface Props {
   feature: string;

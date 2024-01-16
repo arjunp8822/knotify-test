@@ -1,5 +1,5 @@
 import VendorFeature from "./VendorFeature";
-import SampleImg from "../assets/venues/black.png";
+import SampleImg from "/assets/venues/black.png";
 
 const features = [
   {

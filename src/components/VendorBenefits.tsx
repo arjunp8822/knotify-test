@@ -1,10 +1,10 @@
 import VendorBenefit from "./VendorBenefit";
-import ad from "../assets/benefits/ad.png";
-import admin from "../assets/benefits/admin.png";
-import cash from "../assets/benefits/cash.png";
-import click from "../assets/benefits/click.png";
-import handshake from "../assets/benefits/handshake.png";
-import plan from "../assets/benefits/plan.png";
+import ad from "/assets/benefits/ad.png";
+import admin from "/assets/benefits/admin.png";
+import cash from "/assets/benefits/cash.png";
+import click from "/assets/benefits/click.png";
+import handshake from "/assets/benefits/handshake.png";
+import plan from "/assets/benefits/plan.png";
 
 const benefits = [
   { icon: ad, title: "Improved cash flow" },

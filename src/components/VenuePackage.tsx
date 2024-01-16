@@ -1,4 +1,4 @@
-import PackageImg from "../assets/venuePackage.png";
+import PackageImg from "/assets/venuePackage.png";
 import { PackageData } from "./VenuePackages";
 
 interface Props {

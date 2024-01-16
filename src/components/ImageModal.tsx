@@ -1,3 +1,5 @@
+import { IoIosCloseCircleOutline } from "react-icons/io";
+
 interface Props {
   showModal: boolean;
   setShowModal: (showModal: boolean) => void;
@@ -12,10 +14,10 @@ const ImageModal = ({ showModal, setShowModal, img }: Props) => {
       }`}
     >
       <button
-        className="text-white absolute top-2 right-2"
+        className="text-white absolute top-2 right-2 text-3xl"
         onClick={() => setShowModal(false)}
       >
-        Close
+        <IoIosCloseCircleOutline />
       </button>
       <ul className="flex flex-col justify-center items-center gap-4 mt-8">
         {img.map((x) => (

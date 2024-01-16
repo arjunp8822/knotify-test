@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { IoIosCloseCircleOutline } from "react-icons/io";
+import { RxHamburgerMenu } from "react-icons/rx";
 import NavItem from "./NavItem";
 
 interface Props {
@@ -30,10 +32,10 @@ const Navbar = ({ openNav, setOpenNav }: Props) => {
         } sm:static sm:h-auto sm:w-auto sm:top-auto sm:right-auto sm:translate-x-0`}
       >
         <div
-          className="flex justify-start items-center cursor-pointer h-[60px] sm:hidden"
+          className="flex justify-start items-center cursor-pointer h-[60px] sm:hidden text-3xl ml-2 mt-2"
           onClick={() => setOpenNav(false)}
         >
-          Close
+          <IoIosCloseCircleOutline />
         </div>
         <ul className="flex flex-col justify-center items-center gap-12 h-[calc(100vh-60px)] sm:flex-row sm:h-auto font-semibold text-gray-600">
           {navLinks.map((l) => (
@@ -48,10 +50,10 @@ const Navbar = ({ openNav, setOpenNav }: Props) => {
         </ul>
       </div>
       <div
-        className="flex cursor-pointer sm:hidden"
+        className="flex cursor-pointer sm:hidden text-2xl mt-2"
         onClick={() => setOpenNav(true)}
       >
-        Open
+        <RxHamburgerMenu />
       </div>
     </nav>
   );

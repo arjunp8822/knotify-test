@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { Data } from "../data/VenueData";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import NotFound from "./NotFound";
 import ImageModal from "../components/ImageModal";
 import VenueForm from "../components/VenueForm";
@@ -9,10 +9,13 @@ import VenueFeatures from "../components/VenueFeatures";
 import VenuePackages from "../components/VenuePackages";
 import PackageModal from "../components/PackageModal";
 import { PackageData } from "../components/VenuePackages";
+import { MdOutlineMailOutline, MdOutlinePhoneEnabled } from "react-icons/md";
 
 interface VenueData {
   id: number;
   name: string;
+  email: string;
+  phone: string;
   location: string;
   rating: number;
   review_count: number;
@@ -46,9 +49,25 @@ const VenuePage = () => {
 
   return (
     <div>
-      <h1 className="font-semibold text-xl sm:text-4xl mb-1 sm:mb-2">
-        {data.name}
-      </h1>
+      <div className="flex justify-between items-center">
+        <h1 className="font-semibold text-xl sm:text-4xl mb-1 sm:mb-2">
+          {data.name}
+        </h1>
+        <div className="flex gap-3 md:gap-6">
+          <Link
+            to={`mailto:${data.email}`}
+            className="text-xl md:text-2xl border bg-primary text-white p-2 rounded-full cursor-pointer"
+          >
+            <MdOutlineMailOutline />
+          </Link>
+          <Link
+            to={`tel:${data.phone}`}
+            className="text-xl md:text-2xl border bg-primary text-white p-2 rounded-full cursor-pointer"
+          >
+            <MdOutlinePhoneEnabled />
+          </Link>
+        </div>
+      </div>
 
       <div className="flex flex-col">
         <span className="text-gray-500 text-md sm:text-lg mb-8">

@@ -78,6 +78,33 @@ export const Data = [
       "Amenities",
       "Accessible Location",
     ],
+    faqs: [
+      {
+        id: 1,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 2,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 3,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 4,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 5,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+    ],
     packages: [
       {
         title: "Package 1",
@@ -232,6 +259,33 @@ export const Data = [
       "Accomodation",
       "Parking",
       "Accessible Location",
+    ],
+    faqs: [
+      {
+        id: 1,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 2,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 3,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 4,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 5,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
     ],
     packages: [
       {
@@ -395,6 +449,33 @@ export const Data = [
       "Exceptional Menus",
       "Stunning Views",
     ],
+    faqs: [
+      {
+        id: 1,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 2,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 3,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 4,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 5,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+    ],
     packages: [
       {
         title: "Package 1",
@@ -549,6 +630,33 @@ export const Data = [
       "Beachfront",
       "Parking",
       "Accomodation",
+    ],
+    faqs: [
+      {
+        id: 1,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 2,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 3,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 4,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 5,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
     ],
     packages: [
       {
@@ -710,6 +818,33 @@ export const Data = [
       "Parking",
       "Catering",
     ],
+    faqs: [
+      {
+        id: 1,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 2,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 3,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 4,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 5,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+    ],
     packages: [
       {
         title: "Package 1",
@@ -863,6 +998,33 @@ export const Data = [
       "Indoor and Outdoor",
       "Parking",
       "Catering",
+    ],
+    faqs: [
+      {
+        id: 1,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 2,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 3,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 4,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 5,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
     ],
     packages: [
       {
@@ -1024,6 +1186,33 @@ export const Data = [
       "Indoor and Outdoor",
       "Parking",
       "Catering",
+    ],
+    faqs: [
+      {
+        id: 1,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 2,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 3,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 4,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 5,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
     ],
     packages: [
       {
@@ -1201,6 +1390,33 @@ export const Data = [
           "Saturday",
           "Sunday",
         ],
+        faqs: [
+          {
+            id: 1,
+            question: "This is a test question",
+            answer: "This is a test answer",
+          },
+          {
+            id: 2,
+            question: "This is a test question",
+            answer: "This is a test answer",
+          },
+          {
+            id: 3,
+            question: "This is a test question",
+            answer: "This is a test answer",
+          },
+          {
+            id: 4,
+            question: "This is a test question",
+            answer: "This is a test answer",
+          },
+          {
+            id: 5,
+            question: "This is a test question",
+            answer: "This is a test answer",
+          },
+        ],
         description:
           "Our package offers all the essential elements you need to celebrate your forever after, at our elegant beachside venue.",
         disclaimer: "This is a test disclaimer",
@@ -1347,6 +1563,33 @@ export const Data = [
       "Indoor and Outdoor",
       "Catering",
       "Accomodation",
+    ],
+    faqs: [
+      {
+        id: 1,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 2,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 3,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 4,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 5,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
     ],
     packages: [
       {
@@ -1509,6 +1752,33 @@ export const Data = [
           "Friday",
           "Saturday",
           "Sunday",
+        ],
+        faqs: [
+          {
+            id: 1,
+            question: "This is a test question",
+            answer: "This is a test answer",
+          },
+          {
+            id: 2,
+            question: "This is a test question",
+            answer: "This is a test answer",
+          },
+          {
+            id: 3,
+            question: "This is a test question",
+            answer: "This is a test answer",
+          },
+          {
+            id: 4,
+            question: "This is a test question",
+            answer: "This is a test answer",
+          },
+          {
+            id: 5,
+            question: "This is a test question",
+            answer: "This is a test answer",
+          },
         ],
         description:
           "Our package offers all the essential elements you need to celebrate your forever after, at our elegant beachside venue.",

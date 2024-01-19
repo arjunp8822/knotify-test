@@ -47,7 +47,7 @@ const VenueCard = ({
       <div className="relative bg-red-50">
         <Link to={`/venues/${link}`}>
           <img
-            src={img[currentImg]}
+            src={`https://res.cloudinary.com/dkxs4o9vt/image/upload/v1705560129/${img[currentImg]}`}
             alt={name}
             className="rounded-lg mb-2 w-full h-[250px] object-cover"
             onMouseEnter={() => setShowArrow(true)}

@@ -84,21 +84,20 @@ const VenuePage = () => {
           </span>
         </div>
       </div>
-
       <div className="flex relative mb-4">
         <img
-          src={data.img[0]}
+          src={`https://res.cloudinary.com/dkxs4o9vt/image/upload/v1705560129/${data.img[0]}`}
           alt="Venue Image 1"
           className="w-full sm:w-2/3 object-cover rounded-lg sm:rounded-none sm:rounded-l-lg"
         />
         <div>
           <img
-            src={data.img[1]}
+            src={`https://res.cloudinary.com/dkxs4o9vt/image/upload/v1705560129/${data.img[1]}`}
             alt="Venue Image 1"
             className="w-full hidden sm:flex h-1/2 object-cover rounded-lg sm:rounded-none sm:rounded-tr-lg"
           />
           <img
-            src={data.img[2]}
+            src={`https://res.cloudinary.com/dkxs4o9vt/image/upload/v1705560129/${data.img[2]}`}
             alt="Venue Image 1"
             className="w-full hidden sm:flex h-1/2 object-cover rounded-lg sm:rounded-none sm:rounded-br-lg"
           />

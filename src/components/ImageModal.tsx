@@ -23,7 +23,7 @@ const ImageModal = ({ showModal, setShowModal, img }: Props) => {
         {img.map((x) => (
           <li className="w-full flex justify-center items-center">
             <img
-              src={x}
+              src={`https://res.cloudinary.com/dkxs4o9vt/image/upload/v1705560129/${x}`}
               alt="Venue Image"
               className="w-[800px] h-[250px] sm:h-[350px] md:h-[450px] object-cover"
             />

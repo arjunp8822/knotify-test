@@ -32,12 +32,12 @@ const Navbar = ({ openNav, setOpenNav }: Props) => {
         } sm:static sm:h-auto sm:w-auto sm:top-auto sm:right-auto sm:translate-x-0`}
       >
         <div
-          className="flex justify-start items-center cursor-pointer h-[60px] sm:hidden text-3xl ml-2 mt-2"
+          className="flex justify-start items-center cursor-pointer h-[60px] sm:hidden text-3xl ml-2 mt-2 absolute"
           onClick={() => setOpenNav(false)}
         >
           <IoIosCloseCircleOutline />
         </div>
-        <ul className="flex flex-col justify-center items-center gap-12 h-[calc(100vh-60px)] sm:flex-row sm:h-auto font-semibold text-gray-600">
+        <ul className="flex flex-col justify-center items-center gap-12 h-[100vh] sm:flex-row sm:h-auto font-semibold text-gray-600">
           {navLinks.map((l) => (
             <NavItem
               key={l.title}

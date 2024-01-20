@@ -12,7 +12,7 @@ interface Props {
 
 const SearchBar = ({ search, setSearch }: Props) => {
   const [showSortContainer, setShowSortContainer] = useState(false);
-  const [showFilterContainer, setShowFilterContainer] = useState(false);
+  const [showFilterContainer, setShowFilterContainer] = useState(true);
   const toggleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearch(e.target.value);
   };
@@ -54,7 +54,9 @@ const SearchBar = ({ search, setSearch }: Props) => {
       {showSortContainer && (
         <SortContainer setShowSortContainer={setShowSortContainer} />
       )}
-      {showFilterContainer && <FilterContainer />}
+      {showFilterContainer && (
+        <FilterContainer setShowFilterContainer={setShowFilterContainer} />
+      )}
     </div>
   );
 };

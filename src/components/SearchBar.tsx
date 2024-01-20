@@ -3,16 +3,21 @@ import { IoIosClose } from "react-icons/io";
 import { GoSortDesc } from "react-icons/go";
 import { MdFilterAlt } from "react-icons/md";
 import SortContainer from "./SortContainer";
-import FilterContainer from "./FilterContainer";
 
 interface Props {
   search: string;
   setSearch: (search: string) => void;
+  showFilterContainer: boolean;
+  setShowFilterContainer: (show: boolean) => void;
 }
 
-const SearchBar = ({ search, setSearch }: Props) => {
+const SearchBar = ({
+  search,
+  setSearch,
+  showFilterContainer,
+  setShowFilterContainer,
+}: Props) => {
   const [showSortContainer, setShowSortContainer] = useState(false);
-  const [showFilterContainer, setShowFilterContainer] = useState(true);
   const toggleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearch(e.target.value);
   };
@@ -53,9 +58,6 @@ const SearchBar = ({ search, setSearch }: Props) => {
       </div>
       {showSortContainer && (
         <SortContainer setShowSortContainer={setShowSortContainer} />
-      )}
-      {showFilterContainer && (
-        <FilterContainer setShowFilterContainer={setShowFilterContainer} />
       )}
     </div>
   );

@@ -4,9 +4,10 @@ import garden from "/assets/categories/luxury.png";
 import luxury from "/assets/categories/country.png";
 import water from "/assets/categories/water.png";
 import wine from "/assets/categories/wine.png";
-import CategoryContainer from "./CategoryContainer";
+import FilterCategoryContainer from "./FilterCategoryContainer";
 import { IoMdClose } from "react-icons/io";
 import Slider from "./Slider";
+import FilterFeatureContainer from "./FilterFeatureContainer";
 
 interface Props {
   setShowFilterContainer: (show: boolean) => void;
@@ -21,65 +22,100 @@ const categories = [
   { icon: wine, title: "Winery" },
 ];
 
+const features = [
+  "Ceremonies",
+  "Receptions",
+  "External Catering",
+  "MC Services",
+  "Amenities",
+  "Accessible Location",
+  "Indoor and Outdoor",
+  "Accommodation",
+  "Parking",
+  "Exceptional Menus",
+  "Stunning Views",
+];
+
 const FilterContainer = ({ setShowFilterContainer }: Props) => {
   return (
-    <form className="fixed bg-white shadow-xl p-4 sm:p-8 z-50 top-1/2 -translate-y-1/2 w-11/12 md:w-[600px] h-[80vh]">
-      <div className="flex relative justify-center items-center py-3">
+    <form className="fixed bg-white shadow-xl z-50 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-11/12 md:w-[600px] rounded-lg">
+      <div className="flex relative justify-center items-center py-3 border-b">
         <div
-          className="flex justify-center items-center absolute left-0 sm:text-lg cursor-pointer"
+          className="flex justify-center items-center absolute left-4 sm:text-lg cursor-pointer"
           onClick={() => setShowFilterContainer(false)}
         >
           <IoMdClose />
         </div>
         <h1 className="sm:text-lg font-bold">Filters</h1>
       </div>
-      <div className="mt-6 flex flex-col gap-3 sm:gap-6">
-        <div>
-          <h3 className="font-semibold mb-1 sm:mb-2">Location</h3>
-          <p className="text-gray-500 text-sm sm:text-base mb-2 sm:mb-4">
-            Search any location in Australia
-          </p>
-          <input
-            type="text"
-            placeholder="Enter location"
-            className="text-gray-500 text-sm sm:text-base mb-2 sm:mb-4 rounded-lg"
-          />
-        </div>
+      <div className="p-4 sm:p-8 overflow-y-scroll max-h-[80vh]">
+        <div className="mt-6 flex flex-col gap-3 sm:gap-6">
+          <div>
+            <h3 className="font-semibold mb-1 sm:mb-2">Location</h3>
+            <p className="text-gray-500 text-sm sm:text-base mb-2 sm:mb-4">
+              Search any location in Australia
+            </p>
+            <input
+              type="text"
+              placeholder="Enter location"
+              className="text-gray-500 text-sm sm:text-base mb-2 sm:mb-4 rounded-lg"
+            />
+          </div>
 
-        <div>
-          <h3 className="font-semibold mb-1 sm:mb-2">Category</h3>
-          <p className="text-gray-500 text-sm sm:text-base mb-2 sm:mb-4">
-            Search by the most popular styles
-          </p>
-          <ul className="grid grid-cols-2 md:grid-cols-3 gap-3">
-            {categories.map((c) => (
-              <CategoryContainer icon={c.icon} title={c.title} />
-            ))}
-          </ul>
-        </div>
+          <div>
+            <h3 className="font-semibold mb-1 sm:mb-2">Categories</h3>
+            <p className="text-gray-500 text-sm sm:text-base mb-2 sm:mb-4">
+              Select your favourite styles
+            </p>
+            <ul className="grid grid-cols-2 md:grid-cols-3 gap-3">
+              {categories.map((c) => (
+                <FilterCategoryContainer icon={c.icon} title={c.title} />
+              ))}
+            </ul>
+          </div>
 
-        <div>
-          <h3 className="font-semibold mb-1 sm:mb-2">Rating</h3>
-          <p className="text-gray-500 text-sm sm:text-base mb-2 sm:mb-4">
-            Select your minimum rating
-          </p>
-          <Slider initial={3} min={0} max={5} step={0.1} />
-        </div>
+          <div>
+            <h3 className="font-semibold mb-1 sm:mb-2">Rating</h3>
+            <p className="text-gray-500 text-sm sm:text-base mb-2 sm:mb-4">
+              How low do you want your venue to be rated?
+            </p>
+            <Slider initial={3} min={0} max={5} step={0.1} />
+          </div>
 
-        {/* <div>
-          <h3>Price</h3>
-          <div>Price</div>
-        </div>
+          <div>
+            <h3 className="font-semibold mb-1 sm:mb-2">Guests</h3>
+            <p className="text-gray-500 text-sm sm:text-base mb-2 sm:mb-4">
+              How many guests do you think will attend?
+            </p>
+            <input type="number" placeholder="80" className="rounded-lg" />
+          </div>
 
-        <div>
-          <h3>Guests</h3>
-          <div>Guests</div>
-        </div>
+          <div>
+            <h3 className="font-semibold mb-1 sm:mb-2">Budget</h3>
+            <p className="text-gray-500 text-sm sm:text-base mb-2 sm:mb-4">
+              What do you want to spend on the venue?
+            </p>
+            <input type="number" placeholder="80" className="rounded-lg" />
+          </div>
 
-        <div>
-          <h3>Features</h3>
-          <div>Features</div>
-        </div> */}
+          <div>
+            <h3 className="font-semibold mb-1 sm:mb-2">Features</h3>
+            <p className="text-gray-500 text-sm sm:text-base mb-4">
+              Select all your favourite features
+            </p>
+            <ul className="grid grid-cols-2 gap-3">
+              {features.map((c) => (
+                <FilterFeatureContainer title={c} />
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div className="relative bottom-0 left-0 w-full flex justify-between py-4 px-6 sm:px-8 border-t items-center">
+        <span className="font-bold">Clear all</span>
+        <button className="bg-primary text-white font-bold rounded-lg">
+          Show
+        </button>
       </div>
     </form>
   );

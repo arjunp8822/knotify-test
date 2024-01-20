@@ -15,7 +15,12 @@ interface Data {
   img: string[];
 }
 
-const Home = () => {
+interface Props {
+  showFilterContainer: boolean;
+  setShowFilterContainer: (show: boolean) => void;
+}
+
+const Home = ({ showFilterContainer, setShowFilterContainer }: Props) => {
   const [search, setSearch] = useState("");
   const [data, setData] = useState<Data[]>([]);
 
@@ -37,9 +42,14 @@ const Home = () => {
   }, [search]);
 
   return (
-    <div>
+    <div className="bg-white">
       <div className="flex justify-center items-center mb-8">
-        <SearchBar search={search} setSearch={setSearch} />
+        <SearchBar
+          search={search}
+          setSearch={setSearch}
+          showFilterContainer={showFilterContainer}
+          setShowFilterContainer={setShowFilterContainer}
+        />
       </div>
       <ul className="grid gap-x-4 gap-y-8 md:gap-y-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {data.map((venue) => (

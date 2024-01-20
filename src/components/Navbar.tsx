@@ -6,6 +6,7 @@ import NavItem from "./NavItem";
 interface Props {
   openNav: boolean;
   setOpenNav: (openNav: boolean) => void;
+  showFilterContainer: boolean;
 }
 
 const navLinks = [
@@ -14,9 +15,13 @@ const navLinks = [
   { title: "List with us", link: "/vendors", button: true },
 ];
 
-const Navbar = ({ openNav, setOpenNav }: Props) => {
+const Navbar = ({ openNav, setOpenNav, showFilterContainer }: Props) => {
   return (
-    <nav className="navbar flex justify-between items-center sm:py-12">
+    <nav
+      className={`navbar flex justify-between items-center sm:py-12 bg-white ${
+        showFilterContainer ? "brightness-50" : ""
+      }`}
+    >
       <div
         className={`font-marley text-3xl md:text-4xl text-primary ${
           openNav ? "blur-[2px]" : ""

@@ -19,7 +19,9 @@ const Navbar = ({ openNav, setOpenNav, showFilterContainer }: Props) => {
   return (
     <nav
       className={`bg-white ${
-        showFilterContainer ? "sm:brightness-50 fixed sm:static" : ""
+        showFilterContainer
+          ? "brightness-50 sm:brightness-100 fixed sm:static"
+          : ""
       }`}
     >
       <div className="navbar w-full  flex justify-between items-center sm:py-12">

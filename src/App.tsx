@@ -20,39 +20,44 @@ function App() {
       {showFilterContainer && (
         <FilterContainer setShowFilterContainer={setShowFilterContainer} />
       )}
-
-      <Navbar
-        openNav={openNav}
-        setOpenNav={setOpenNav}
-        showFilterContainer={showFilterContainer}
-      />
-
       <div
-        className={`container bg-white transition-all ${
-          openNav ? "blur-[2px]" : ""
-        } ${showFilterContainer ? "brightness-50" : ""}`}
-      >
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Home
-                showFilterContainer={showFilterContainer}
-                setShowFilterContainer={setShowFilterContainer}
-              />
-            }
-          />
-          <Route path="/vendors" element={<Vendors />} />
-          <Route path="/venues/:id" element={<VendorPage />} />
-          <Route path="/blog" element={<Blog />} />
-        </Routes>
-      </div>
-      <div
-        className={`bg-gray-100 h-[300px] flex justify-center items-center ${
-          showFilterContainer ? "brightness-50" : ""
+        className={`bg-white transition-all ${
+          showFilterContainer ? "sm:brightness-50" : ""
         }`}
       >
-        <Footer />
+        <Navbar
+          openNav={openNav}
+          setOpenNav={setOpenNav}
+          showFilterContainer={showFilterContainer}
+        />
+
+        <div
+          className={`container bg-white transition-all ${
+            openNav ? "blur-[2px]" : ""
+          } ${showFilterContainer ? "brightness-50 sm:brightness-100" : ""}`}
+        >
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Home
+                  showFilterContainer={showFilterContainer}
+                  setShowFilterContainer={setShowFilterContainer}
+                />
+              }
+            />
+            <Route path="/vendors" element={<Vendors />} />
+            <Route path="/venues/:id" element={<VendorPage />} />
+            <Route path="/blog" element={<Blog />} />
+          </Routes>
+        </div>
+        <div
+          className={`bg-gray-100 h-[300px] flex justify-center items-center ${
+            showFilterContainer ? "brightness-50" : ""
+          }`}
+        >
+          <Footer />
+        </div>
       </div>
     </div>
   );

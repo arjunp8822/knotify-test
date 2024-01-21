@@ -39,7 +39,7 @@ const features = [
 const FilterContainer = ({ setShowFilterContainer }: Props) => {
   return (
     <form className="fixed bg-white shadow-xl z-50 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-11/12 md:w-[600px] rounded-lg">
-      <div className="flex relative justify-center items-center py-3 border-b">
+      <div className="flex relative justify-center items-center py-4 px-6 sm:px-8 border-b">
         <div
           className="flex justify-center items-center absolute left-4 sm:text-lg cursor-pointer"
           onClick={() => setShowFilterContainer(false)}
@@ -95,7 +95,7 @@ const FilterContainer = ({ setShowFilterContainer }: Props) => {
             <p className="text-gray-500 text-sm sm:text-base mb-2 sm:mb-4">
               What do you want to spend on the venue?
             </p>
-            <input type="number" placeholder="80" className="rounded-lg" />
+            <input type="number" placeholder="$10,000" className="rounded-lg" />
           </div>
 
           <div>

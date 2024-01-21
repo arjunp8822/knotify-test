@@ -28,7 +28,7 @@ const SearchBar = ({
         <input
           type="text"
           placeholder="Search by name or location"
-          className="border border-gray-300 text-sm w-full sm:w-72 px-4 py-2 rounded-lg h-[38px]"
+          className="border border-gray-300 text-sm w-full sm:w-96 px-4 py-2 rounded-lg h-[38px]"
           onChange={toggleChange}
           value={search}
         />

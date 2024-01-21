@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
-    "axios": "^1.6.2",
+    "axios": "^1.6.5",
     "react": "^18.2.0",
     "react-calendar": "^4.7.0",
     "react-datepicker": "^4.24.0",

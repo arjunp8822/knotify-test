@@ -18,47 +18,49 @@ const navLinks = [
 const Navbar = ({ openNav, setOpenNav, showFilterContainer }: Props) => {
   return (
     <nav
-      className={`navbar flex justify-between items-center sm:py-12 bg-white ${
-        showFilterContainer ? "brightness-50" : ""
+      className={`bg-white ${
+        showFilterContainer ? "sm:brightness-50 fixed sm:static" : ""
       }`}
     >
-      <div
-        className={`font-marley text-3xl md:text-4xl text-primary ${
-          openNav ? "blur-[2px]" : ""
-        }`}
-      >
-        <Link to={"/"} onClick={() => setOpenNav(false)}>
-          Knotify
-        </Link>
-      </div>
-      <div
-        className={`bg-white z-30 fixed h-full w-[80vw] top-0 right-0 transition-transform ${
-          openNav ? "translate-x-0" : "translate-x-[100vw]"
-        } sm:static sm:h-auto sm:w-auto sm:top-auto sm:right-auto sm:translate-x-0`}
-      >
+      <div className="navbar w-full  flex justify-between items-center sm:py-12">
         <div
-          className="flex justify-start items-center cursor-pointer h-[60px] sm:hidden text-3xl ml-2 mt-2 absolute"
-          onClick={() => setOpenNav(false)}
+          className={`font-marley text-3xl md:text-4xl text-primary ${
+            openNav ? "blur-[2px]" : ""
+          }`}
         >
-          <IoIosCloseCircleOutline />
+          <Link to={"/"} onClick={() => setOpenNav(false)}>
+            Knotify
+          </Link>
         </div>
-        <ul className="flex flex-col justify-center items-center gap-12 h-[100vh] sm:flex-row sm:h-auto font-semibold text-gray-600">
-          {navLinks.map((l) => (
-            <NavItem
-              key={l.title}
-              title={l.title}
-              link={l.link}
-              button={l.button}
-              setOpen={setOpenNav}
-            />
-          ))}
-        </ul>
-      </div>
-      <div
-        className="flex cursor-pointer sm:hidden text-2xl mt-2"
-        onClick={() => setOpenNav(true)}
-      >
-        <RxHamburgerMenu />
+        <div
+          className={`bg-white z-30 fixed h-full w-[80vw] top-0 right-0 transition-transform ${
+            openNav ? "translate-x-0" : "translate-x-[100vw]"
+          } sm:static sm:h-auto sm:w-auto sm:top-auto sm:right-auto sm:translate-x-0`}
+        >
+          <div
+            className="flex justify-start items-center cursor-pointer h-[60px] sm:hidden text-3xl ml-2 mt-2 absolute"
+            onClick={() => setOpenNav(false)}
+          >
+            <IoIosCloseCircleOutline />
+          </div>
+          <ul className="flex flex-col justify-center items-center gap-12 h-[100vh] sm:flex-row sm:h-auto font-semibold text-gray-600">
+            {navLinks.map((l) => (
+              <NavItem
+                key={l.title}
+                title={l.title}
+                link={l.link}
+                button={l.button}
+                setOpen={setOpenNav}
+              />
+            ))}
+          </ul>
+        </div>
+        <div
+          className="flex cursor-pointer sm:hidden text-2xl mt-2"
+          onClick={() => setOpenNav(true)}
+        >
+          <RxHamburgerMenu />
+        </div>
       </div>
     </nav>
   );

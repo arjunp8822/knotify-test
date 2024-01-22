@@ -8,7 +8,7 @@ interface Props {
 const FilterFeatureContainer = ({ title }: Props) => {
   const [clicked, setClicked] = useState(false);
   return (
-    <li
+    <div
       className="flex gap-2 items-center cursor-pointer"
       onClick={() => setClicked(!clicked)}
     >
@@ -20,7 +20,7 @@ const FilterFeatureContainer = ({ title }: Props) => {
         {clicked && <FaCheck />}
       </div>
       <h5 className="text-sm sm:text-base">{title}</h5>
-    </li>
+    </div>
   );
 };
 

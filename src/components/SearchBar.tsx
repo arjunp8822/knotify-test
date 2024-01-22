@@ -27,7 +27,7 @@ const SearchBar = ({
       <div className="relative w-full sm:w-auto ">
         <input
           type="text"
-          placeholder="Search by name or location"
+          placeholder="Search by any city"
           className="border border-gray-300 text-sm w-full sm:w-96 px-4 py-2 rounded-lg h-[38px]"
           onChange={toggleChange}
           value={search}
@@ -46,7 +46,7 @@ const SearchBar = ({
           className="flex gap-1 justify-center items-center border border-gray-300 py-1 px-2 rounded-lg text-gray-500 cursor-pointer h-[38px]"
           onClick={() => setShowFilterContainer(!showFilterContainer)}
         >
-          <span>Filter</span>
+          <span className="text-sm">Filter</span>
           <MdFilterAlt />
         </div>
         <div

@@ -8,7 +8,7 @@ interface Props {
 const CategoryContainer = ({ icon, title }: Props) => {
   const [clicked, setClicked] = useState(false);
   return (
-    <li
+    <div
       className={`flex rounded-lg justify-center items-center p-2 gap-4 cursor-pointer ${
         clicked ? "border border-black" : "border"
       }`}
@@ -22,7 +22,7 @@ const CategoryContainer = ({ icon, title }: Props) => {
       >
         {title}
       </h5>
-    </li>
+    </div>
   );
 };
 

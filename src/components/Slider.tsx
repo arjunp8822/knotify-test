@@ -5,10 +5,17 @@ interface Props {
   min: number;
   max: number;
   step: number;
+  setMinimumRating: (val: number) => void;
 }
 
-const Slider = ({ initial, min, max, step }: Props) => {
+const Slider = ({ initial, min, max, step, setMinimumRating }: Props) => {
   const [value, setValue] = useState(initial.toPrecision(1));
+
+  const toggleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(e.target.value);
+    setMinimumRating(parseFloat(e.target.value));
+  };
+
   return (
     <div className="flex gap-4 justify-center items-center">
       <input
@@ -17,7 +24,7 @@ const Slider = ({ initial, min, max, step }: Props) => {
         max={max}
         step={step}
         value={value}
-        onChange={(e) => setValue(e.target.value)}
+        onChange={toggleChange}
         className="appearance-none border-none bg-gray-100 h-1 rounded-full [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-[20px] [&::-webkit-slider-thumb]:w-[20px] [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-black"
       />
       <span className="text-gray-500 text-sm sm:text-base">{value}</span>

@@ -4,13 +4,23 @@ interface Props {
   city: string;
   state: string;
   setClickedCity: (city: string) => void;
+  setShowCitySearch: (show: boolean) => void;
 }
 
-const CitySearchItem = ({ city, state, setClickedCity }: Props) => {
+const CitySearchItem = ({
+  city,
+  state,
+  setClickedCity,
+  setShowCitySearch,
+}: Props) => {
+  const clickHandler = () => {
+    setClickedCity(city);
+    setShowCitySearch(false);
+  };
   return (
     <li
       className="flex gap-4 items-center cursor-pointer"
-      onClick={() => setClickedCity(city)}
+      onClick={clickHandler}
     >
       <div className="text-2xl bg-gray-200 p-2 sm:p-3 rounded-lg font-semibold">
         <CiLocationOn />

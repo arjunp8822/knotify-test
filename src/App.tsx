@@ -7,19 +7,32 @@ import Blog from "./pages/Blog";
 import VendorPage from "./pages/VenuePage";
 import Footer from "./components/Footer";
 import { useState } from "react";
-import FilterContainer from "./components/FilterContainer";
+import FilterContainer, { FilterData } from "./components/FilterContainer";
 
 function App() {
   const [openNav, setOpenNav] = useState(false);
   const [showFilterContainer, setShowFilterContainer] = useState(false);
+  const [filterButtonClicked, setFilterButtonClicked] = useState(false);
+  const [filterData, setFilterData] = useState<FilterData>({
+    categories: null,
+    minimumRating: null,
+    guests: null,
+    budget: null,
+    features: null,
+  });
 
   return (
     <div>
       {/* overlays */}
 
       {showFilterContainer && (
-        <FilterContainer setShowFilterContainer={setShowFilterContainer} />
+        <FilterContainer
+          setShowFilterContainer={setShowFilterContainer}
+          setFilterData={setFilterData}
+          setFilterButtonClicked={setFilterButtonClicked}
+        />
       )}
+
       <div
         className={`bg-white transition-all ${
           showFilterContainer ? "sm:brightness-50" : ""
@@ -43,6 +56,9 @@ function App() {
                 <Home
                   showFilterContainer={showFilterContainer}
                   setShowFilterContainer={setShowFilterContainer}
+                  filterData={filterData}
+                  filterButtonClicked={filterButtonClicked}
+                  setFilterButtonClicked={setFilterButtonClicked}
                 />
               }
             />

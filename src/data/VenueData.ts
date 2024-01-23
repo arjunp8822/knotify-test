@@ -131,6 +131,7 @@ export const Data = [
     location: "Sydney, NSW",
     city: "Sydney",
     state: "NSW",
+    category: "Garden", //limit this to [Beach, Garden, Luxury, Country, Waterview, Winery, Other]
     rating: 4.4,
     review_count: 4373,
     min_price: 200,
@@ -315,6 +316,7 @@ export const Data = [
     location: "Woolloomooloo, NSW",
     city: "Sydney",
     state: "NSW",
+    category: "Country", //limit this to [Beach, Garden, Luxury, Country, Waterview, Winery, Other]
     rating: 4.5,
     review_count: 1661,
     min_price: 210,
@@ -499,6 +501,7 @@ export const Data = [
     location: "The Rocks, NSW",
     city: "Sydney",
     state: "NSW",
+    category: "Waterview", //limit this to [Beach, Garden, Luxury, Country, Waterview, Winery, Other]
     rating: 4.0,
     review_count: 1631,
     min_price: 120,
@@ -690,6 +693,7 @@ export const Data = [
     location: "Coogee, NSW",
     city: "Sydney",
     state: "NSW",
+    category: "Waterview", //limit this to [Beach, Garden, Luxury, Country, Waterview, Winery, Other]
     rating: 4.0,
     review_count: 3345,
     min_price: 105,
@@ -874,6 +878,7 @@ export const Data = [
     location: "Banksmeadow, NSW",
     city: "Sydney",
     state: "NSW",
+    category: "Waterview", //limit this to [Beach, Garden, Luxury, Country, Waterview, Winery, Other]
     rating: 4.6,
     review_count: 94,
     min_price: 105,
@@ -1063,6 +1068,7 @@ export const Data = [
     location: "Mosman, NSW",
     city: "Sydney",
     state: "NSW",
+    category: "Waterview", //limit this to [Beach, Garden, Luxury, Country, Waterview, Winery, Other]
     rating: 4.3,
     review_count: 1805,
     min_price: 125,
@@ -1253,6 +1259,7 @@ export const Data = [
     location: "Centennial Park, NSW",
     city: "Sydney",
     state: "NSW",
+    category: "Waterview", //limit this to [Beach, Garden, Luxury, Country, Waterview, Winery, Other]
     rating: 4.0,
     review_count: 1306,
     min_price: 115,
@@ -1443,6 +1450,7 @@ export const Data = [
     location: "Pokolbin, NSW",
     city: "Pokolbin",
     state: "NSW",
+    category: "Waterview", //limit this to [Beach, Garden, Luxury, Country, Waterview, Winery, Other]
     rating: 3.8,
     review_count: 265,
     min_price: 85,
@@ -1661,6 +1669,7 @@ export const Data = [
     location: "Pokolbin, NSW",
     city: "Pokolbin",
     state: "NSW",
+    category: "Waterview", //limit this to [Beach, Garden, Luxury, Country, Waterview, Winery, Other]
     rating: 4.3,
     review_count: 990,
     min_price: 175,
@@ -1851,6 +1860,7 @@ export const Data = [
     location: "Chippendale, NSW",
     city: "Sydney",
     state: "NSW",
+    category: "Waterview", //limit this to [Beach, Garden, Luxury, Country, Waterview, Winery, Other]
     rating: 4.2,
     review_count: 636,
     min_price: 78,

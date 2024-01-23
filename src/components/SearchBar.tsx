@@ -9,6 +9,8 @@ interface Props {
   setSearch: (search: string) => void;
   showFilterContainer: boolean;
   setShowFilterContainer: (show: boolean) => void;
+  filterButtonClicked: boolean;
+  setFilterButtonClicked: (clicked: boolean) => void;
 }
 
 const SearchBar = ({
@@ -16,6 +18,8 @@ const SearchBar = ({
   setSearch,
   showFilterContainer,
   setShowFilterContainer,
+  filterButtonClicked,
+  setFilterButtonClicked,
 }: Props) => {
   const [showSortContainer, setShowSortContainer] = useState(false);
   const toggleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -43,11 +47,25 @@ const SearchBar = ({
       </div>
       <div className="static sm:absolute right-0 flex justify-center items-center gap-4">
         <div
-          className="flex gap-1 justify-center items-center border border-gray-300 py-1 px-2 rounded-lg text-gray-500 cursor-pointer h-[38px]"
-          onClick={() => setShowFilterContainer(!showFilterContainer)}
+          className={`flex gap-1 justify-center items-center py-1 px-2 rounded-lg cursor-pointer h-[38px] ${
+            filterButtonClicked
+              ? "border-primary border-2 text-primary font-semibold"
+              : "border-gray-300 border text-gray-500"
+          }`}
+          onClick={() =>
+            filterButtonClicked
+              ? setFilterButtonClicked(false)
+              : setShowFilterContainer(!showFilterContainer)
+          }
         >
           <span className="text-sm">Filter</span>
-          <MdFilterAlt />
+          {filterButtonClicked ? (
+            <div className="text-xl">
+              <IoIosClose />
+            </div>
+          ) : (
+            <MdFilterAlt />
+          )}
         </div>
         <div
           className="border border-gray-300 py-1 px-2 rounded-lg text-gray-500 cursor-pointer h-[38px] flex justify-center items-center text-2xl"

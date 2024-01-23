@@ -12,6 +12,16 @@ import { useState } from "react";
 
 interface Props {
   setShowFilterContainer: (show: boolean) => void;
+  setFilterData: (data: FilterData) => void;
+  setFilterButtonClicked: (clicked: boolean) => void;
+}
+
+export interface FilterData {
+  categories: string[] | null;
+  minimumRating: number | null;
+  guests: number | null;
+  budget: number | null;
+  features: string[] | null;
 }
 
 const categories = [
@@ -37,8 +47,11 @@ const features = [
   "Stunning Views",
 ];
 
-const FilterContainer = ({ setShowFilterContainer }: Props) => {
-  const [filterData, setFilterData] = useState({});
+const FilterContainer = ({
+  setShowFilterContainer,
+  setFilterData,
+  setFilterButtonClicked,
+}: Props) => {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [minimumRating, setMinimumRating] = useState(3);
   const [guests, setGuests] = useState<number | null>(null);
@@ -54,8 +67,9 @@ const FilterContainer = ({ setShowFilterContainer }: Props) => {
       budget: budget,
       features: selectedFeatures,
     };
+    setFilterButtonClicked(true);
     setFilterData(filters);
-    console.log(filterData);
+    setShowFilterContainer(false);
   };
 
   const clickCategoryHandler = (title: string) => {

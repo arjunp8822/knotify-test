@@ -1342,6 +1342,33 @@ export const Data = [
       "Catering",
       "Accomodation",
     ],
+    faqs: [
+      {
+        id: 1,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 2,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 3,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 4,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 5,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+    ],
     packages: [
       {
         title: "Package 1",
@@ -1709,6 +1736,33 @@ export const Data = [
       "Stepping into the scene at Olio Kensington Street, you are transported to a world of captivating beauty and intimate ambience. The venue’s location in the heart of Sydney adds an air of excitement and convenience, ensuring that your guests will easily be able to join in the festivities.\n\nThe wedding spaces at Olio have been carefully designed to cater to your needs, offering a range of options to create the perfect atmosphere for your ceremony and reception. Whether you envision an intimate affair or a grand celebration, Olio’s versatile layout and modern industrial style provide endless possibilities to bring your dream wedding to life.\n\nWith its impeccable service, delectable cuisine curated by award-winning executive chef Lino Sauro, and a team dedicated to making your day truly special, Olio Kensington Street is the ultimate destination for couples who want to create lifelong memories in a chic restaurant setting that exudes romance and sophistication.",
     img: ["Olio1", "Olio2", "Olio3", "Olio4", "Olio5"],
     features: ["Ceremonies", "Receptions", "Indoor and Outdoor", "Catering"],
+    faqs: [
+      {
+        id: 1,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 2,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 3,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 4,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+      {
+        id: 5,
+        question: "This is a test question",
+        answer: "This is a test answer",
+      },
+    ],
     packages: [
       {
         title: "Package 1",

@@ -55,6 +55,7 @@ const FilterContainer = ({ setShowFilterContainer }: Props) => {
       features: selectedFeatures,
     };
     setFilterData(filters);
+    console.log(filterData);
   };
 
   const clickCategoryHandler = (title: string) => {

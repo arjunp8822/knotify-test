@@ -13,7 +13,7 @@ interface Props {
 
 const VenueFeature = ({ feature }: Props) => {
   return (
-    <li className="flex text-sm sm:text-base justify-start items-center gap-4 p-2 rounded">
+    <li className="flex text-sm sm:text-base justify-start items-center gap-2 sm:gap-4 p-2 rounded">
       {feature === "Accomodation" ? (
         <img src={accomodation} alt="Accomodation" className="w-4" />
       ) : feature === "Beachfront" ? (

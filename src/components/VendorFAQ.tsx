@@ -1,5 +1,11 @@
 import QuestionAnswer from "./QuestionAnswer";
 
+export interface FAQs {
+  id: number;
+  question: string;
+  answer: string;
+}
+
 const questionList = [
   {
     question: "How do I create a vendor listing on your platform?",

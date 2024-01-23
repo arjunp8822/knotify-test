@@ -10,6 +10,8 @@ import VenuePackages from "../components/VenuePackages";
 import PackageModal from "../components/PackageModal";
 import { PackageData } from "../components/VenuePackages";
 import { MdOutlineMailOutline, MdOutlinePhoneEnabled } from "react-icons/md";
+import { FAQs } from "../components/VendorFAQ";
+import QuestionAnswer from "../components/QuestionAnswer";
 
 interface VenueData {
   id: number;
@@ -25,6 +27,7 @@ interface VenueData {
   img: string[];
   features: string[];
   packages: PackageData[];
+  faqs: FAQs[];
 }
 
 const VenuePage = () => {
@@ -129,6 +132,16 @@ const VenuePage = () => {
             setShowPackageModal={setShowPackageModal}
             setPackageData={setPackageData}
           />
+
+          {/* FAQ */}
+          <h3 className="font-semibold text-xl mb-4 mt-8">
+            Frequenly asked questions
+          </h3>
+          <ul>
+            {data.faqs.map((x) => (
+              <QuestionAnswer question={x.question} answer={x.answer} />
+            ))}
+          </ul>
         </div>
 
         {/* form */}

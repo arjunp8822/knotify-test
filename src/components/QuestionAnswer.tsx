@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaAngleDown } from "react-icons/fa6";
+import { FiPlus, FiMinus } from "react-icons/fi";
 
 interface Props {
   question: string;
@@ -10,24 +10,24 @@ const QuestionAnswer = ({ question, answer }: Props) => {
   const [showAnswer, setShowAnswer] = useState(false);
 
   return (
-    <li className="border-b-2 border-b-gray-100 border-dashed py-4 flex flex-col gap-6 mb-6">
+    <li className="border-b-2 border-b-gray-100 py-4 flex flex-col gap-6 mb-6 text-sm sm:text-base">
       <div className="flex gap-4 items-center">
         <button
-          className="bg-red-500 p-2 rounded-full transition-all duration-150"
+          className="border border-black p-2 rounded-full transition-all duration-150"
           onClick={() => setShowAnswer(!showAnswer)}
         >
           {showAnswer ? (
-            <FaAngleDown className="text-sm text-white rotate-180" />
+            <FiMinus className="text-sm" />
           ) : (
-            <FaAngleDown className="text-sm text-white" />
+            <FiPlus className="text-sm" />
           )}
         </button>
         <p className="font-medium">{question}</p>
       </div>
 
       <p
-        className={`ml-4 sm:ml-12 text-font-secondary border-l-2 border-bg-secondary pl-6 overflow-hidden duration-150 transition-all flex justify-center items-center ${
-          showAnswer ? "h-72 sm:h-36 mb-6" : "h-0"
+        className={`ml-12 text-font-secondary overflow-hidden duration-150 transition-all flex items-center ${
+          showAnswer ? "h-fit mb-6" : "h-0"
         }`}
       >
         {answer}

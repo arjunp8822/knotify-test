@@ -1,5 +1,128 @@
 export const Data = [
   {
+    id: 0,
+    sample: false,
+    name: "Ventuno Restaurant",
+    email: "events@sydneyrestaurantgroup.com.au",
+    phone: "(02) 9247 4444",
+    location: "Walsh Bay, NSW",
+    city: "Sydney",
+    state: "NSW",
+    category: "Waterview", //limit this to [Beach, Garden, Luxury, Country, Waterview, Winery, Other]
+    rating: 4.4,
+    review_count: 1271,
+    min_price: 85,
+    max_guests: 80, //make sure this is sitdown
+    //need a max character length below
+    short_description:
+      "The Private Dining Room at Ventuno is spacious and versatile, complete with floor to ceiling glass windows offering ample natural light whilst boasting magnificent waterfront views of the historic Walsh Bay.\n\nAt Ventuno we pride ourselves on providing a personal approach to each event and offer restaurant quality menus and beverage packages for you and your guests to enjoy. Our dedicated event coordinators will liaise with you during the entire planning process to ensure that your event will run seamlessly.",
+    img: ["ventuno1", "ventuno2", "ventuno3", "ventuno4", "ventuno5"],
+    features: [
+      "Ceremonies",
+      "Receiptions",
+      "External Catering",
+      "MC Services",
+      "Amenities",
+      "Accessible Location",
+      "Indoor and Outdoor",
+      "Accomodation",
+      "Parking",
+      "Exceptioonal Menus",
+      "Stunning Views",
+    ], //limit this to [Ceremonies, Receiptions, External Catering, MC Services, Amenities, Accessible Location, Indoor and Outdoor, Accomodation, Parking, Exceptioonal Menus, Stunning Views]
+    faqs: [
+      {
+        id: 1,
+        question: "Where do we park if coming by car?",
+        answer:
+          "We are conveniently located near secure parking stations with metered street parking at our front door. We are a 10 minute stroll from the Sydney's CBD and only moments away from Circular Quay and Barangaroo.",
+      },
+      {
+        id: 2,
+        question: "Is there a venue hire fee?",
+        answer:
+          "We do not charge venue hire fees, however minimum spend requirements apply dependent on the date of the event. This means you are required to spend at least the advised minimum spend requirement on food and beverages in order to reserve our venue.",
+      },
+      {
+        id: 3,
+        question: "Are we allowed a DJ or Band?",
+        answer:
+          "You are welcome to organise a band or DJ to perform during your event. Your event coordinator can provide you with our preferred suppliers list on request.",
+      },
+    ], //limit this to 5
+    packages: [
+      {
+        title: "Package 1",
+        name: "Formal Dining",
+        duration: 5.5,
+        days: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        description:
+          "Our package offers all the essential elements you need to celebrate your forever after, at our elegant waterfront venue.",
+        disclaimer:
+          "Ventuno does not charge venue hire fees, however minimum spend requirements apply dependent on the date of the event.",
+        minGuests: 20,
+        maxGuests: 80,
+        priceStarting: 85,
+        venueInclusions: [
+          "Linen napkins (formal dining events)",
+          "Your supplied celebratory cake can be cut into canapé style slices and served on platters (there is no cakeage fee)",
+          "Personalised menus printed with individual guest names to act as place cards",
+          "Tea light candles for the tables",
+        ],
+        serviceInclusions: [],
+        planningInclusions: [],
+        diningInclusions: [
+          "Antipasti board to share",
+          "Pastas to share",
+          "Mains to share",
+          "Sides to share",
+          "Dessert to share",
+        ],
+      },
+      {
+        title: "Package 2",
+        name: "Cocktail Style",
+        duration: 5.5,
+        days: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        description:
+          "Our package offers all the essential elements you need to celebrate your forever after, at our elegant waterfront venue.",
+        disclaimer:
+          "Ventuno does not charge venue hire fees, however minimum spend requirements apply dependent on the date of the event.",
+        minGuests: 20,
+        maxGuests: 90,
+        priceStarting: 85,
+        venueInclusions: [
+          "Linen napkins (formal dining events)",
+          "Your supplied celebratory cake can be cut into canapé style slices and served on platters (there is no cakeage fee)",
+          "Personalised menus printed with individual guest names to act as place cards",
+          "Tea light candles for the tables",
+        ],
+        serviceInclusions: [],
+        planningInclusions: [],
+        diningInclusions: [
+          "A substantial selection of 8 canapés (1.5 servings per selection per person)",
+          "2 substantials (1 serving per selection per person)",
+        ],
+      },
+    ],
+  },
+  {
     id: 1,
     sample: true,
     name: "O Bar & Dining",

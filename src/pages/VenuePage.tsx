@@ -77,7 +77,9 @@ const VenuePage = () => {
           {data.location}
         </span>
         <div className="flex gap-2 justify-start items-center text-sm sm:text-base mb-4">
-          <span>Starting from ${data.min_price} per person</span>
+          <span>${data.min_price} per person</span>
+          <div className="bg-black h-[4px] w-[4px] rounded-full translate-y-[1px]"></div>
+          <span>{data.max_guests} guests</span>
           <div className="bg-black h-[4px] w-[4px] rounded-full translate-y-[1px]"></div>
           <span className="flex justify-center items-center gap-1">
             <span className="text-yellow-500">

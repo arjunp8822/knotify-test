@@ -60,34 +60,41 @@ const PackageModal = ({
               </div>
             </div>
           </div>
-          <h3 className="font-semibold mb-6 text-center text-primary text-lg">
-            Venue
-          </h3>
-
+          {packageData?.venueInclusions.length > 0 && (
+            <h3 className="font-semibold mb-6 text-center text-primary text-lg">
+              Venue
+            </h3>
+          )}
           <ul className="mb-6 text-center text-sm sm:text-base">
             {packageData?.venueInclusions?.map((item) => (
               <li className="mb-2">{item}</li>
             ))}
           </ul>
-          <h3 className="font-semibold mb-6 text-center text-primary text-lg">
-            Service
-          </h3>
+          {packageData?.serviceInclusions.length > 0 && (
+            <h3 className="font-semibold mb-6 text-center text-primary text-lg">
+              Service
+            </h3>
+          )}
           <ul className="mb-6 text-center text-sm sm:text-base">
             {packageData?.serviceInclusions?.map((item) => (
               <li className="mb-2">{item}</li>
             ))}
           </ul>
-          <h3 className="font-semibold mb-6 text-center text-primary text-lg">
-            Planning
-          </h3>
+          {packageData?.planningInclusions.length > 0 && (
+            <h3 className="font-semibold mb-6 text-center text-primary text-lg">
+              Planning
+            </h3>
+          )}
           <ul className="mb-6 text-center text-sm sm:text-base">
             {packageData?.planningInclusions?.map((item) => (
               <li className="mb-2">{item}</li>
             ))}
           </ul>
-          <h3 className="font-semibold mb-6 text-center text-primary text-lg">
-            Dining
-          </h3>
+          {packageData?.diningInclusions.length > 0 && (
+            <h3 className="font-semibold mb-6 text-center text-primary text-lg">
+              Dining
+            </h3>
+          )}
           <ul className="mb-6 text-center text-sm sm:text-base">
             {packageData?.diningInclusions?.map((item) => (
               <li className="mb-2">{item}</li>

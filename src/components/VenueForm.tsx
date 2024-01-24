@@ -4,11 +4,7 @@ import { MdEmail } from "react-icons/md";
 import { FaPhoneFlip } from "react-icons/fa6";
 import { BsFillPeopleFill } from "react-icons/bs";
 
-interface Props {
-  title: string;
-}
-
-const VenueForm = ({ title }: Props) => {
+const VenueForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");

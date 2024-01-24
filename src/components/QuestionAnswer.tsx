@@ -10,7 +10,7 @@ const QuestionAnswer = ({ question, answer }: Props) => {
   const [showAnswer, setShowAnswer] = useState(false);
 
   return (
-    <li className="border-b-2 border-b-gray-100 py-4 flex flex-col gap-6 mb-6 text-sm sm:text-base">
+    <li className="border-b py-4 flex flex-col gap-6 text-sm sm:text-base">
       <div className="flex gap-4 items-center">
         <button
           className="border border-black p-2 rounded-full transition-all duration-150"
@@ -26,7 +26,7 @@ const QuestionAnswer = ({ question, answer }: Props) => {
       </div>
 
       <p
-        className={`ml-12 text-font-secondary overflow-hidden duration-150 transition-all flex items-center ${
+        className={`ml-12 text-font-secondary overflow-hidden duration-150 transition-all flex items-center text-gray-700 ${
           showAnswer ? "h-fit mb-6" : "h-0"
         }`}
       >

@@ -32,7 +32,6 @@ const VenueForm = ({ title }: Props) => {
       className="flex flex-col gap-2 w-full"
       onSubmit={(e) => submitHandler(e)}
     >
-      <h3 className="font-semibold text-xl mb-4">Enquire with {title}</h3>
       <div className="flex justify-between relative">
         <input
           type="text"
@@ -64,7 +63,7 @@ const VenueForm = ({ title }: Props) => {
       </div>
       <div className="flex justify-between relative">
         {date.length === 0 && (
-          <h5 className="text-gray-400 absolute flex items-center h-full ml-4 text-sm sm:text-base">
+          <h5 className="text-gray-400 absolute flex items-center h-full pl-4 text-sm sm:text-base w-4/6">
             Wedding date
           </h5>
         )}

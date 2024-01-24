@@ -5,6 +5,8 @@ export const Data = [
     name: "Ventuno Restaurant",
     email: "events@sydneyrestaurantgroup.com.au",
     phone: "(02) 9247 4444",
+    facebook: "https://www.facebook.com/www.ventuno.com.au/",
+    instagram: "https://www.instagram.com/ventunorestaurantsydney/?hl=en",
     location: "Walsh Bay, NSW",
     city: "Sydney",
     state: "NSW",
@@ -19,7 +21,7 @@ export const Data = [
     img: ["ventuno1", "ventuno2", "ventuno3", "ventuno4", "ventuno5"],
     features: [
       "Ceremonies",
-      "Receiptions",
+      "Receptions",
       "External Catering",
       "MC Services",
       "Amenities",
@@ -50,6 +52,7 @@ export const Data = [
           "You are welcome to organise a band or DJ to perform during your event. Your event coordinator can provide you with our preferred suppliers list on request.",
       },
     ], //limit this to 5
+    workWith: [2, 3, 4, 5], //limit this to 4
     packages: [
       {
         title: "Package 1",
@@ -128,6 +131,8 @@ export const Data = [
     name: "O Bar & Dining",
     email: "arjun.p@knotify.com.au",
     phone: "0424073944",
+    facebook: "https://www.facebook.com/www.ventuno.com.au/",
+    instagram: "https://www.instagram.com/ventunorestaurantsydney/?hl=en",
     location: "Sydney, NSW",
     city: "Sydney",
     state: "NSW",
@@ -174,6 +179,7 @@ export const Data = [
         answer: "This is a test answer",
       },
     ],
+    workWith: [2, 3, 4, 5], //limit this to 4
     packages: [
       {
         title: "Package 1",
@@ -313,6 +319,8 @@ export const Data = [
     name: "Ovolo Woolloomooloo",
     email: "arjun.p@knotify.com.au",
     phone: "0424073944",
+    facebook: "https://www.facebook.com/www.ventuno.com.au/",
+    instagram: "https://www.instagram.com/ventunorestaurantsydney/?hl=en",
     location: "Woolloomooloo, NSW",
     city: "Sydney",
     state: "NSW",
@@ -359,6 +367,7 @@ export const Data = [
         answer: "This is a test answer",
       },
     ],
+    workWith: [2, 3, 4, 5], //limit this to 4
     packages: [
       {
         title: "Package 1",
@@ -498,6 +507,8 @@ export const Data = [
     name: "Cruise Bar",
     email: "arjun.p@knotify.com.au",
     phone: "0424073944",
+    facebook: "https://www.facebook.com/www.ventuno.com.au/",
+    instagram: "https://www.instagram.com/ventunorestaurantsydney/?hl=en",
     location: "The Rocks, NSW",
     city: "Sydney",
     state: "NSW",
@@ -551,6 +562,7 @@ export const Data = [
         answer: "This is a test answer",
       },
     ],
+    workWith: [2, 3, 4, 5], //limit this to 4
     packages: [
       {
         title: "Package 1",
@@ -690,6 +702,8 @@ export const Data = [
     name: "Coogee Bay Hotel",
     email: "arjun.p@knotify.com.au",
     phone: "0424073944",
+    facebook: "https://www.facebook.com/www.ventuno.com.au/",
+    instagram: "https://www.instagram.com/ventunorestaurantsydney/?hl=en",
     location: "Coogee, NSW",
     city: "Sydney",
     state: "NSW",
@@ -736,6 +750,7 @@ export const Data = [
         answer: "This is a test answer",
       },
     ],
+    workWith: [2, 3, 4, 5], //limit this to 4
     packages: [
       {
         title: "Package 1",
@@ -875,6 +890,8 @@ export const Data = [
     name: "Will & Mike's",
     email: "arjun.p@knotify.com.au",
     phone: "0424073944",
+    facebook: "https://www.facebook.com/www.ventuno.com.au/",
+    instagram: "https://www.instagram.com/ventunorestaurantsydney/?hl=en",
     location: "Banksmeadow, NSW",
     city: "Sydney",
     state: "NSW",
@@ -926,6 +943,7 @@ export const Data = [
         answer: "This is a test answer",
       },
     ],
+    workWith: [2, 3, 4, 5], //limit this to 4
     packages: [
       {
         title: "Package 1",
@@ -1065,6 +1083,8 @@ export const Data = [
     name: "Bathers' Pavilion",
     email: "arjun.p@knotify.com.au",
     phone: "0424073944",
+    facebook: "https://www.facebook.com/www.ventuno.com.au/",
+    instagram: "https://www.instagram.com/ventunorestaurantsydney/?hl=en",
     location: "Mosman, NSW",
     city: "Sydney",
     state: "NSW",
@@ -1117,6 +1137,7 @@ export const Data = [
         answer: "This is a test answer",
       },
     ],
+    workWith: [2, 3, 4, 5], //limit this to 4
     packages: [
       {
         title: "Package 1",
@@ -1256,6 +1277,8 @@ export const Data = [
     name: "Centennial Homestead",
     email: "arjun.p@knotify.com.au",
     phone: "0424073944",
+    facebook: "https://www.facebook.com/www.ventuno.com.au/",
+    instagram: "https://www.instagram.com/ventunorestaurantsydney/?hl=en",
     location: "Centennial Park, NSW",
     city: "Sydney",
     state: "NSW",
@@ -1308,6 +1331,7 @@ export const Data = [
         answer: "This is a test answer",
       },
     ],
+    workWith: [2, 3, 4, 5], //limit this to 4
     packages: [
       {
         title: "Package 1",
@@ -1447,6 +1471,8 @@ export const Data = [
     name: "Estate Tuscany",
     email: "arjun.p@knotify.com.au",
     phone: "0424073944",
+    facebook: "https://www.facebook.com/www.ventuno.com.au/",
+    instagram: "https://www.instagram.com/ventunorestaurantsydney/?hl=en",
     location: "Pokolbin, NSW",
     city: "Pokolbin",
     state: "NSW",
@@ -1500,6 +1526,7 @@ export const Data = [
         answer: "This is a test answer",
       },
     ],
+    workWith: [2, 3, 4, 5], //limit this to 4
     packages: [
       {
         title: "Package 1",
@@ -1666,6 +1693,8 @@ export const Data = [
     name: "Chateau Elan",
     email: "arjun.p@knotify.com.au",
     phone: "0424073944",
+    facebook: "https://www.facebook.com/www.ventuno.com.au/",
+    instagram: "https://www.instagram.com/ventunorestaurantsydney/?hl=en",
     location: "Pokolbin, NSW",
     city: "Pokolbin",
     state: "NSW",
@@ -1718,6 +1747,7 @@ export const Data = [
         answer: "This is a test answer",
       },
     ],
+    workWith: [2, 3, 4, 5], //limit this to 4
     packages: [
       {
         title: "Package 1",
@@ -1857,6 +1887,8 @@ export const Data = [
     name: "Olio",
     email: "arjun.p@knotify.com.au",
     phone: "0424073944",
+    facebook: "https://www.facebook.com/www.ventuno.com.au/",
+    instagram: "https://www.instagram.com/ventunorestaurantsydney/?hl=en",
     location: "Chippendale, NSW",
     city: "Sydney",
     state: "NSW",
@@ -1896,6 +1928,7 @@ export const Data = [
         answer: "This is a test answer",
       },
     ],
+    workWith: [2, 3, 4, 5], //limit this to 4
     packages: [
       {
         title: "Package 1",

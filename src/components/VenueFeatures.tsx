@@ -6,7 +6,7 @@ interface Props {
 
 const VenueFeatures = ({ features }: Props) => {
   return (
-    <ul className="grid grid-cols-2 md:grid-cols-3 gap-1 sm:gap-2">
+    <ul className="grid grid-cols-2 md:grid-cols-3 gap-1 sm:gap-2 text-gray-700">
       {features.map((f) => (
         <VenueFeature feature={f} />
       ))}

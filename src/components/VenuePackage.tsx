@@ -43,7 +43,7 @@ const VenuePackage = ({
       </div>
       <div className="font-semibold mb-4">{venuePackage.name}</div>
       <button className="border rounded-xl border-primary flex gap-2 items-center">
-        <span className="text-primary">See Package</span>
+        <span className="text-primary">See More</span>
         <div className="text-[10px] bg-primary text-white p-1 rounded-full">
           <FaPlus />
         </div>

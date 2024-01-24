@@ -1,6 +1,4 @@
-import React from "react";
 import { FaStar } from "react-icons/fa";
-import { IoMdPeople } from "react-icons/io";
 import { Link } from "react-router-dom";
 
 interface Props {

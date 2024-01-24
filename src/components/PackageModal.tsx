@@ -31,7 +31,7 @@ const PackageModal = ({
       {/* Package data */}
       {packageData && (
         <div>
-          <h1 className="text-2xl sm:text-4xl font-semibold mb-8 text-center text-primary">
+          <h1 className="text-2xl sm:text-4xl font-semibold mb-8 text-center text-primary mt-8">
             {packageData?.name} Inclusions
           </h1>
 

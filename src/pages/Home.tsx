@@ -46,6 +46,8 @@ const Home = ({
   const [cityData, setCityData] = useState<City[]>([]);
   const [showCitySearch, setShowCitySearch] = useState(false);
   const [clickedCity, setClickedCity] = useState("");
+  const [showSortContainer, setShowSortContainer] = useState(false);
+  const [clickedSort, setClickedSort] = useState("Best match");
 
   // set the original data
 
@@ -53,13 +55,16 @@ const Home = ({
     setData(Data);
   }, [filterButtonClicked]);
 
-  // filter by searched filter container
+  // filter, search and sort
 
   useEffect(() => {
     const updateData = () => {
       const { categories, minimumRating, guests, budget, features } =
         filterData;
       let newData = Data;
+
+      // filter
+
       if (categories && categories.length > 0) {
         newData = Data.filter((x) => categories.includes(x.category));
       }
@@ -84,21 +89,44 @@ const Home = ({
       if (!categories && !minimumRating && !guests && !budget && !features) {
         newData = Data;
       }
+
+      // search
+
       if (clickedCity.length > 0) {
         newData = newData.filter((x) =>
           x.city.toLowerCase().includes(clickedCity.toLowerCase())
         );
       }
-      setData(newData);
-    };
 
+      // sort
+
+      if (clickedSort === "Best match") {
+        newData.sort(function (a, b) {
+          return a.id - b.id;
+        });
+      }
+
+      if (clickedSort === "Price - low to high") {
+        newData.sort(function (a, b) {
+          return a.min_price - b.min_price;
+        });
+      }
+
+      if (clickedSort === "Price - high to low") {
+        newData.sort(function (a, b) {
+          return b.min_price - a.min_price;
+        });
+      }
+      setData([...newData]);
+    };
+    console.log(clickedCity);
     updateData();
-  }, [filterData, clickedCity]);
+  }, [filterData, clickedCity, clickedSort]);
 
   // dropdown search for cities
 
   useEffect(() => {
-    const setData = () => {
+    const updateData = () => {
       if (search.length > 0) {
         const newData = CityData.filter((x) =>
           x.City.toLowerCase().includes(search.toLowerCase())
@@ -110,7 +138,7 @@ const Home = ({
         setCityData([]);
       }
     };
-    setData();
+    updateData();
   }, [search]);
 
   // reset filter if search gets cleared
@@ -132,6 +160,10 @@ const Home = ({
           setShowFilterContainer={setShowFilterContainer}
           filterButtonClicked={filterButtonClicked}
           setFilterButtonClicked={setFilterButtonClicked}
+          showSortContainer={showSortContainer}
+          setShowSortContainer={setShowSortContainer}
+          setClickedSort={setClickedSort}
+          setClickedCity={setClickedCity}
         />
         {showCitySearch && (
           <CitySearch

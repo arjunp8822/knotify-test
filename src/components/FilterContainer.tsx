@@ -100,7 +100,7 @@ const FilterContainer = ({
 
   return (
     <form
-      className="fixed bg-white shadow-xl z-50 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-11/12 md:w-[600px] rounded-lg"
+      className="fixed bg-white shadow-xl z-50 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-[95vw] md:w-[600px] rounded-lg"
       onSubmit={handleSubmit}
     >
       <div className="flex relative justify-center items-center py-4 px-6 sm:px-8 border-b">
@@ -173,7 +173,7 @@ const FilterContainer = ({
             <p className="text-gray-500 text-sm sm:text-base mb-4">
               Select all your favourite features
             </p>
-            <ul className="grid grid-cols-2 gap-3">
+            <ul className="grid grid-cols-2 gap-x-2 sm:gap-x-3 gap-y-3">
               {features.map((c) => (
                 <li onClick={() => clickFeatureHandler(c)}>
                   <FilterFeatureContainer title={c} />

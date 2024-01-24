@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { IoIosClose } from "react-icons/io";
 import { GoSortDesc } from "react-icons/go";
 import { MdFilterAlt } from "react-icons/md";
@@ -11,6 +10,10 @@ interface Props {
   setShowFilterContainer: (show: boolean) => void;
   filterButtonClicked: boolean;
   setFilterButtonClicked: (clicked: boolean) => void;
+  showSortContainer: boolean;
+  setShowSortContainer: (clicked: boolean) => void;
+  setClickedSort: (set: string) => void;
+  setClickedCity: (set: string) => void;
 }
 
 const SearchBar = ({
@@ -20,10 +23,18 @@ const SearchBar = ({
   setShowFilterContainer,
   filterButtonClicked,
   setFilterButtonClicked,
+  showSortContainer,
+  setShowSortContainer,
+  setClickedSort,
+  setClickedCity,
 }: Props) => {
-  const [showSortContainer, setShowSortContainer] = useState(false);
   const toggleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearch(e.target.value);
+  };
+
+  const clearHandler = () => {
+    setSearch("");
+    setClickedCity("");
   };
 
   return (
@@ -39,7 +50,7 @@ const SearchBar = ({
         {search.length > 0 && (
           <div
             className="absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer text-lg"
-            onClick={() => setSearch("")}
+            onClick={clearHandler}
           >
             <IoIosClose />
           </div>
@@ -60,7 +71,7 @@ const SearchBar = ({
         >
           <span className="text-sm">Filter</span>
           {filterButtonClicked ? (
-            <div className="text-xl">
+            <div className="text-xl" onClick={() => setSearch("")}>
               <IoIosClose />
             </div>
           ) : (
@@ -75,7 +86,10 @@ const SearchBar = ({
         </div>
       </div>
       {showSortContainer && (
-        <SortContainer setShowSortContainer={setShowSortContainer} />
+        <SortContainer
+          setShowSortContainer={setShowSortContainer}
+          setClickedSort={setClickedSort}
+        />
       )}
     </div>
   );

@@ -257,7 +257,7 @@ const VenuePage = () => {
               <h5 className="font-semibold sm:text-lg mb-4">
                 Send us an enquiry
               </h5>
-              <VenueForm title={data.name} />
+              <VenueForm />
             </div>
           </div>
         </div>

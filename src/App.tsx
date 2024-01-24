@@ -43,7 +43,6 @@ function App() {
           setOpenNav={setOpenNav}
           showFilterContainer={showFilterContainer}
         />
-        t
         <div
           className={`container bg-white transition-all ${
             openNav ? "blur-[2px]" : ""

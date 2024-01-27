@@ -4,6 +4,7 @@ import { Data } from "../data/VenueData";
 import { Link, useParams } from "react-router-dom";
 import NotFound from "./NotFound";
 import ImageModal from "../components/ImageModal";
+import LargeImageModal from "../components/LargeImageModal";
 import VenueForm from "../components/VenueForm";
 import VenueFeatures from "../components/VenueFeatures";
 import VenuePackages from "../components/VenuePackages";
@@ -38,6 +39,8 @@ interface VenueData {
 const VenuePage = () => {
   const [data, setData] = useState<VenueData | null>(null);
   const [showImageModal, setShowImageModal] = useState(false);
+  const [showLargeImageModal, setShowLargeImageModal] = useState(false);
+  const [largeImageIdx, setLargeImageIdx] = useState<number | null>(null);
   const [showPackageModal, setShowPackageModal] = useState(false);
   const [packageData, setPackageData] = useState<PackageData | null>(null);
   const [workWithData, setWorkWithData] = useState<VenueData[] | null>(null);
@@ -86,18 +89,21 @@ const VenuePage = () => {
         <img
           src={`https://res.cloudinary.com/dkxs4o9vt/image/upload/v1705560129/${data.img[0]}`}
           alt="Venue Image 1"
-          className="w-full sm:w-2/3 object-cover rounded-lg sm:rounded-none sm:rounded-l-lg"
+          className="w-full sm:w-2/3 object-cover rounded-lg sm:rounded-none sm:rounded-l-lg cursor-pointer"
+          onClick={() => setShowImageModal(true)}
         />
         <div>
           <img
             src={`https://res.cloudinary.com/dkxs4o9vt/image/upload/v1705560129/${data.img[1]}`}
             alt="Venue Image 1"
-            className="w-full hidden sm:flex h-1/2 object-cover rounded-lg sm:rounded-none sm:rounded-tr-lg"
+            className="w-full hidden sm:flex h-1/2 object-cover rounded-lg sm:rounded-none sm:rounded-tr-lg cursor-pointer"
+            onClick={() => setShowImageModal(true)}
           />
           <img
             src={`https://res.cloudinary.com/dkxs4o9vt/image/upload/v1705560129/${data.img[2]}`}
             alt="Venue Image 1"
-            className="w-full hidden sm:flex h-1/2 object-cover rounded-lg sm:rounded-none sm:rounded-br-lg"
+            className="w-full hidden sm:flex h-1/2 object-cover rounded-lg sm:rounded-none sm:rounded-br-lg cursor-pointer"
+            onClick={() => setShowImageModal(true)}
           />
         </div>
         <button
@@ -274,7 +280,19 @@ const VenuePage = () => {
       <ImageModal
         showModal={showImageModal}
         setShowModal={setShowImageModal}
+        showLargeImageModal={showLargeImageModal}
+        setShowLargeImageModal={setShowLargeImageModal}
+        setLargeImageIdx={setLargeImageIdx}
         img={data.img}
+      />
+
+      {/* image modal */}
+      <LargeImageModal
+        showLargeImageModal={showLargeImageModal}
+        setShowLargeImageModal={setShowLargeImageModal}
+        img={data.img}
+        largeImageIdx={largeImageIdx}
+        setLargeImageIdx={setLargeImageIdx}
       />
     </div>
   );

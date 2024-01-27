@@ -31,7 +31,6 @@ const VenueCard = ({
   const toggleImgDown = () => {
     if (currentImg !== 0) {
       setCurrentImg(currentImg - 1);
-      console.log(currentImg);
     }
   };
 

@@ -3,10 +3,23 @@ import { IoIosCloseCircleOutline } from "react-icons/io";
 interface Props {
   showModal: boolean;
   setShowModal: (showModal: boolean) => void;
+  showLargeImageModal: boolean;
+  setShowLargeImageModal: (showModal: boolean, index?: number) => void;
+  setLargeImageIdx: (number: number) => void;
   img: string[];
 }
 
-const ImageModal = ({ showModal, setShowModal, img }: Props) => {
+const ImageModal = ({
+  showModal,
+  setShowModal,
+  img,
+  setShowLargeImageModal,
+  setLargeImageIdx,
+}: Props) => {
+  const clickHandler = (index: number) => {
+    setShowLargeImageModal(true);
+    setLargeImageIdx(index);
+  };
   return (
     <div
       className={`fixed top-0 left-0 right-0 h-full bg-black container transition-transform z-30 overflow-y-auto ${
@@ -20,12 +33,13 @@ const ImageModal = ({ showModal, setShowModal, img }: Props) => {
         <IoIosCloseCircleOutline />
       </button>
       <ul className="flex flex-col justify-center items-center gap-4 mt-8">
-        {img.map((x) => (
+        {img.map((x, index) => (
           <li className="w-full flex justify-center items-center">
             <img
               src={`https://res.cloudinary.com/dkxs4o9vt/image/upload/v1705560129/${x}`}
               alt="Venue Image"
-              className="w-[800px] h-[250px] sm:h-[350px] md:h-[450px] object-cover"
+              className="w-[800px] h-[250px] sm:h-[350px] md:h-[450px] object-cover cursor-pointer"
+              onClick={() => clickHandler(index)}
             />
           </li>
         ))}

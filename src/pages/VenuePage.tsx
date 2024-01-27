@@ -44,7 +44,24 @@ const VenuePage = () => {
   const [showPackageModal, setShowPackageModal] = useState(false);
   const [packageData, setPackageData] = useState<PackageData | null>(null);
   const [workWithData, setWorkWithData] = useState<VenueData[] | null>(null);
+  const [fixedContactSection, setFixedContactSection] = useState(false);
   const { id } = useParams();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      // Adjust the threshold as needed based on your design
+      const threshold = 950;
+      setFixedContactSection(scrollPosition > threshold);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener when the component is unmounted
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     const venueData = Data.filter((x) => x.id === +id!);
@@ -61,7 +78,7 @@ const VenuePage = () => {
   }
 
   return (
-    <div>
+    <div className="relative">
       <div className="flex justify-between items-center">
         <h1 className="font-semibold text-xl sm:text-4xl mb-1 sm:mb-2">
           {data.name}
@@ -175,11 +192,12 @@ const VenuePage = () => {
           {/* Related */}
           <div className="sm:mb-4 sm:pb-4" id="related">
             <h3 className="font-semibold text-xl mb-4">
-              Vendors we often work with
+              Venues similar to {data.name}
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
+            <div className="flex overflow-x-auto gap-4 custom-scrollbar pb-6">
               {workWithData?.map((x) => (
                 <WorkWithCard
+                  key={x.id}
                   img={x.img[0]}
                   name={x.name}
                   rating={x.rating}
@@ -192,7 +210,12 @@ const VenuePage = () => {
         </div>
 
         {/* contact */}
-        <div className="w-full lg:w-1/3" id="contact">
+        <div
+          className={`w-full lg:w-1/3 ${
+            fixedContactSection ? "md:sticky md:top-0 md:right-0" : ""
+          }`}
+          id="contact"
+        >
           <h3 className="font-semibold text-xl mb-4 sm:mb-8">
             Contact {data.name}
           </h3>

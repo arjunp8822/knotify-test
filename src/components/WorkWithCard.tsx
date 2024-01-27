@@ -19,7 +19,7 @@ const WorkWithCard = ({ img, name, rating, reviews, link }: Props) => {
           className="rounded-lg mb-2 w-full object-cover"
         />
       </Link>
-      <div>
+      <div className="w-[300px]">
         <div className="flex justify-between">
           <span className="text-sm font-semibold">{name}</span>
           <div className="flex gap-1 justify-center items-center">

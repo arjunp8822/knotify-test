@@ -45,7 +45,6 @@ const features = [
   "Parking",
   "Exceptional Menus",
   "Stunning Views",
-  "Pet Friendly",
 ];
 
 const FilterContainer = ({
@@ -89,16 +88,6 @@ const FilterContainer = ({
     }
   };
 
-  // this needs to be worked on
-
-  // const clearHandler = () => {
-  //   setSelectedCategories([]);
-  //   setMinimumRating(3);
-  //   setGuests(null);
-  //   setBudget(null);
-  //   setSelectedFeatures([]);
-  // };
-
   return (
     <form
       className="fixed bg-white shadow-xl z-50 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-[95vw] md:w-[600px] rounded-lg"
@@ -132,7 +121,7 @@ const FilterContainer = ({
           <div>
             <h3 className="font-semibold mb-1 sm:mb-2">Rating</h3>
             <p className="text-gray-500 text-sm sm:text-base mb-2 sm:mb-4">
-              Select the minimum rating you desire
+              How low do you want your venue to be rated?
             </p>
             <Slider
               initial={3}
@@ -185,7 +174,6 @@ const FilterContainer = ({
         </div>
       </div>
       <div className="relative bottom-0 left-0 w-full flex justify-between py-4 px-6 sm:px-8 border-t items-center">
-        <span className="font-bold">Clear all</span>
         <button className="bg-primary text-white font-bold rounded-lg">
           Show
         </button>

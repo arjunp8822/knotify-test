@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { RxHamburgerMenu } from "react-icons/rx";
 import NavItem from "./NavItem";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 
 interface Props {
   openNav: boolean;
@@ -56,6 +57,20 @@ const Navbar = ({ openNav, setOpenNav, showFilterContainer }: Props) => {
               />
             ))}
           </ul>
+          <div className="absolute bottom-0 w-full h-[100px] flex justify-center items-center sm:hidden gap-8">
+            <Link
+              className="text-lg bg-gray-100 text-gray-700 p-2 rounded-full"
+              to={""}
+            >
+              <FaFacebookF />
+            </Link>
+            <Link
+              className="text-lg bg-gray-100 text-gray-700 p-2 rounded-full"
+              to={""}
+            >
+              <FaInstagram />
+            </Link>
+          </div>
         </div>
         <div
           className="flex cursor-pointer sm:hidden text-2xl mt-2"

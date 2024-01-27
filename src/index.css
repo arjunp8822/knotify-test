@@ -51,3 +51,16 @@ textarea {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+/* Image full on landscape orientation */
+@media screen and (max-width: 1400px) and (orientation: landscape) {
+  .landscape-image {
+    height: 90vh;
+  }
+}
+
+@media screen and (max-width: 1400px) and (orientation: landscape) {
+  .landscape-text {
+    bottom: 24px;
+  }
+}

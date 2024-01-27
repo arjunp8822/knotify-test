@@ -47,7 +47,7 @@ const LargeImageModal = ({
             img[largeImageIdx!]
           }`}
           alt="Venue Image"
-          className="object-cover cursor-pointer h-[40vh] w-full"
+          className="object-cover cursor-pointer h-[40vh] w-full landscape-image"
         />
       </div>
       {largeImageIdx !== 0 && (
@@ -66,7 +66,7 @@ const LargeImageModal = ({
           <FaChevronRight />
         </div>
       )}
-      <div className="absolute text-white bottom-16">{`${
+      <div className="absolute text-white bottom-16 landscape-text">{`${
         largeImageIdx! + 1
       } / ${img.length}`}</div>
     </div>

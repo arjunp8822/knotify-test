@@ -1,6 +1,5 @@
 import VendorBanner from "../components/VendorBanner";
 import VendorFeatures from "../components/VendorFeatures";
-import VendorBenefits from "../components/VendorBenefits";
 import VendorFAQ from "../components/VendorFAQ";
 
 const Vendors = () => {
@@ -8,7 +7,6 @@ const Vendors = () => {
     <div>
       <VendorBanner />
       <VendorFeatures />
-      <VendorBenefits />
       <VendorFAQ />
     </div>
   );

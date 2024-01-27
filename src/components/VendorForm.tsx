@@ -7,7 +7,9 @@ const VendorForm = () => {
       </div>
       <input type="email" placeholder="Email" />
       <input type="text" placeholder="Website URL" />
-      <button className="bg-primary text-white">List with us</button>
+      <button className="bg-primary border border-primary text-white hover:bg-white hover:border hover:border-primary hover:text-primary transition-all">
+        List with us
+      </button>
     </form>
   );
 };

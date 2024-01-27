@@ -1,4 +1,5 @@
 import QuestionAnswer from "./QuestionAnswer";
+import WeddingRed from "/assets/weddingred.jpg";
 
 export interface FAQs {
   id: number;
@@ -40,11 +41,30 @@ const VendorFAQ = () => {
       <h4 className="text-2xl lg:text-3xl font-semibold mb-12">
         Frequently asked questions
       </h4>
-      <ul>
+      <ul className="mb-12">
         {questionList.map((q) => (
           <QuestionAnswer question={q.question} answer={q.answer} />
         ))}
       </ul>
+      <div className="flex flex-col sm:flex-row gap-8 sm:gap-16">
+        <img
+          src={WeddingRed}
+          alt="Wedding Img"
+          className="h-[300px] w-full sm:w-1/2 object-cover"
+        />
+        <div className="flex flex-col gap-4 w-full sm:w-1/2 justify-center">
+          <h5 className="text-xl lg:text-2xl font-semibold">
+            Still have questions?
+          </h5>
+          <p className="text-sm sm:text-lg text-gray-700">
+            Reach out and a member of our team will get back to you within 24
+            hours
+          </p>
+          <button className="bg-primary border border-primary text-white font-semibold mt-4 sm:mt-8 hover:bg-white hover:border hover:border-primary hover:text-primary transition-all">
+            <a href="#contactform">Find Out More</a>
+          </button>
+        </div>
+      </div>
     </div>
   );
 };

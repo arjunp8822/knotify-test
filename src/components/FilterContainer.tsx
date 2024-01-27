@@ -45,6 +45,7 @@ const features = [
   "Parking",
   "Exceptional Menus",
   "Stunning Views",
+  "Pet Friendly",
 ];
 
 const FilterContainer = ({

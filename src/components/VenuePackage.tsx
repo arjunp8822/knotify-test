@@ -1,6 +1,6 @@
 import PackageImg from "/assets/venuePackage.png";
 import { PackageData } from "./VenuePackages";
-import { FaPlus } from "react-icons/fa6";
+import { FaAngleRight } from "react-icons/fa";
 
 interface Props {
   venuePackage: {
@@ -43,9 +43,9 @@ const VenuePackage = ({
       </div>
       <div className="font-semibold mb-4">{venuePackage.name}</div>
       <button className="border rounded-xl border-primary flex gap-2 items-center">
-        <span className="text-primary">See More</span>
-        <div className="text-[10px] bg-primary text-white p-1 rounded-full">
-          <FaPlus />
+        <span className="text-primary font-semibold">See More</span>
+        <div className="text-[10px] text-primary mt-[2px]">
+          <FaAngleRight />
         </div>
       </button>
     </li>

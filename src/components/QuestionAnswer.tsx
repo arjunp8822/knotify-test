@@ -22,13 +22,16 @@ const QuestionAnswer = ({ question, answer }: Props) => {
             <FiPlus className="text-sm" />
           )}
         </button>
-        <p className="font-medium">{question}</p>
+        <p className="font-medium" onClick={() => setShowAnswer(!showAnswer)}>
+          {question}
+        </p>
       </div>
 
       <p
         className={`ml-12 text-font-secondary overflow-hidden duration-150 transition-all flex items-center text-gray-700 ${
           showAnswer ? "h-fit mb-6" : "h-0"
         }`}
+        onClick={() => setShowAnswer(!showAnswer)}
       >
         {answer}
       </p>

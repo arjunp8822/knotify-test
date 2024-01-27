@@ -101,7 +101,7 @@ const VenuePage = () => {
           />
         </div>
         <button
-          className="absolute bottom-2 right-2 bg-white border rounded"
+          className="absolute bottom-2 right-2 bg-white border rounded text-sm sm:text-base"
           onClick={() => setShowImageModal(true)}
         >
           Show More
@@ -192,7 +192,7 @@ const VenuePage = () => {
           </h3>
           <div className="flex flex-col gap-4 sm:gap-8">
             <div>
-              <h5 className="font-semibold sm:text-lg mb-4">
+              <h5 className="font-semibold sm:text-lg mb-4 mt-4">
                 Get in touch with us directly
               </h5>
               <div className="flex flex-col gap-4">
@@ -233,7 +233,7 @@ const VenuePage = () => {
               </div>
             </div>
             <div>
-              <h5 className="font-semibold sm:text-lg mb-4">
+              <h5 className="font-semibold sm:text-lg mb-4 mt-4">
                 Visit our social media
               </h5>
               <div className="flex gap-3 items-center">
@@ -254,7 +254,7 @@ const VenuePage = () => {
               </div>
             </div>
             <div>
-              <h5 className="font-semibold sm:text-lg mb-4">
+              <h5 className="font-semibold sm:text-lg mb-4 mt-4">
                 Send us an enquiry
               </h5>
               <VenueForm />

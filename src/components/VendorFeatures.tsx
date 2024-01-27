@@ -12,8 +12,9 @@ const features = [
     comingSoon: false,
     title: "Your Personalised Listing",
     content:
-      "With Knotify listings, your services are strategically showcased to thousands of couples actively seeking your expertise for their special day. Elevate your visibility within your local demographic through our comprehensive directory listing and tap into targeted searches with our geo-specific app features.",
-    benefit: "This is a test benefit",
+      "Elevate your venue's profile by showcasing its unique features and packages to a large audience of couples. Maximise bookings with our geo-specific app features, precisely connecting you with potential clients seeking the perfect location for their special day.",
+    benefit:
+      "100,000 unique users per month, translating into 30 valuable enquiries each month.",
     benefitIcon: cash,
     img: Listing,
   },

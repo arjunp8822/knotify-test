@@ -19,15 +19,15 @@ const VendorFeature = ({ data }: Props) => {
           className="object-cover w-[450px]"
         />
         {data.comingSoon && (
-          <span className="bg-green-500 text-white rounded-xl px-2 py-1 w-fit absolute top-2 right-2 text-sm">
+          <span className="bg-green-100 font-semibold text-green-500 border border-green-500 rounded-xl px-2 py-1 w-fit absolute top-2 right-2 text-sm">
             Coming Soon
           </span>
         )}
       </div>
-      <div className="flex flex-col gap-2 h-[500px] px-4">
+      <div className="flex flex-col gap-2 h-[300px] px-4">
         <h5 className="text-xl font-semibold mb-4">{data.title}</h5>
-        <p className="text-md">{data.content}</p>
-        <div className="mt-8 flex items-center gap-4 border px-2 py-1">
+        <p className="text-md text-gray-700">{data.content}</p>
+        <div className="mt-8 flex items-center gap-4 font-semibold">
           <img src={data.benefitIcon} alt={"Icon"} className="w-6" />
           <span>{data.benefit}</span>
         </div>

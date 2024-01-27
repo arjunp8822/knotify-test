@@ -67,7 +67,7 @@ const VenueForm = () => {
           type="date"
           onChange={(e) => setDate(e.target.value)}
           value={date}
-          className="w-full"
+          className="w-full appearance-none"
         />
       </div>
       <div className="flex justify-between relative">

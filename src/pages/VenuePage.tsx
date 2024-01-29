@@ -15,6 +15,7 @@ import { FAQs } from "../components/VendorFAQ";
 import QuestionAnswer from "../components/QuestionAnswer";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import WorkWithCard from "../components/WorkWithCard";
+import { FiArrowUpRight } from "react-icons/fi";
 
 interface VenueData {
   id: number;
@@ -34,6 +35,7 @@ interface VenueData {
   workWith: number[];
   facebook: string;
   instagram: string;
+  website: string;
 }
 
 const VenuePage = () => {
@@ -257,6 +259,26 @@ const VenuePage = () => {
                     to={`tel:${data.phone}`}
                   >
                     {data.phone}
+                  </Link>
+                </Link>
+                <Link
+                  to={`${data.website}`}
+                  className="flex items-center gap-2"
+                  target="_blank"
+                >
+                  <Link
+                    className="text-lg bg-primary p-2 rounded-full text-white"
+                    to={`${data.website}`}
+                    target="_blank"
+                  >
+                    <FiArrowUpRight />
+                  </Link>
+                  <Link
+                    className="underline hover:text-primary"
+                    to={`${data.website}`}
+                    target="_blank"
+                  >
+                    {data.website}
                   </Link>
                 </Link>
               </div>

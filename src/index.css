@@ -87,3 +87,12 @@ textarea {
   background-color: #f4f4f4;
   height: 10px;
 }
+
+/* date fix */
+
+input[type="date"] {
+  display: block;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  min-height: 1.2em;
+}

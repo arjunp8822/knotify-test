@@ -8,6 +8,7 @@ import VendorPage from "./pages/VenuePage";
 import Footer from "./components/Footer";
 import { useState } from "react";
 import FilterContainer, { FilterData } from "./components/FilterContainer";
+import Privacy from "./pages/Privacy";
 
 function App() {
   const [openNav, setOpenNav] = useState(false);
@@ -64,6 +65,7 @@ function App() {
             <Route path="/vendors" element={<Vendors />} />
             <Route path="/venues/:id" element={<VendorPage />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/privacy" element={<Privacy />} />
           </Routes>
         </div>
         <div

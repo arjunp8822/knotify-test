@@ -45,6 +45,7 @@ const features = [
   "Parking",
   "Exceptional Menus",
   "Stunning Views",
+  "Pet Friendly",
 ];
 
 const FilterContainer = ({
@@ -121,7 +122,7 @@ const FilterContainer = ({
           <div>
             <h3 className="font-semibold mb-1 sm:mb-2">Rating</h3>
             <p className="text-gray-500 text-sm sm:text-base mb-2 sm:mb-4">
-              How low do you want your venue to be rated?
+              What is the minimum rating you desire?
             </p>
             <Slider
               initial={3}

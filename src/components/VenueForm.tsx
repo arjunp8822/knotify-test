@@ -1,14 +1,16 @@
 import { useState } from "react";
 import { FaUser } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import { FaPhoneFlip } from "react-icons/fa6";
+import { FaPhoneFlip, FaCalendar } from "react-icons/fa6";
 import { BsFillPeopleFill } from "react-icons/bs";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const VenueForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [date, setDate] = useState("");
+  const [date, setDate] = useState<Date | null>(null);
   const [guests, setGuests] = useState("");
   const [message, setMessage] = useState("");
 
@@ -18,7 +20,7 @@ const VenueForm = () => {
     setName("");
     setEmail("");
     setPhone("");
-    setDate("");
+    setDate(null);
     setGuests("");
     setMessage("");
   };
@@ -58,17 +60,17 @@ const VenueForm = () => {
         <FaPhoneFlip className="absolute right-[18px] h-full text-[16px]" />
       </div>
       <div className="flex justify-between relative">
-        {date.length === 0 && (
-          <h5 className="text-gray-400 absolute flex items-center h-full pl-4 text-sm sm:text-base w-4/6">
-            Wedding date
-          </h5>
-        )}
-        <input
-          type="date"
-          onChange={(e) => setDate(e.target.value)}
-          value={date}
-          className="w-full"
+        <DatePicker
+          wrapperClassName="datepicker"
+          className="w-[full]"
+          selected={date}
+          onChange={(d) => setDate(d)}
+          dateFormat={"yyyy/MM/dd"}
+          minDate={new Date()}
+          placeholderText="Date"
+          showYearDropdown
         />
+        <FaCalendar className="absolute right-[19px] h-full text-[14px]" />
       </div>
       <div className="flex justify-between relative">
         <input

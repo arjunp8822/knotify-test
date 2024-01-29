@@ -90,9 +90,10 @@ textarea {
 
 /* date fix */
 
-input[type="date"] {
-  display: block;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  min-height: 1.2em;
+.react-datepicker__input-container {
+  width: inherit;
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
 }

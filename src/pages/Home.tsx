@@ -48,6 +48,14 @@ const Home = ({
   const [clickedCity, setClickedCity] = useState("");
   const [showSortContainer, setShowSortContainer] = useState(false);
   const [clickedSort, setClickedSort] = useState("Best match");
+  const [visibleCards, setVisibleCards] = useState(12); // Set cards to show here
+
+  const handleShowMore = () => {
+    // Set cards to show here
+    setVisibleCards((prevVisibleCards) =>
+      Math.min(prevVisibleCards + 12, data.length)
+    );
+  };
 
   // set the original data
 
@@ -174,7 +182,7 @@ const Home = ({
         )}
       </div>
       <ul className="grid gap-x-4 gap-y-8 md:gap-y-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {data.map((venue) => (
+        {data.slice(0, visibleCards).map((venue) => (
           <VenueCard
             key={venue.id}
             name={venue.name}
@@ -188,6 +196,16 @@ const Home = ({
           />
         ))}
       </ul>
+      {data.length > visibleCards && (
+        <div className="flex justify-center mt-12">
+          <button
+            className="border border-black text-sm"
+            onClick={handleShowMore}
+          >
+            Show More
+          </button>
+        </div>
+      )}
     </div>
   );
 };

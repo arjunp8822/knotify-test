@@ -15,16 +15,18 @@ import QuestionAnswer from "../components/venuePage/QuestionAnswer";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import WorkWithCard from "../components/venuePage/WorkWithCard";
 import { FiArrowUpRight } from "react-icons/fi";
-import { VenueData } from "./Vendors";
+import { VenueDataInterface } from "./Vendors";
 
 const VenuePage = () => {
-  const [data, setData] = useState<VenueData | null>(null);
+  const [data, setData] = useState<VenueDataInterface | null>(null);
   const [showImageModal, setShowImageModal] = useState(false);
   const [showLargeImageModal, setShowLargeImageModal] = useState(false);
   const [largeImageIdx, setLargeImageIdx] = useState<number | null>(null);
   const [showPackageModal, setShowPackageModal] = useState(false);
   const [packageData, setPackageData] = useState<PackageData | null>(null);
-  const [workWithData, setWorkWithData] = useState<VenueData[] | null>(null);
+  const [workWithData, setWorkWithData] = useState<VenueDataInterface[] | null>(
+    null
+  );
   const [fixedContactSection, setFixedContactSection] = useState(false);
   const { id } = useParams();
 

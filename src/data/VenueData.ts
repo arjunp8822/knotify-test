@@ -1,6 +1,7 @@
 export const Data = [
   {
     id: 0,
+    featured: true,
     sample: false,
     name: "Ventuno Restaurant",
     email: "events@sydneyrestaurantgroup.com.au",
@@ -23,22 +24,21 @@ export const Data = [
     features: [
       "Ceremonies",
       "Receptions",
-      "External Catering",
       "MC Services",
       "Amenities",
       "Accessible Location",
       "Indoor and Outdoor",
       "Accomodation",
       "Parking",
-      "Exceptioonal Menus",
+      "Exceptional Menus",
       "Stunning Views",
-    ], //limit this to [Ceremonies, Receiptions, External Catering, MC Services, Amenities, Accessible Location, Indoor and Outdoor, Accomodation, Parking, Exceptioonal Menus, Stunning Views]
+    ], //limit this to [Ceremonies, Receiptions, External Catering, MC Services, Amenities, Accessible Location, Indoor and Outdoor, Accomodation, Parking, Exceptional Menus, Stunning Views]
     faqs: [
       {
         id: 1,
         question: "Where do we park if coming by car?",
         answer:
-          "We are conveniently located near secure parking stations with metered street parking at our front door. We are a 10 minute stroll from the Sydney's CBD and only moments away from Circular Quay and Barangaroo.",
+          "We are conveniently located near secure parking stations with metered street parking at our front door.",
       },
       {
         id: 2,
@@ -53,7 +53,7 @@ export const Data = [
           "You are welcome to organise a band or DJ to perform during your event. Your event coordinator can provide you with our preferred suppliers list on request.",
       },
     ], //limit this to 5
-    workWith: [2, 3, 4, 5], //limit this to 4
+    workWith: [1, 3, 4, 5], //limit this to 4
     packages: [
       {
         title: "Package 1",
@@ -71,7 +71,7 @@ export const Data = [
         description:
           "Our package offers all the essential elements you need to celebrate your forever after, at our elegant waterfront venue.",
         disclaimer:
-          "Ventuno does not charge venue hire fees, however minimum spend requirements apply dependent on the date of the event.",
+          "We do not charge venue hire fees, however minimum spend requirements apply dependent on the date of the event.",
         minGuests: 20,
         maxGuests: 80,
         priceStarting: 85,
@@ -107,7 +107,7 @@ export const Data = [
         description:
           "Our package offers all the essential elements you need to celebrate your forever after, at our elegant waterfront venue.",
         disclaimer:
-          "Ventuno does not charge venue hire fees, however minimum spend requirements apply dependent on the date of the event.",
+          "We do not charge venue hire fees, however minimum spend requirements apply dependent on the date of the event.",
         minGuests: 20,
         maxGuests: 90,
         priceStarting: 85,
@@ -126,15 +126,589 @@ export const Data = [
       },
     ],
   },
+
   {
     id: 1,
+    featured: true,
+    sample: false,
+    name: "Ripples Chowder Bay",
+    email: "chowderbay@ripplescafe.com.au",
+    phone: "(02) 9960 3000",
+    facebook: "https://www.facebook.com/rippleschowderbay/",
+    instagram: "https://www.instagram.com/rippleschowderbay/",
+    website: "https://www.rippleschowderbay.com.au/",
+    location: "Mosman, NSW",
+    city: "Sydney",
+    state: "NSW",
+    category: "Waterview", //limit this to [Beach, Garden, Luxury, Country, Waterview, Winery, Other]
+    rating: 4.3,
+    review_count: 1168,
+    min_price: 169,
+    max_guests: 101, //make sure this is sitdown
+    //need a max character length below
+    short_description:
+      "The heritage listed Ripples site, was skillfully transformed from a submarine miners’ depot into one of Sydney’s leading waterfront restaurants in 2007. Boasting a captivating blend of history and modernity, our restaurant offers a sophisticated backdrop for your special occasion.\n\nOur dedicated wedding coordinators will be on hand to guide you through the planning process, ensuring a seamless wedding reception.",
+    img: [
+      "rippleschowderbay01",
+      "rippleschowderbay2",
+      "rippleschowderbay3",
+      "rippleschowderbay4",
+    ],
+    features: [
+      "Ceremonies",
+      "Receptions",
+      "Amenities",
+      "Accessible Location",
+      "Indoor and Outdoor",
+      "Parking",
+      "Exceptional Menus",
+      "Stunning Views",
+    ], //limit this to [Ceremonies, Receiptions, External Catering, MC Services, Amenities, Accessible Location, Indoor and Outdoor, Accomodation, Parking, Exceptional Menus, Stunning Views]
+    faqs: [
+      {
+        id: 1,
+        question: "Where do we park if coming by car?",
+        answer:
+          "Ripples Chowder Bay is located in the Sydney Harbour National Park where metered parking on Chowder Bay Road operates from 8.00am – 10.00pm.",
+      },
+      {
+        id: 2,
+        question: "Can we arrive by water taxi?",
+        answer:
+          "We recommend arriving by car/Uber as the Chowder Bay Wharf is currently closed for renovation. If you would like to arrive by water taxi you can do so by disembarking at nearby Clifton Gardens Wharf and walk along the beach to Ripples Chowder Bay. Please  enquire about the tides as a high tide will impact your walk.",
+      },
+      {
+        id: 3,
+        question: "Is there a venue hire fee?",
+        answer:
+          "Ripples Chowder Bay does not charge venue hire fees, however minimum spend requirements apply dependent on the date of the event. This means you are required to spend at least the advised minimum spend requirement on food and beverages in order to reserve Ripples Chowder Bay for your event. Minimum spend requirements are available on request.",
+      },
+      {
+        id: 4,
+        question: "Are we allowed a DJ or Band?",
+        answer:
+          "You are welcome to organise a band or DJ to perform during your event. Your event coordinator can provide you with our preferred suppliers list on request.",
+      },
+      {
+        id: 4,
+        question: "Is there disabled access?",
+        answer:
+          "Please note Ripples Chowder Bay does not have disabled access.",
+      },
+    ], //limit this to 5
+    workWith: [0, 2, 3, 4], //limit this to 4
+    packages: [
+      {
+        title: "Package 1",
+        name: "Seated Event",
+        duration: 4.5,
+        days: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        description:
+          "Our chefs have created a 3 course menu that allows your guests to have the luxury of selecting their dishes on the day based on your pre-selection. Package includes premium alcoholic & non-alcoholic beverage package for the event duration",
+        disclaimer:
+          "We do not charge venue hire fees, however minimum spend requirements apply dependent on the date of the event.",
+        minGuests: 20,
+        maxGuests: 101,
+        priceStarting: 169,
+        venueInclusions: [
+          "White linen napkins",
+          "Personalised printed menus with guest names to act as place cards",
+          "Mircophone",
+          "Tea light candles for the tables",
+        ],
+        serviceInclusions: [
+          "Your celebratory cake can be cut into canapé style slices and served on platters with tea and coffee (there is no cakeage fee)",
+        ],
+        planningInclusions: [],
+        diningInclusions: [],
+      },
+      {
+        title: "Package 2",
+        name: "Cocktail Event",
+        duration: 4.5,
+        days: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        description:
+          "Package includes premium alcoholic & non-alcoholic beverage package for the event duration",
+        disclaimer:
+          "Ripples Chowder Bay does not charge venue hire fees, however minimum spend requirements apply dependent on the date of the reception. This means you are required to spend at least the advised minimum spend requirement on food and beverages in order to reserve Ripples Chowder Bay for your reception. Minimum spend requirements are available on request.",
+        minGuests: 20,
+        maxGuests: 200,
+        priceStarting: 155,
+        venueInclusions: [
+          "White linen napkins",
+          "Personalised printed menus with guest names to act as place cards",
+          "Mircophone",
+          "Tea light candles for the tables",
+        ],
+        serviceInclusions: [
+          "Your celebratory cake can be cut into canapé style slices and served on platters with tea and coffee (there is no cakeage fee)",
+        ],
+        planningInclusions: [],
+        diningInclusions: [],
+      },
+    ],
+  },
+
+  {
+    id: 2,
+    featured: true,
+    sample: false,
+    name: "Ripples Little Manly",
+    email: "littlemanly@ripplescafe.com.au",
+    phone: "(02) 9337 7300",
+    facebook: "https://www.facebook.com/rippleslittlemanly/",
+    instagram: "https://www.instagram.com/rippleslittlemanly/",
+    website: "https://www.rippleslittlemanly.com.au/",
+    location: "Manly, NSW",
+    city: "Sydney",
+    state: "NSW",
+    category: "Beach", //limit this to [Beach, Garden, Luxury, Country, Waterview, Winery, Other]
+    rating: 4.2,
+    review_count: 219,
+    min_price: 85,
+    max_guests: 62, //make sure this is sitdown
+    //need a max character length below
+    short_description:
+      "Ripples Little Manly provides the perfect backdrop for your next private event or celebration. Offering a laid back location with direct beach access and a menu highlighted by fresh local produce and Mediterranean flavours. Our dedicated event coordinators liaise with you during the entire planning process to ensure that from the time of booking, your event will run smoothly.",
+    img: [
+      "rippleslittlemanly1",
+      "rippleslittlemanly2",
+      "rippleslittlemanly3",
+      "rippleslittlemanly4",
+    ],
+    features: [
+      "Ceremonies",
+      "Receptions",
+      "Amenities",
+      "Accessible Location",
+      "Indoor and Outdoor",
+      "Parking",
+      "Exceptional Menus",
+      "Stunning Views",
+    ], //limit this to [Ceremonies, Receiptions, External Catering, MC Services, Amenities, Accessible Location, Indoor and Outdoor, Accomodation, Parking, Exceptional Menus, Stunning Views]
+    faqs: [
+      {
+        id: 1,
+        question: "Where do we park if coming by car?",
+        answer:
+          "We are conveniently located near secure parking stations with metered street parking at our front door.",
+      },
+      {
+        id: 2,
+        question: "Is there a venue hire fee?",
+        answer:
+          "We do not charge venue hire fees, however minimum spend requirements apply dependent on the date of the event. This means you are required to spend at least the advised minimum spend requirement on food and beverages in order to reserve our venue.",
+      },
+      {
+        id: 3,
+        question: "Are we allowed a DJ or Band?",
+        answer:
+          "You are welcome to organise a band or DJ to perform during your event. Your event coordinator can provide you with our preferred suppliers list on request.",
+      },
+    ], //limit this to 5
+    workWith: [0, 1, 3, 4], //limit this to 4
+    packages: [
+      {
+        title: "Package 1",
+        name: "Classic Banquet Menu",
+        duration: 4.5,
+        days: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        description:
+          "Our chefs have created a 3 course menu that allows your guests to have the luxury of selecting their dishes on the day based on your pre-selection.",
+        disclaimer:
+          "Ripples Little Manly does not charge venue hire fees, however, minimum spend requirements apply. This means you are required to spend at least the advised minimum spend requirement on food and beverages in order to reserve Ripples Little Manly for your event. Minimum spend requirements are available on request.",
+        minGuests: 20,
+        maxGuests: 62,
+        priceStarting: 85,
+        venueInclusions: [
+          "Linen napkins (seated style events)",
+          "Personalised menus printed with individual guest names (to act as place cards if applicable)",
+        ],
+        serviceInclusions: [
+          "Professional service staff on the day",
+          "Your supplied celebratory cake can be cut into canapé style slices (if this applies)",
+        ],
+        planningInclusions: [
+          "Dedicated event coordinator in the lead up to your event",
+        ],
+        diningInclusions: [
+          "Mixed marinated olives",
+          "Bread & butter",
+          "3 course menus designed to share",
+        ],
+      },
+      {
+        title: "Package 2",
+        name: "Premium Banquet Menu",
+        duration: 4.5,
+        days: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        description:
+          "Our chefs have created a 3 course menu that allows your guests to have the luxury of selecting their dishes on the day based on your pre-selection.",
+        disclaimer:
+          "Ripples Little Manly does not charge venue hire fees, however, minimum spend requirements apply. This means you are required to spend at least the advised minimum spend requirement on food and beverages in order to reserve Ripples Little Manly for your event. Minimum spend requirements are available on request.",
+        minGuests: 20,
+        maxGuests: 62,
+        priceStarting: 105,
+        venueInclusions: [
+          "Linen napkins (seated style events)",
+          "Personalised menus printed with individual guest names (to act as place cards if applicable)",
+        ],
+        serviceInclusions: [
+          "Professional service staff on the day",
+          "Your supplied celebratory cake can be cut into canapé style slices (if this applies)",
+        ],
+        planningInclusions: [
+          "Dedicated event coordinator in the lead up to your event",
+        ],
+        diningInclusions: [
+          "Mixed marinated olives",
+          "Bread & butter",
+          "Premium 3 course menus designed to share",
+        ],
+      },
+      {
+        title: "Package 3",
+        name: "Cocktail Style Event",
+        duration: 4.5,
+        days: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        description:
+          "Our chefs have created a 3 course menu that allows your guests to have the luxury of selecting their dishes on the day based on your pre-selection.",
+        disclaimer:
+          "Ripples Little Manly does not charge venue hire fees, however, minimum spend requirements apply. This means you are required to spend at least the advised minimum spend requirement on food and beverages in order to reserve Ripples Little Manly for your event. Minimum spend requirements are available on request.",
+        minGuests: 20,
+        maxGuests: 62,
+        priceStarting: 105,
+        venueInclusions: [
+          "Linen napkins (seated style events)",
+          "Personalised menus printed with individual guest names (to act as place cards if applicable)",
+        ],
+        serviceInclusions: [
+          "Professional service staff on the day",
+          "Your supplied celebratory cake can be cut into canapé style slices (if this applies)",
+        ],
+        planningInclusions: [
+          "Dedicated event coordinator in the lead up to your event",
+        ],
+        diningInclusions: [
+          "A selection of 8 canapés (1.5 servings per selection per person)",
+          "2 substantials (1 serving per selection per person)",
+          "Non-alcoholic beverage package for the duration of the event",
+          "Your supplied celebratory cake can be cut into canapé style slices and served on platters (if this applies)",
+        ],
+      },
+    ],
+  },
+
+  {
+    id: 3,
+    featured: false,
+    sample: false,
+    name: "The Fenwick",
+    email: "reservations@thefenwick.com.au",
+    phone: "(02) 9159 4700",
+    facebook: "https://www.facebook.com/thefenwick/",
+    instagram: "https://www.instagram.com/thefenwickbalmain/",
+    website: "https://www.thefenwick.com.au/",
+    location: "Balmain East, NSW",
+    city: "Sydney",
+    state: "NSW",
+    category: "Waterview", //limit this to [Beach, Garden, Luxury, Country, Waterview, Winery, Other]
+    rating: 4.5,
+    review_count: 1102,
+    min_price: 95,
+    max_guests: 50, //make sure this is sitdown
+    //need a max character length below
+    short_description:
+      "Located on the harbour foreshore in Balmain East, The Fenwick offers a quintessential Sydney dining experience in a historical setting. With views sweeping from Barangaroo to the iconic Sydney Harbour Bridge and Luna Park, The Fenwick provides seasonal and contemporary dining.",
+    img: ["fenwick01", "fenwick02", "fenwick03", "fenwick04"],
+    features: [
+      "Ceremonies",
+      "Receptions",
+      "MC Services",
+      "Amenities",
+      "Accessible Location",
+      "Indoor and Outdoor",
+      "Exceptional Menus",
+      "Stunning Views",
+    ], //limit this to [Ceremonies, Receiptions, External Catering, MC Services, Amenities, Accessible Location, Indoor and Outdoor, Accomodation, Parking, Exceptional Menus, Stunning Views]
+    faqs: [
+      {
+        id: 1,
+        question: "Where do we park if coming by car?",
+        answer:
+          "We are conveniently located near secure parking stations with metered street parking at our front door.",
+      },
+      {
+        id: 2,
+        question: "Is there a venue hire fee?",
+        answer:
+          "We do not charge venue hire fees, however minimum spend requirements apply dependent on the date of the event. This means you are required to spend at least the advised minimum spend requirement on food and beverages in order to reserve our venue.",
+      },
+      {
+        id: 3,
+        question: "Are we allowed a DJ or Band?",
+        answer:
+          "You are welcome to organise a band or DJ to perform during your event. Your event coordinator can provide you with our preferred suppliers list on request.",
+      },
+    ], //limit this to 5
+    workWith: [1, 2, 4, 5], //limit this to 4
+    packages: [
+      {
+        title: "Package 1",
+        name: "Classic Banquet Menu",
+        duration: 5,
+        days: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        description:
+          "Our package offers all the essential elements you need to celebrate your forever after, at our elegant waterfront venue.",
+        disclaimer:
+          "The Fenwick does not charge venue hire fees, minimum spend requirements apply. ns you are required to spend at least the minimum spend requirement on food and s in order to reserve The Gallery for your inimum spend requirements are available on request.",
+        minGuests: 20,
+        maxGuests: 50,
+        priceStarting: 95,
+        venueInclusions: [
+          "Linen napkins (formal dining events)",
+          "Personalised menus printed with individual guest names (to act as place cards if applicable)",
+        ],
+        serviceInclusions: [
+          "Professional service staff on the day",
+          "Your supplied celebratory cake can be cut into canapé style slices (if this applies)",
+        ],
+        planningInclusions: [
+          "Dedicated event coordinator in the lead up to your event",
+        ],
+        diningInclusions: [
+          "Bread & butter",
+          "3 course menus designed to share",
+          "Shared sides for the tables",
+        ],
+      },
+      {
+        title: "Package 2",
+        name: "Premium Banquet Menu",
+        duration: 5,
+        days: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        description:
+          "Our package offers all the essential elements you need to celebrate your forever after, at our elegant waterfront venue.",
+        disclaimer:
+          "The Fenwick does not charge venue hire fees, minimum spend requirements apply. ns you are required to spend at least the minimum spend requirement on food and s in order to reserve The Gallery for your inimum spend requirements are available on request.",
+        minGuests: 20,
+        maxGuests: 50,
+        priceStarting: 115,
+        venueInclusions: [
+          "Linen napkins (formal dining events)",
+          "Personalised menus printed with individual guest names (to act as place cards if applicable)",
+        ],
+        serviceInclusions: [
+          "Professional service staff on the day",
+          "Your supplied celebratory cake can be cut into canapé style slices (if this applies)",
+        ],
+        planningInclusions: [
+          "Dedicated event coordinator in the lead up to your event",
+        ],
+        diningInclusions: [
+          "Bread & butter",
+          "3 course menu designed to share with additional choices",
+          "Shared sides for the tables",
+        ],
+      },
+      {
+        title: "Package 3",
+        name: "Cocktail Style Event",
+        duration: 5,
+        days: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        description:
+          "Our package offers all the essential elements you need to celebrate your forever after, at our elegant waterfront venue.",
+        disclaimer:
+          "The Fenwick does not charge venue hire fees, minimum spend requirements apply. ns you are required to spend at least the minimum spend requirement on food and s in order to reserve The Gallery for your inimum spend requirements are available on request.",
+        minGuests: 20,
+        maxGuests: 50,
+        priceStarting: 95,
+        venueInclusions: [
+          "Linen napkins (formal dining events)",
+          "Personalised menus printed with individual guest names (to act as place cards if applicable)",
+        ],
+        serviceInclusions: [
+          "Professional service staff on the day",
+          "Your supplied celebratory cake can be cut into canapé style slices (if this applies)",
+        ],
+        planningInclusions: [
+          "Dedicated event coordinator in the lead up to your event",
+        ],
+        diningInclusions: [
+          "A substantial selection of 8 canapés (1.5 servings per selection, per person)",
+          "2 substantials (1 serving per selection, per person)",
+        ],
+      },
+    ],
+  },
+
+  {
+    id: 4,
+    featured: false,
+    sample: false,
+    name: "Sails on Lavender Bay",
+    email: "info@sailslavenderbay.com",
+    phone: "(02) 9955 5998",
+    facebook: "https://www.facebook.com/sailslavenderbay/",
+    instagram: "https://www.instagram.com/sailsonlavenderbay/",
+    website: "https://www.sailslavenderbay.com/",
+    location: "McMahons Point, NSW",
+    city: "Sydney",
+    state: "NSW",
+    category: "Waterview", //limit this to [Beach, Garden, Luxury, Country, Waterview, Winery, Other]
+    rating: 4.4,
+    review_count: 889,
+    min_price: 119,
+    max_guests: 100, //make sure this is sitdown
+    //need a max character length below
+    short_description:
+      "Perched on Sydney Harbour’s edge, our restaurant offers postcard views of the Sydney Opera House framed by the Harbour Bridge, Luna Park and the tranquil, bobbing boats of Lavender Bay.\n\nSails on Lavender Bay is available for all events from birthdays and anniversaries to corporate events and wedding receptions.\n\nWe have a variety of dining options ranging from sit down meals to cocktail parties. Your event will be individually tailored to your preferences with the help of our experienced Functions Coordinator.",
+    img: ["sails1", "sails02", "sails03", "sails04"],
+    features: [
+      "Ceremonies",
+      "Receptions",
+      "MC Services",
+      "Amenities",
+      "Accessible Location",
+      "Indoor and Outdoor",
+      "Exceptional Menus",
+      "Stunning Views",
+    ], //limit this to [Ceremonies, Receiptions, External Catering, MC Services, Amenities, Accessible Location, Indoor and Outdoor, Accomodation, Parking, Exceptional Menus, Stunning Views]
+    faqs: [
+      {
+        id: 1,
+        question: "Where do we park if coming by car?",
+        answer:
+          "We are conveniently located near secure parking stations with metered street parking at our front door.",
+      },
+      {
+        id: 2,
+        question: "Is there a venue hire fee?",
+        answer:
+          "We do not charge venue hire fees, however minimum spend requirements apply dependent on the date of the event. This means you are required to spend at least the advised minimum spend requirement on food and beverages in order to reserve our venue.",
+      },
+      {
+        id: 3,
+        question: "Are we allowed a DJ or Band?",
+        answer:
+          "You are welcome to organise a band or DJ to perform during your event. Your event coordinator can provide you with our preferred suppliers list on request.",
+      },
+    ], //limit this to 5
+    workWith: [1, 2, 3, 5], //limit this to 4
+    packages: [
+      {
+        title: "Package 1",
+        name: "Lunch & Dinner Menu",
+        duration: 5.5,
+        days: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        description:
+          "Our package offers all the essential elements you need to celebrate your forever after, at our elegant waterfront venue.",
+        disclaimer:
+          "Sails on Lavender Bay does not charge venue hire fees, minimum spend requirements apply. ns you are required to spend at least the minimum spend requirement on food and s in order to reserve The Gallery for your inimum spend requirements are available on request.",
+        minGuests: 20,
+        maxGuests: 100,
+        priceStarting: 119,
+        venueInclusions: [
+          "Linen napkins (formal dining events)",
+          "Personalised menus printed with individual guest names (to act as place cards if applicable)",
+        ],
+        serviceInclusions: [
+          "Professional service staff on the day",
+          "Your supplied celebratory cake can be cut into canapé style slices (if this applies)",
+        ],
+        planningInclusions: [
+          "Dedicated event coordinator in the lead up to your event",
+        ],
+        diningInclusions: [
+          "Bread & butter",
+          "3 course menus designed to share",
+          "Shared sides for the tables",
+        ],
+      },
+    ],
+  },
+  {
+    id: 5,
+    featured: false,
     sample: true,
     name: "O Bar & Dining",
-    email: "arjun.p@knotify.com.au",
-    phone: "0424073944",
-    facebook: "https://www.facebook.com/www.ventuno.com.au/",
-    instagram: "https://www.instagram.com/ventunorestaurantsydney/?hl=en",
-    website: "https://www.ventuno.com.au/",
+    email: "reservations@obardining.com.au",
+    phone: "(02) 9247 9777",
+    facebook: "https://www.facebook.com/Obardining/",
+    instagram: "https://www.instagram.com/obardining/",
+    website: "https://www.obardining.com.au/",
     location: "Sydney, NSW",
     city: "Sydney",
     state: "NSW",
@@ -157,30 +731,23 @@ export const Data = [
     faqs: [
       {
         id: 1,
-        question: "This is a test question",
-        answer: "This is a test answer",
+        question: "Where do we park if coming by car?",
+        answer:
+          "We are conveniently located near secure parking stations with metered street parking at our front door.",
       },
       {
         id: 2,
-        question: "This is a test question",
-        answer: "This is a test answer",
+        question: "Is there a venue hire fee?",
+        answer:
+          "We do not charge venue hire fees, however minimum spend requirements apply dependent on the date of the event. This means you are required to spend at least the advised minimum spend requirement on food and beverages in order to reserve our venue.",
       },
       {
         id: 3,
-        question: "This is a test question",
-        answer: "This is a test answer",
+        question: "Are we allowed a DJ or Band?",
+        answer:
+          "You are welcome to organise a band or DJ to perform during your event. Your event coordinator can provide you with our preferred suppliers list on request.",
       },
-      {
-        id: 4,
-        question: "This is a test question",
-        answer: "This is a test answer",
-      },
-      {
-        id: 5,
-        question: "This is a test question",
-        answer: "This is a test answer",
-      },
-    ],
+    ], //limit this to 5
     workWith: [2, 3, 4, 5], //limit this to 4
     packages: [
       {
@@ -198,7 +765,8 @@ export const Data = [
         ],
         description:
           "Our package offers all the essential elements you need to celebrate your forever after, at our elegant beachside venue.",
-        disclaimer: "This is a test disclaimer",
+        disclaimer:
+          "We do not charge venue hire fees, however minimum spend requirements apply dependent on the date of the event.",
         minGuests: 80,
         maxGuests: 120,
         priceStarting: 200,
@@ -285,7 +853,8 @@ export const Data = [
         ],
         description:
           "Our package offers all the essential elements you need to celebrate your forever after, at our elegant beachside venue.",
-        disclaimer: "",
+        disclaimer:
+          "We do not charge venue hire fees, however minimum spend requirements apply dependent on the date of the event.",
         minGuests: 80,
         maxGuests: 120,
         priceStarting: 200,
@@ -316,7 +885,8 @@ export const Data = [
     ],
   },
   {
-    id: 2,
+    id: 6,
+    featured: false,
     sample: true,
     name: "Ovolo Woolloomooloo",
     email: "arjun.p@knotify.com.au",
@@ -346,30 +916,23 @@ export const Data = [
     faqs: [
       {
         id: 1,
-        question: "This is a test question",
-        answer: "This is a test answer",
+        question: "Where do we park if coming by car?",
+        answer:
+          "We are conveniently located near secure parking stations with metered street parking at our front door.",
       },
       {
         id: 2,
-        question: "This is a test question",
-        answer: "This is a test answer",
+        question: "Is there a venue hire fee?",
+        answer:
+          "We do not charge venue hire fees, however minimum spend requirements apply dependent on the date of the event. This means you are required to spend at least the advised minimum spend requirement on food and beverages in order to reserve our venue.",
       },
       {
         id: 3,
-        question: "This is a test question",
-        answer: "This is a test answer",
+        question: "Are we allowed a DJ or Band?",
+        answer:
+          "You are welcome to organise a band or DJ to perform during your event. Your event coordinator can provide you with our preferred suppliers list on request.",
       },
-      {
-        id: 4,
-        question: "This is a test question",
-        answer: "This is a test answer",
-      },
-      {
-        id: 5,
-        question: "This is a test question",
-        answer: "This is a test answer",
-      },
-    ],
+    ], //limit this to 5
     workWith: [2, 3, 4, 5], //limit this to 4
     packages: [
       {
@@ -387,7 +950,8 @@ export const Data = [
         ],
         description:
           "Our package offers all the essential elements you need to celebrate your forever after, at our elegant beachside venue.",
-        disclaimer: "This is a test disclaimer",
+        disclaimer:
+          "We do not charge venue hire fees, however minimum spend requirements apply dependent on the date of the event.",
         minGuests: 80,
         maxGuests: 120,
         priceStarting: 200,
@@ -474,7 +1038,8 @@ export const Data = [
         ],
         description:
           "Our package offers all the essential elements you need to celebrate your forever after, at our elegant beachside venue.",
-        disclaimer: "",
+        disclaimer:
+          "We do not charge venue hire fees, however minimum spend requirements apply dependent on the date of the event.",
         minGuests: 80,
         maxGuests: 120,
         priceStarting: 200,
@@ -505,7 +1070,8 @@ export const Data = [
     ],
   },
   {
-    id: 3,
+    id: 7,
+    featured: false,
     sample: true,
     name: "Cruise Bar",
     email: "arjun.p@knotify.com.au",
@@ -542,30 +1108,23 @@ export const Data = [
     faqs: [
       {
         id: 1,
-        question: "This is a test question",
-        answer: "This is a test answer",
+        question: "Where do we park if coming by car?",
+        answer:
+          "We are conveniently located near secure parking stations with metered street parking at our front door.",
       },
       {
         id: 2,
-        question: "This is a test question",
-        answer: "This is a test answer",
+        question: "Is there a venue hire fee?",
+        answer:
+          "We do not charge venue hire fees, however minimum spend requirements apply dependent on the date of the event. This means you are required to spend at least the advised minimum spend requirement on food and beverages in order to reserve our venue.",
       },
       {
         id: 3,
-        question: "This is a test question",
-        answer: "This is a test answer",
+        question: "Are we allowed a DJ or Band?",
+        answer:
+          "You are welcome to organise a band or DJ to perform during your event. Your event coordinator can provide you with our preferred suppliers list on request.",
       },
-      {
-        id: 4,
-        question: "This is a test question",
-        answer: "This is a test answer",
-      },
-      {
-        id: 5,
-        question: "This is a test question",
-        answer: "This is a test answer",
-      },
-    ],
+    ], //limit this to 5
     workWith: [2, 3, 4, 5], //limit this to 4
     packages: [
       {
@@ -670,7 +1229,8 @@ export const Data = [
         ],
         description:
           "Our package offers all the essential elements you need to celebrate your forever after, at our elegant beachside venue.",
-        disclaimer: "",
+        disclaimer:
+          "We do not charge venue hire fees, however minimum spend requirements apply dependent on the date of the event.",
         minGuests: 80,
         maxGuests: 120,
         priceStarting: 200,
@@ -701,7 +1261,8 @@ export const Data = [
     ],
   },
   {
-    id: 4,
+    id: 8,
+    featured: false,
     sample: true,
     name: "Coogee Bay Hotel",
     email: "arjun.p@knotify.com.au",
@@ -731,30 +1292,23 @@ export const Data = [
     faqs: [
       {
         id: 1,
-        question: "This is a test question",
-        answer: "This is a test answer",
+        question: "Where do we park if coming by car?",
+        answer:
+          "We are conveniently located near secure parking stations with metered street parking at our front door.",
       },
       {
         id: 2,
-        question: "This is a test question",
-        answer: "This is a test answer",
+        question: "Is there a venue hire fee?",
+        answer:
+          "We do not charge venue hire fees, however minimum spend requirements apply dependent on the date of the event. This means you are required to spend at least the advised minimum spend requirement on food and beverages in order to reserve our venue.",
       },
       {
         id: 3,
-        question: "This is a test question",
-        answer: "This is a test answer",
+        question: "Are we allowed a DJ or Band?",
+        answer:
+          "You are welcome to organise a band or DJ to perform during your event. Your event coordinator can provide you with our preferred suppliers list on request.",
       },
-      {
-        id: 4,
-        question: "This is a test question",
-        answer: "This is a test answer",
-      },
-      {
-        id: 5,
-        question: "This is a test question",
-        answer: "This is a test answer",
-      },
-    ],
+    ], //limit this to 5
     workWith: [2, 3, 4, 5], //limit this to 4
     packages: [
       {
@@ -859,7 +1413,8 @@ export const Data = [
         ],
         description:
           "Our package offers all the essential elements you need to celebrate your forever after, at our elegant beachside venue.",
-        disclaimer: "",
+        disclaimer:
+          "We do not charge venue hire fees, however minimum spend requirements apply dependent on the date of the event.",
         minGuests: 80,
         maxGuests: 120,
         priceStarting: 200,
@@ -890,7 +1445,8 @@ export const Data = [
     ],
   },
   {
-    id: 5,
+    id: 9,
+    featured: false,
     sample: true,
     name: "Will & Mike's",
     email: "arjun.p@knotify.com.au",
@@ -925,30 +1481,23 @@ export const Data = [
     faqs: [
       {
         id: 1,
-        question: "This is a test question",
-        answer: "This is a test answer",
+        question: "Where do we park if coming by car?",
+        answer:
+          "We are conveniently located near secure parking stations with metered street parking at our front door.",
       },
       {
         id: 2,
-        question: "This is a test question",
-        answer: "This is a test answer",
+        question: "Is there a venue hire fee?",
+        answer:
+          "We do not charge venue hire fees, however minimum spend requirements apply dependent on the date of the event. This means you are required to spend at least the advised minimum spend requirement on food and beverages in order to reserve our venue.",
       },
       {
         id: 3,
-        question: "This is a test question",
-        answer: "This is a test answer",
+        question: "Are we allowed a DJ or Band?",
+        answer:
+          "You are welcome to organise a band or DJ to perform during your event. Your event coordinator can provide you with our preferred suppliers list on request.",
       },
-      {
-        id: 4,
-        question: "This is a test question",
-        answer: "This is a test answer",
-      },
-      {
-        id: 5,
-        question: "This is a test question",
-        answer: "This is a test answer",
-      },
-    ],
+    ], //limit this to 5
     workWith: [2, 3, 4, 5], //limit this to 4
     packages: [
       {
@@ -1053,7 +1602,8 @@ export const Data = [
         ],
         description:
           "Our package offers all the essential elements you need to celebrate your forever after, at our elegant beachside venue.",
-        disclaimer: "",
+        disclaimer:
+          "We do not charge venue hire fees, however minimum spend requirements apply dependent on the date of the event.",
         minGuests: 80,
         maxGuests: 120,
         priceStarting: 200,
@@ -1084,7 +1634,8 @@ export const Data = [
     ],
   },
   {
-    id: 6,
+    id: 10,
+    featured: false,
     sample: true,
     name: "Bathers' Pavilion",
     email: "arjun.p@knotify.com.au",
@@ -1120,30 +1671,23 @@ export const Data = [
     faqs: [
       {
         id: 1,
-        question: "This is a test question",
-        answer: "This is a test answer",
+        question: "Where do we park if coming by car?",
+        answer:
+          "We are conveniently located near secure parking stations with metered street parking at our front door.",
       },
       {
         id: 2,
-        question: "This is a test question",
-        answer: "This is a test answer",
+        question: "Is there a venue hire fee?",
+        answer:
+          "We do not charge venue hire fees, however minimum spend requirements apply dependent on the date of the event. This means you are required to spend at least the advised minimum spend requirement on food and beverages in order to reserve our venue.",
       },
       {
         id: 3,
-        question: "This is a test question",
-        answer: "This is a test answer",
+        question: "Are we allowed a DJ or Band?",
+        answer:
+          "You are welcome to organise a band or DJ to perform during your event. Your event coordinator can provide you with our preferred suppliers list on request.",
       },
-      {
-        id: 4,
-        question: "This is a test question",
-        answer: "This is a test answer",
-      },
-      {
-        id: 5,
-        question: "This is a test question",
-        answer: "This is a test answer",
-      },
-    ],
+    ], //limit this to 5
     workWith: [2, 3, 4, 5], //limit this to 4
     packages: [
       {
@@ -1248,7 +1792,8 @@ export const Data = [
         ],
         description:
           "Our package offers all the essential elements you need to celebrate your forever after, at our elegant beachside venue.",
-        disclaimer: "",
+        disclaimer:
+          "We do not charge venue hire fees, however minimum spend requirements apply dependent on the date of the event.",
         minGuests: 80,
         maxGuests: 120,
         priceStarting: 200,
@@ -1279,7 +1824,8 @@ export const Data = [
     ],
   },
   {
-    id: 7,
+    id: 11,
+    featured: false,
     sample: true,
     name: "Centennial Homestead",
     email: "arjun.p@knotify.com.au",
@@ -1315,30 +1861,23 @@ export const Data = [
     faqs: [
       {
         id: 1,
-        question: "This is a test question",
-        answer: "This is a test answer",
+        question: "Where do we park if coming by car?",
+        answer:
+          "We are conveniently located near secure parking stations with metered street parking at our front door.",
       },
       {
         id: 2,
-        question: "This is a test question",
-        answer: "This is a test answer",
+        question: "Is there a venue hire fee?",
+        answer:
+          "We do not charge venue hire fees, however minimum spend requirements apply dependent on the date of the event. This means you are required to spend at least the advised minimum spend requirement on food and beverages in order to reserve our venue.",
       },
       {
         id: 3,
-        question: "This is a test question",
-        answer: "This is a test answer",
+        question: "Are we allowed a DJ or Band?",
+        answer:
+          "You are welcome to organise a band or DJ to perform during your event. Your event coordinator can provide you with our preferred suppliers list on request.",
       },
-      {
-        id: 4,
-        question: "This is a test question",
-        answer: "This is a test answer",
-      },
-      {
-        id: 5,
-        question: "This is a test question",
-        answer: "This is a test answer",
-      },
-    ],
+    ], //limit this to 5
     workWith: [2, 3, 4, 5], //limit this to 4
     packages: [
       {
@@ -1443,7 +1982,8 @@ export const Data = [
         ],
         description:
           "Our package offers all the essential elements you need to celebrate your forever after, at our elegant beachside venue.",
-        disclaimer: "",
+        disclaimer:
+          "We do not charge venue hire fees, however minimum spend requirements apply dependent on the date of the event.",
         minGuests: 80,
         maxGuests: 120,
         priceStarting: 200,
@@ -1474,7 +2014,8 @@ export const Data = [
     ],
   },
   {
-    id: 8,
+    id: 12,
+    featured: false,
     sample: true,
     name: "Estate Tuscany",
     email: "arjun.p@knotify.com.au",
@@ -1511,30 +2052,23 @@ export const Data = [
     faqs: [
       {
         id: 1,
-        question: "This is a test question",
-        answer: "This is a test answer",
+        question: "Where do we park if coming by car?",
+        answer:
+          "We are conveniently located near secure parking stations with metered street parking at our front door.",
       },
       {
         id: 2,
-        question: "This is a test question",
-        answer: "This is a test answer",
+        question: "Is there a venue hire fee?",
+        answer:
+          "We do not charge venue hire fees, however minimum spend requirements apply dependent on the date of the event. This means you are required to spend at least the advised minimum spend requirement on food and beverages in order to reserve our venue.",
       },
       {
         id: 3,
-        question: "This is a test question",
-        answer: "This is a test answer",
+        question: "Are we allowed a DJ or Band?",
+        answer:
+          "You are welcome to organise a band or DJ to perform during your event. Your event coordinator can provide you with our preferred suppliers list on request.",
       },
-      {
-        id: 4,
-        question: "This is a test question",
-        answer: "This is a test answer",
-      },
-      {
-        id: 5,
-        question: "This is a test question",
-        answer: "This is a test answer",
-      },
-    ],
+    ], //limit this to 5
     workWith: [2, 3, 4, 5], //limit this to 4
     packages: [
       {
@@ -1553,30 +2087,23 @@ export const Data = [
         faqs: [
           {
             id: 1,
-            question: "This is a test question",
-            answer: "This is a test answer",
+            question: "Where do we park if coming by car?",
+            answer:
+              "We are conveniently located near secure parking stations with metered street parking at our front door.",
           },
           {
             id: 2,
-            question: "This is a test question",
-            answer: "This is a test answer",
+            question: "Is there a venue hire fee?",
+            answer:
+              "We do not charge venue hire fees, however minimum spend requirements apply dependent on the date of the event. This means you are required to spend at least the advised minimum spend requirement on food and beverages in order to reserve our venue.",
           },
           {
             id: 3,
-            question: "This is a test question",
-            answer: "This is a test answer",
+            question: "Are we allowed a DJ or Band?",
+            answer:
+              "You are welcome to organise a band or DJ to perform during your event. Your event coordinator can provide you with our preferred suppliers list on request.",
           },
-          {
-            id: 4,
-            question: "This is a test question",
-            answer: "This is a test answer",
-          },
-          {
-            id: 5,
-            question: "This is a test question",
-            answer: "This is a test answer",
-          },
-        ],
+        ], //limit this to 5
         description:
           "Our package offers all the essential elements you need to celebrate your forever after, at our elegant beachside venue.",
         disclaimer: "This is a test disclaimer",
@@ -1666,7 +2193,8 @@ export const Data = [
         ],
         description:
           "Our package offers all the essential elements you need to celebrate your forever after, at our elegant beachside venue.",
-        disclaimer: "",
+        disclaimer:
+          "We do not charge venue hire fees, however minimum spend requirements apply dependent on the date of the event.",
         minGuests: 80,
         maxGuests: 120,
         priceStarting: 200,
@@ -1697,7 +2225,8 @@ export const Data = [
     ],
   },
   {
-    id: 9,
+    id: 13,
+    featured: false,
     sample: true,
     name: "Chateau Elan",
     email: "arjun.p@knotify.com.au",
@@ -1733,30 +2262,23 @@ export const Data = [
     faqs: [
       {
         id: 1,
-        question: "This is a test question",
-        answer: "This is a test answer",
+        question: "Where do we park if coming by car?",
+        answer:
+          "We are conveniently located near secure parking stations with metered street parking at our front door.",
       },
       {
         id: 2,
-        question: "This is a test question",
-        answer: "This is a test answer",
+        question: "Is there a venue hire fee?",
+        answer:
+          "We do not charge venue hire fees, however minimum spend requirements apply dependent on the date of the event. This means you are required to spend at least the advised minimum spend requirement on food and beverages in order to reserve our venue.",
       },
       {
         id: 3,
-        question: "This is a test question",
-        answer: "This is a test answer",
+        question: "Are we allowed a DJ or Band?",
+        answer:
+          "You are welcome to organise a band or DJ to perform during your event. Your event coordinator can provide you with our preferred suppliers list on request.",
       },
-      {
-        id: 4,
-        question: "This is a test question",
-        answer: "This is a test answer",
-      },
-      {
-        id: 5,
-        question: "This is a test question",
-        answer: "This is a test answer",
-      },
-    ],
+    ], //limit this to 5
     workWith: [2, 3, 4, 5], //limit this to 4
     packages: [
       {
@@ -1861,7 +2383,8 @@ export const Data = [
         ],
         description:
           "Our package offers all the essential elements you need to celebrate your forever after, at our elegant beachside venue.",
-        disclaimer: "",
+        disclaimer:
+          "We do not charge venue hire fees, however minimum spend requirements apply dependent on the date of the event.",
         minGuests: 80,
         maxGuests: 120,
         priceStarting: 200,
@@ -1892,7 +2415,8 @@ export const Data = [
     ],
   },
   {
-    id: 10,
+    id: 14,
+    featured: false,
     sample: true,
     name: "Olio",
     email: "arjun.p@knotify.com.au",
@@ -1915,30 +2439,23 @@ export const Data = [
     faqs: [
       {
         id: 1,
-        question: "This is a test question",
-        answer: "This is a test answer",
+        question: "Where do we park if coming by car?",
+        answer:
+          "We are conveniently located near secure parking stations with metered street parking at our front door.",
       },
       {
         id: 2,
-        question: "This is a test question",
-        answer: "This is a test answer",
+        question: "Is there a venue hire fee?",
+        answer:
+          "We do not charge venue hire fees, however minimum spend requirements apply dependent on the date of the event. This means you are required to spend at least the advised minimum spend requirement on food and beverages in order to reserve our venue.",
       },
       {
         id: 3,
-        question: "This is a test question",
-        answer: "This is a test answer",
+        question: "Are we allowed a DJ or Band?",
+        answer:
+          "You are welcome to organise a band or DJ to perform during your event. Your event coordinator can provide you with our preferred suppliers list on request.",
       },
-      {
-        id: 4,
-        question: "This is a test question",
-        answer: "This is a test answer",
-      },
-      {
-        id: 5,
-        question: "This is a test question",
-        answer: "This is a test answer",
-      },
-    ],
+    ], //limit this to 5
     workWith: [2, 3, 4, 5], //limit this to 4
     packages: [
       {
@@ -1957,30 +2474,23 @@ export const Data = [
         faqs: [
           {
             id: 1,
-            question: "This is a test question",
-            answer: "This is a test answer",
+            question: "Where do we park if coming by car?",
+            answer:
+              "We are conveniently located near secure parking stations with metered street parking at our front door.",
           },
           {
             id: 2,
-            question: "This is a test question",
-            answer: "This is a test answer",
+            question: "Is there a venue hire fee?",
+            answer:
+              "We do not charge venue hire fees, however minimum spend requirements apply dependent on the date of the event. This means you are required to spend at least the advised minimum spend requirement on food and beverages in order to reserve our venue.",
           },
           {
             id: 3,
-            question: "This is a test question",
-            answer: "This is a test answer",
+            question: "Are we allowed a DJ or Band?",
+            answer:
+              "You are welcome to organise a band or DJ to perform during your event. Your event coordinator can provide you with our preferred suppliers list on request.",
           },
-          {
-            id: 4,
-            question: "This is a test question",
-            answer: "This is a test answer",
-          },
-          {
-            id: 5,
-            question: "This is a test question",
-            answer: "This is a test answer",
-          },
-        ],
+        ], //limit this to 5
         description:
           "Our package offers all the essential elements you need to celebrate your forever after, at our elegant beachside venue.",
         disclaimer: "This is a test disclaimer",
@@ -2070,7 +2580,8 @@ export const Data = [
         ],
         description:
           "Our package offers all the essential elements you need to celebrate your forever after, at our elegant beachside venue.",
-        disclaimer: "",
+        disclaimer:
+          "We do not charge venue hire fees, however minimum spend requirements apply dependent on the date of the event.",
         minGuests: 80,
         maxGuests: 120,
         priceStarting: 200,

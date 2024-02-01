@@ -1,4 +1,4 @@
-import QuestionAnswer from "./QuestionAnswer";
+import QuestionAnswer from "../venuePage/QuestionAnswer";
 import WeddingRed from "/assets/weddingred.jpg";
 
 export interface FAQs {

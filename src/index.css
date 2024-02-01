@@ -97,3 +97,9 @@ textarea {
 .react-datepicker-wrapper {
   width: 100%;
 }
+
+/* line height */
+
+h1 {
+  line-height: 5.5rem;
+}

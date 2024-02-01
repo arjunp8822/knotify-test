@@ -1,81 +1,37 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Home from "./pages/Home";
-import Navbar from "./components/Navbar";
 import Vendors from "./pages/Vendors";
+import Navbar from "./components/Navbar";
+import List from "./pages/List";
 import Blog from "./pages/Blog";
-import VendorPage from "./pages/VenuePage";
+import VendorPage from "./pages/VendorPage";
 import Footer from "./components/Footer";
 import { useState } from "react";
-import FilterContainer, { FilterData } from "./components/FilterContainer";
 import Privacy from "./pages/Privacy";
+// import Home from "./pages/Home";
 
 function App() {
   const [openNav, setOpenNav] = useState(false);
-  const [showFilterContainer, setShowFilterContainer] = useState(false);
-  const [filterButtonClicked, setFilterButtonClicked] = useState(false);
-  const [filterData, setFilterData] = useState<FilterData>({
-    categories: null,
-    minimumRating: null,
-    guests: null,
-    budget: null,
-    features: null,
-  });
 
   return (
     <div>
-      {/* overlays */}
-
-      {showFilterContainer && (
-        <FilterContainer
-          setShowFilterContainer={setShowFilterContainer}
-          setFilterData={setFilterData}
-          setFilterButtonClicked={setFilterButtonClicked}
-        />
-      )}
-
+      <Navbar openNav={openNav} setOpenNav={setOpenNav} />
       <div
-        className={`bg-white transition-all ${
-          showFilterContainer ? "sm:brightness-50" : ""
-        }`}
+        className={`container bg-white transition-all ${
+          openNav ? "blur-[2px]" : ""
+        } `}
       >
-        <Navbar
-          openNav={openNav}
-          setOpenNav={setOpenNav}
-          showFilterContainer={showFilterContainer}
-        />
-        <div
-          className={`container bg-white transition-all ${
-            openNav ? "blur-[2px]" : ""
-          } ${showFilterContainer ? "brightness-50 sm:brightness-100" : ""}`}
-        >
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <Home
-                  showFilterContainer={showFilterContainer}
-                  setShowFilterContainer={setShowFilterContainer}
-                  filterData={filterData}
-                  filterButtonClicked={filterButtonClicked}
-                  setFilterButtonClicked={setFilterButtonClicked}
-                />
-              }
-            />
-            <Route path="/vendors" element={<Vendors />} />
-            <Route path="/venues/:id" element={<VendorPage />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/privacy" element={<Privacy />} />
-          </Routes>
-        </div>
-        <div
-          className={`bg-gray-100 h-[300px] flex justify-center items-center ${
-            showFilterContainer ? "brightness-50" : ""
-          }`}
-        >
-          <Footer />
-        </div>
+        <Routes>
+          {/* <Route path="/" element={<Home />} /> */}
+          <Route path="/" element={<Vendors />} />
+          <Route path="/list" element={<List />} />
+          <Route path="/vendors/:id" element={<VendorPage />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/privacy" element={<Privacy />} />
+        </Routes>
       </div>
+
+      <Footer />
     </div>
   );
 }

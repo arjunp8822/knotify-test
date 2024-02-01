@@ -7,24 +7,17 @@ import { FaFacebookF, FaInstagram } from "react-icons/fa";
 interface Props {
   openNav: boolean;
   setOpenNav: (openNav: boolean) => void;
-  showFilterContainer: boolean;
 }
 
 const navLinks = [
-  { title: "Venues", link: "/", button: false },
+  { title: "Vendors", link: "/", button: false },
   // { title: "Blog", link: "/blog", button: false },
-  { title: "List with us", link: "/vendors", button: true },
+  { title: "List with us", link: "/list", button: true },
 ];
 
-const Navbar = ({ openNav, setOpenNav, showFilterContainer }: Props) => {
+const Navbar = ({ openNav, setOpenNav }: Props) => {
   return (
-    <nav
-      className={`bg-white ${
-        showFilterContainer
-          ? "brightness-50 sm:brightness-100 fixed sm:static"
-          : ""
-      }`}
-    >
+    <nav className={`bg-white`}>
       <div className="navbar w-full  flex justify-between items-center sm:py-12">
         <div
           className={`font-marley text-3xl md:text-4xl text-primary ${
@@ -46,7 +39,7 @@ const Navbar = ({ openNav, setOpenNav, showFilterContainer }: Props) => {
           >
             <IoIosCloseCircleOutline />
           </div>
-          <ul className="flex flex-col justify-center items-center gap-12 h-[100vh] sm:flex-row sm:h-auto font-semibold text-gray-600">
+          <ul className="flex flex-col justify-center items-center gap-12 h-[100vh] sm:flex-row sm:h-auto font-semibold">
             {navLinks.map((l) => (
               <NavItem
                 key={l.title}

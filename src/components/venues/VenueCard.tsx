@@ -44,11 +44,11 @@ const VenueCard = ({
   return (
     <li>
       <div className="relative bg-red-50">
-        <Link to={`/venues/${link}`}>
+        <Link to={`/vendors/${link}`}>
           <img
             src={`https://res.cloudinary.com/dkxs4o9vt/image/upload/v1705560129/${img[currentImg]}`}
             alt={name}
-            className="rounded-lg mb-2 w-full h-[250px] object-cover"
+            className="rounded mb-2 w-full h-[250px] object-cover"
             onMouseEnter={() => setShowArrow(true)}
             onMouseLeave={() => setShowArrow(false)}
           />
@@ -82,19 +82,23 @@ const VenueCard = ({
       </div>
       <Link to={`/venues/${link}`}>
         <div className="flex justify-between">
-          <span className="text-sm font-semibold">{name}</span>
+          <span className="text-sm sm:text-[15px] font-semibold">{name}</span>
           <div className="flex gap-1 justify-center items-center">
             <FaStar className="text-yellow-500" />
-            <span className="text-sm">{rating.toFixed(1)}</span>
-            <span className="text-sm">({review_count.toLocaleString()})</span>
+            <span className="text-sm sm:text-[15px]">{rating.toFixed(1)}</span>
+            <span className="text-sm sm:text-[15px]">
+              ({review_count.toLocaleString()})
+            </span>
           </div>
         </div>
-        <p className="mb-3 text-sm text-gray-500">{location}</p>
+        <p className="mb-3 text-sm sm:text-[15px] text-gray-500">{location}</p>
         <div className="flex justify-between">
-          <span className="text-sm font-semibold">${min_price}pp</span>
+          <span className="text-sm sm:text-[15px] font-semibold">
+            ${min_price}pp
+          </span>
           <div className="flex gap-1 justify-center items-center">
             <IoMdPeople />
-            <span className="text-sm">{max_guests}</span>
+            <span className="text-sm sm:text-[15px]">{max_guests}</span>
           </div>
         </div>
       </Link>

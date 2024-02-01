@@ -3,40 +3,19 @@ import { FaStar } from "react-icons/fa";
 import { Data } from "../data/VenueData";
 import { Link, useParams } from "react-router-dom";
 import NotFound from "./NotFound";
-import ImageModal from "../components/ImageModal";
-import LargeImageModal from "../components/LargeImageModal";
-import VenueForm from "../components/VenueForm";
-import VenueFeatures from "../components/VenueFeatures";
-import VenuePackages from "../components/VenuePackages";
-import PackageModal from "../components/PackageModal";
-import { PackageData } from "../components/VenuePackages";
+import ImageModal from "../components/venuePage/ImageModal";
+import LargeImageModal from "../components/venuePage/LargeImageModal";
+import VenueForm from "../components/venuePage/VenueForm";
+import VenueFeatures from "../components/venuePage/VenueFeatures";
+import VenuePackages from "../components/venuePage/VenuePackages";
+import PackageModal from "../components/venuePage/PackageModal";
+import { PackageData } from "../components/venuePage/VenuePackages";
 import { MdOutlineMailOutline, MdOutlinePhoneEnabled } from "react-icons/md";
-import { FAQs } from "../components/VendorFAQ";
-import QuestionAnswer from "../components/QuestionAnswer";
+import QuestionAnswer from "../components/venuePage/QuestionAnswer";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
-import WorkWithCard from "../components/WorkWithCard";
+import WorkWithCard from "../components/venuePage/WorkWithCard";
 import { FiArrowUpRight } from "react-icons/fi";
-
-interface VenueData {
-  id: number;
-  name: string;
-  email: string;
-  phone: string;
-  location: string;
-  rating: number;
-  review_count: number;
-  min_price: number;
-  max_guests: number;
-  short_description: string;
-  img: string[];
-  features: string[];
-  packages: PackageData[];
-  faqs: FAQs[];
-  workWith: number[];
-  facebook: string;
-  instagram: string;
-  website: string;
-}
+import { VenueData } from "./Vendors";
 
 const VenuePage = () => {
   const [data, setData] = useState<VenueData | null>(null);

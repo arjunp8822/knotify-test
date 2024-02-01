@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { VenueData } from "../../pages/Vendors";
+import { VenueDataInterface } from "../../pages/Vendors";
 import { Data } from "../../data/VenueData";
 import FeaturedCard from "./FeaturedCard";
 
 const Featured = () => {
-  const [data, setData] = useState<VenueData[]>([]);
+  const [data, setData] = useState<VenueDataInterface[]>([]);
 
   useEffect(() => {
     setData(Data.filter((x) => x.featured === true));

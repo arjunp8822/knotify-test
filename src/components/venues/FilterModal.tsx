@@ -35,7 +35,7 @@ const featureList = [
   "MC Services",
   "Amenities",
   "Accessible Location",
-  "Indoor and Outdoor",
+  "Outdoor",
   "Accommodation",
   "Parking",
   "Exceptional Menus",
@@ -123,7 +123,7 @@ const FilterModal = ({
 
   return (
     <form
-      className={`bg-white z-50 h-[80vh] w-[90vw] sm:w-[600px] relative rounded`}
+      className={`bg-white z-50 h-[80vh] w-[95vw] sm:w-[600px] relative rounded`}
       onSubmit={handleSubmit}
     >
       <div className="flex absolute w-full justify-center items-center py-4 px-6 sm:px-8 border-b h-[50px] sm:h-[70px]">

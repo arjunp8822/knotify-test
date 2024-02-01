@@ -207,7 +207,7 @@ const VenuePage = () => {
               <h5 className="font-semibold sm:text-lg mb-4 mt-4">
                 Get in touch with us directly
               </h5>
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-4 text-sm sm:text-base">
                 <Link
                   to={`mailto:${data.email}`}
                   className="flex items-center gap-2"

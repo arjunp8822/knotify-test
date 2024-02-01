@@ -27,12 +27,12 @@ export const Data = [
       "MC Services",
       "Amenities",
       "Accessible Location",
-      "Indoor and Outdoor",
+      "Outdoor",
       "Accomodation",
       "Parking",
       "Exceptional Menus",
       "Stunning Views",
-    ], //limit this to [Ceremonies, Receiptions, External Catering, MC Services, Amenities, Accessible Location, Indoor and Outdoor, Accomodation, Parking, Exceptional Menus, Stunning Views]
+    ], //limit this to [Ceremonies, Receiptions, External Catering, MC Services, Amenities, Accessible Location, Outdoor, Accomodation, Parking, Exceptional Menus, Stunning Views]
     faqs: [
       {
         id: 1,
@@ -159,11 +159,11 @@ export const Data = [
       "Receptions",
       "Amenities",
       "Accessible Location",
-      "Indoor and Outdoor",
+      "Outdoor",
       "Parking",
       "Exceptional Menus",
       "Stunning Views",
-    ], //limit this to [Ceremonies, Receiptions, External Catering, MC Services, Amenities, Accessible Location, Indoor and Outdoor, Accomodation, Parking, Exceptional Menus, Stunning Views]
+    ], //limit this to [Ceremonies, Receiptions, External Catering, MC Services, Amenities, Accessible Location, Outdoor, Accomodation, Parking, Exceptional Menus, Stunning Views]
     faqs: [
       {
         id: 1,
@@ -297,11 +297,11 @@ export const Data = [
       "Receptions",
       "Amenities",
       "Accessible Location",
-      "Indoor and Outdoor",
+      "Outdoor",
       "Parking",
       "Exceptional Menus",
       "Stunning Views",
-    ], //limit this to [Ceremonies, Receiptions, External Catering, MC Services, Amenities, Accessible Location, Indoor and Outdoor, Accomodation, Parking, Exceptional Menus, Stunning Views]
+    ], //limit this to [Ceremonies, Receiptions, External Catering, MC Services, Amenities, Accessible Location, Outdoor, Accomodation, Parking, Exceptional Menus, Stunning Views]
     faqs: [
       {
         id: 1,
@@ -467,10 +467,10 @@ export const Data = [
       "MC Services",
       "Amenities",
       "Accessible Location",
-      "Indoor and Outdoor",
+      "Outdoor",
       "Exceptional Menus",
       "Stunning Views",
-    ], //limit this to [Ceremonies, Receiptions, External Catering, MC Services, Amenities, Accessible Location, Indoor and Outdoor, Accomodation, Parking, Exceptional Menus, Stunning Views]
+    ], //limit this to [Ceremonies, Receiptions, External Catering, MC Services, Amenities, Accessible Location, Outdoor, Accomodation, Parking, Exceptional Menus, Stunning Views]
     faqs: [
       {
         id: 1,
@@ -634,10 +634,10 @@ export const Data = [
       "MC Services",
       "Amenities",
       "Accessible Location",
-      "Indoor and Outdoor",
+      "Outdoor",
       "Exceptional Menus",
       "Stunning Views",
-    ], //limit this to [Ceremonies, Receiptions, External Catering, MC Services, Amenities, Accessible Location, Indoor and Outdoor, Accomodation, Parking, Exceptional Menus, Stunning Views]
+    ], //limit this to [Ceremonies, Receiptions, External Catering, MC Services, Amenities, Accessible Location, Outdoor, Accomodation, Parking, Exceptional Menus, Stunning Views]
     faqs: [
       {
         id: 1,
@@ -908,7 +908,7 @@ export const Data = [
     features: [
       "Ceremonies",
       "Receptions",
-      "Indoor and Outdoor",
+      "Outdoor",
       "Accomodation",
       "Parking",
       "Accessible Location",
@@ -1100,7 +1100,7 @@ export const Data = [
     features: [
       "Ceremonies",
       "Receptions",
-      "Indoor and Outdoor",
+      "Outdoor",
       "External Catering",
       "Exceptional Menus",
       "Stunning Views",
@@ -1284,7 +1284,7 @@ export const Data = [
     features: [
       "Ceremonies",
       "Receptions",
-      "Indoor and Outdoor",
+      "Outdoor",
       "Beachfront",
       "Parking",
       "Accomodation",
@@ -1463,7 +1463,7 @@ export const Data = [
     min_price: 105,
     max_guests: 200,
     short_description:
-      "Will & Mike’s is a hidden gem of a wedding venue nestled in a heritage-listed garden just 15 minutes from Sydney’s bustling CBD. This unique venue boasts a fusion of indoor and outdoor spaces, plus a picturesque backdrop of lush greenery for nature-loving couples.\n\nAlongside picture-perfect surroundings, this charming location also offers extensive catering options and a licensed bar. Will & Mike’s Sydney started with humble catering beginnings, and since 2003 this team has flourished from catering to providing venues and packages for weddings and private functions.\n\nIf you want to work with hospitality experts on your big day, this team is ready to help. With years in the industry, your wedding day will be seamless and stress-free, thanks to this experienced and dedicated hospitality team.",
+      "Will & Mike’s is a hidden gem of a wedding venue nestled in a heritage-listed garden just 15 minutes from Sydney’s bustling CBD. This unique venue boasts a fusion of Outdoor spaces, plus a picturesque backdrop of lush greenery for nature-loving couples.\n\nAlongside picture-perfect surroundings, this charming location also offers extensive catering options and a licensed bar. Will & Mike’s Sydney started with humble catering beginnings, and since 2003 this team has flourished from catering to providing venues and packages for weddings and private functions.\n\nIf you want to work with hospitality experts on your big day, this team is ready to help. With years in the industry, your wedding day will be seamless and stress-free, thanks to this experienced and dedicated hospitality team.",
     img: [
       "WillandMikes1",
       "WillandMikes2",
@@ -1471,13 +1471,7 @@ export const Data = [
       "WillandMikes4",
       "WillandMikes5",
     ],
-    features: [
-      "Ceremonies",
-      "Receptions",
-      "Indoor and Outdoor",
-      "Parking",
-      "Catering",
-    ],
+    features: ["Ceremonies", "Receptions", "Outdoor", "Parking", "Catering"],
     faqs: [
       {
         id: 1,
@@ -1661,13 +1655,7 @@ export const Data = [
       "Bathers5",
       "Bathers6",
     ],
-    features: [
-      "Ceremonies",
-      "Receptions",
-      "Indoor and Outdoor",
-      "Parking",
-      "Catering",
-    ],
+    features: ["Ceremonies", "Receptions", "Outdoor", "Parking", "Catering"],
     faqs: [
       {
         id: 1,
@@ -1842,7 +1830,7 @@ export const Data = [
     min_price: 115,
     max_guests: 1000,
     short_description:
-      "Centennial Homestead is a premium Sydney venue nestled in the heart of Centennial Park. Surrounded by rolling green lawns, wooded groves, and winding lakes, the luxury venue is one of Sydney’s best-kept secrets.\n\nOffering a number of enchanting indoor and outdoor spaces, Centennial Homestead is a colourful and memorable setting for a number of celebrations, including weddings, corporate functions, and social parties.\n\nJust moments from Sydney CBD, Centennial Homestead transports guests from the hustle and bustle of the city to a tranquil and idyllic natural setting that feels a million miles away.",
+      "Centennial Homestead is a premium Sydney venue nestled in the heart of Centennial Park. Surrounded by rolling green lawns, wooded groves, and winding lakes, the luxury venue is one of Sydney’s best-kept secrets.\n\nOffering a number of enchanting Outdoor spaces, Centennial Homestead is a colourful and memorable setting for a number of celebrations, including weddings, corporate functions, and social parties.\n\nJust moments from Sydney CBD, Centennial Homestead transports guests from the hustle and bustle of the city to a tranquil and idyllic natural setting that feels a million miles away.",
     img: [
       "CentennialHomestead1",
       "CentennialHomestead2",
@@ -1851,13 +1839,7 @@ export const Data = [
       "CentennialHomestead5",
       "CentennialHomestead6",
     ],
-    features: [
-      "Ceremonies",
-      "Receptions",
-      "Indoor and Outdoor",
-      "Parking",
-      "Catering",
-    ],
+    features: ["Ceremonies", "Receptions", "Outdoor", "Parking", "Catering"],
     faqs: [
       {
         id: 1,
@@ -2044,7 +2026,7 @@ export const Data = [
     features: [
       "Ceremonies",
       "Receptions",
-      "Indoor and Outdoor",
+      "Outdoor",
       "Parking",
       "Catering",
       "Accomodation",
@@ -2255,7 +2237,7 @@ export const Data = [
     features: [
       "Ceremonies",
       "Receptions",
-      "Indoor and Outdoor",
+      "Outdoor",
       "Catering",
       "Accomodation",
     ],
@@ -2435,7 +2417,7 @@ export const Data = [
     short_description:
       "Stepping into the scene at Olio Kensington Street, you are transported to a world of captivating beauty and intimate ambience. The venue’s location in the heart of Sydney adds an air of excitement and convenience, ensuring that your guests will easily be able to join in the festivities.\n\nThe wedding spaces at Olio have been carefully designed to cater to your needs, offering a range of options to create the perfect atmosphere for your ceremony and reception. Whether you envision an intimate affair or a grand celebration, Olio’s versatile layout and modern industrial style provide endless possibilities to bring your dream wedding to life.\n\nWith its impeccable service, delectable cuisine curated by award-winning executive chef Lino Sauro, and a team dedicated to making your day truly special, Olio Kensington Street is the ultimate destination for couples who want to create lifelong memories in a chic restaurant setting that exudes romance and sophistication.",
     img: ["Olio1", "Olio2", "Olio3", "Olio4", "Olio5"],
-    features: ["Ceremonies", "Receptions", "Indoor and Outdoor", "Catering"],
+    features: ["Ceremonies", "Receptions", "Outdoor", "Catering"],
     faqs: [
       {
         id: 1,

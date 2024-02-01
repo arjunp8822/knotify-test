@@ -91,7 +91,7 @@ const SearchBar = ({ filtersSelected, setFiltersSelected }: Props) => {
       <div className="static sm:absolute right-0 flex justify-center items-center gap-2 sm:gap-4">
         {/* test */}
         <button
-          className={`border flex items-center gap-2 text-gray-500 ${
+          className={`border flex items-center gap-2 text-gray-500 px-3 h-[38px] ${
             filterButtonRed
               ? "border-green-500 text-green-500 bg-green-100"
               : ""
@@ -99,7 +99,7 @@ const SearchBar = ({ filtersSelected, setFiltersSelected }: Props) => {
           onClick={filterClickHandler}
         >
           <MdFilterAlt />
-          <span>Filter</span>
+          <span className="hidden sm:flex">Filter</span>
         </button>
 
         {openTest && (

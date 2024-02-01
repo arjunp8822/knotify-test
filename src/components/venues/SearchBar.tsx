@@ -9,14 +9,19 @@ import { MdFilterAlt } from "react-icons/md";
 import CityData from "../../data/CityData.json";
 
 interface Props {
+  filtersSelected: FiltersInterface;
   setFiltersSelected: (
     updateFilters: (prev: FiltersInterface) => FiltersInterface
   ) => void;
 }
 
-const SearchBar = ({ setFiltersSelected }: Props) => {
+const SearchBar = ({ filtersSelected, setFiltersSelected }: Props) => {
   const toggleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearch(e.target.value);
+  };
+
+  const filterClickHandler = () => {
+    setOpenTest(true);
   };
 
   const clearHandler = () => {
@@ -32,6 +37,7 @@ const SearchBar = ({ setFiltersSelected }: Props) => {
   const [showCitySearch, setShowCitySearch] = useState(false);
   const [cityData, setCityData] = useState<City[]>([]);
   const [showSortContainer, setShowSortContainer] = useState(false);
+  const [filterButtonRed, setFilterButtonRed] = useState(false);
 
   // toggle search bar on user input
 
@@ -76,36 +82,38 @@ const SearchBar = ({ setFiltersSelected }: Props) => {
             <IoIosClose />
           </div>
         )}
+        {filtersSelected.city && (
+          <div className="absolute top-0 left-2 h-[85%] flex items-center text-sm sm:text-[15px] px-4 py-2 translate-y-[10%] bg-white">
+            {filtersSelected.location}
+          </div>
+        )}
       </div>
-      <div className="static sm:absolute right-0 flex justify-center items-center gap-4">
+      <div className="static sm:absolute right-0 flex justify-center items-center gap-2 sm:gap-4">
         {/* test */}
         <button
-          className="border flex items-center gap-2 text-gray-500"
-          onClick={() => setOpenTest(true)}
+          className={`border flex items-center gap-2 text-gray-500 ${
+            filterButtonRed
+              ? "border-green-500 text-green-500 bg-green-100"
+              : ""
+          }`}
+          onClick={filterClickHandler}
         >
           <MdFilterAlt />
           <span>Filter</span>
         </button>
-        <div
-          className={`${
-            openTest
-              ? "fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center z-40 transition-all bg-black bg-opacity-50"
-              : ""
-          }`}
-        >
-          <div
-            className={`transition-all ${
-              openTest ? "translate-y-0" : "translate-y-[100vh]"
-            }`}
-          >
-            {openTest && (
+
+        {openTest && (
+          <div className="fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center z-40 transition-all bg-black bg-opacity-50">
+            <div className="transition-all relative translate-y-0">
               <FilterModal
                 setOpenTest={setOpenTest}
+                filtersSelected={filtersSelected}
                 setFiltersSelected={setFiltersSelected}
+                setFilterButtonRed={setFilterButtonRed}
               />
-            )}
+            </div>
           </div>
-        </div>
+        )}
         {/* end test */}
 
         <div

@@ -37,6 +37,7 @@ export interface City {
 
 export interface FiltersInterface {
   city: string | null;
+  location: string | null;
   sort: string | null;
   categories: string[] | null;
   rating: number;
@@ -51,7 +52,8 @@ const Home = () => {
   // filter functionality
 
   const [filtersSelected, setFiltersSelected] = useState<FiltersInterface>({
-    city: null,
+    city: "",
+    location: "",
     sort: "Best match",
     categories: [],
     rating: 3,
@@ -138,7 +140,10 @@ const Home = () => {
   return (
     <div className="bg-white">
       <div className="flex justify-center items-center mb-8 relative">
-        <SearchBar setFiltersSelected={setFiltersSelected} />
+        <SearchBar
+          filtersSelected={filtersSelected}
+          setFiltersSelected={setFiltersSelected}
+        />
       </div>
       <ul className="grid gap-x-5 sm:gap-x-10 gap-y-8 md:gap-y-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {data.slice(0, visibleCards).map((venue) => (

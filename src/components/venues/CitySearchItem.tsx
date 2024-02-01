@@ -21,6 +21,7 @@ const CitySearchItem = ({
     setFiltersSelected((prev) => ({
       ...prev,
       city,
+      location: `${city}, ${state}`,
     }));
   };
 

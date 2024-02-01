@@ -45,17 +45,28 @@ const featureList = [
 
 interface Props {
   setOpenTest: (open: boolean) => void;
+  filtersSelected: FiltersInterface;
   setFiltersSelected: (
     updateFilters: (prev: FiltersInterface) => FiltersInterface
   ) => void;
+  setFilterButtonRed: (red: boolean) => void;
 }
 
-const FilterModal = ({ setOpenTest, setFiltersSelected }: Props) => {
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-  const [minimumRating, setMinimumRating] = useState(3);
-  const [guests, setGuests] = useState<number | null>(null);
-  const [budget, setBudget] = useState<number | null>(null);
-  const [selectedFeatures, setSelectedFeatures] = useState<string[]>([]);
+const FilterModal = ({
+  setOpenTest,
+  filtersSelected,
+  setFiltersSelected,
+  setFilterButtonRed,
+}: Props) => {
+  const [selectedCategories, setSelectedCategories] = useState<string[] | null>(
+    filtersSelected.categories || null
+  );
+  const [minimumRating, setMinimumRating] = useState(filtersSelected.rating);
+  const [guests, setGuests] = useState<number | null>(filtersSelected.guests);
+  const [budget, setBudget] = useState<number | null>(filtersSelected.budget);
+  const [selectedFeatures, setSelectedFeatures] = useState<string[] | null>(
+    filtersSelected.features || null
+  );
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -67,34 +78,52 @@ const FilterModal = ({ setOpenTest, setFiltersSelected }: Props) => {
       categories: selectedCategories,
       features: selectedFeatures,
     }));
-    // add filter functionality here
-
-    // setFilterButtonClicked(true);
-    // setFilterData(filters);
+    setFilterButtonRed(true);
     setOpenTest(false);
+  };
+
+  const clearFilters = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    setSelectedCategories([]);
+    setMinimumRating(3);
+    setGuests(null);
+    setBudget(null);
+    setSelectedFeatures([]);
+    setFiltersSelected((prev) => ({
+      ...prev,
+      rating: 3,
+      guests: null,
+      budget: null,
+      categories: [],
+      features: [],
+    }));
+    setFilterButtonRed(false);
+    setOpenTest(false);
+    console.log(filtersSelected);
+    console.log("first");
   };
 
   // handle clicks of categories and features
 
   const clickCategoryHandler = (title: string) => {
-    if (selectedCategories.includes(title)) {
-      setSelectedCategories(selectedCategories.filter((x) => x !== title));
+    if (selectedCategories!.includes(title)) {
+      setSelectedCategories(selectedCategories!.filter((x) => x !== title));
     } else {
-      setSelectedCategories([...selectedCategories, title]);
+      setSelectedCategories([...selectedCategories!, title]);
     }
   };
 
   const clickFeatureHandler = (title: string) => {
-    if (selectedFeatures.includes(title)) {
-      setSelectedFeatures(selectedFeatures.filter((x) => x !== title));
+    if (selectedFeatures!.includes(title)) {
+      setSelectedFeatures(selectedFeatures!.filter((x) => x !== title));
     } else {
-      setSelectedFeatures([...selectedFeatures, title]);
+      setSelectedFeatures([...selectedFeatures!, title]);
     }
   };
 
   return (
     <form
-      className={`bg-white z-50 h-[80vh] w-[90vw] sm:w-[600px] transition-all delay-300 relative rounded`}
+      className={`bg-white z-50 h-[80vh] w-[90vw] sm:w-[600px] relative rounded`}
       onSubmit={handleSubmit}
     >
       <div className="flex absolute w-full justify-center items-center py-4 px-6 sm:px-8 border-b h-[50px] sm:h-[70px]">
@@ -117,7 +146,11 @@ const FilterModal = ({ setOpenTest, setFiltersSelected }: Props) => {
             <ul className="grid grid-cols-2 md:grid-cols-3 gap-3">
               {categories.map((c) => (
                 <li onClick={() => clickCategoryHandler(c.title)}>
-                  <FilterCategoryContainer icon={c.icon} title={c.title} />
+                  <FilterCategoryContainer
+                    icon={c.icon}
+                    title={c.title}
+                    filtersSelected={filtersSelected}
+                  />
                 </li>
               ))}
             </ul>
@@ -129,11 +162,11 @@ const FilterModal = ({ setOpenTest, setFiltersSelected }: Props) => {
               What is the minimum rating you desire?
             </p>
             <Slider
-              initial={3}
+              initial={filtersSelected.rating}
               min={0}
               max={5}
               step={0.1}
-              setMinimumRating={setMinimumRating}
+              setMinimumRating={(v) => setMinimumRating(v)}
             />
           </div>
 
@@ -147,6 +180,7 @@ const FilterModal = ({ setOpenTest, setFiltersSelected }: Props) => {
               placeholder="80"
               className="rounded-lg"
               onChange={(e) => setGuests(parseInt(e.target.value))}
+              value={guests?.toString()}
             />
           </div>
 
@@ -160,6 +194,7 @@ const FilterModal = ({ setOpenTest, setFiltersSelected }: Props) => {
               placeholder="$10,000"
               className="rounded-lg"
               onChange={(e) => setBudget(parseInt(e.target.value))}
+              value={budget?.toString()}
             />
           </div>
 
@@ -171,7 +206,10 @@ const FilterModal = ({ setOpenTest, setFiltersSelected }: Props) => {
             <ul className="grid grid-cols-2 gap-x-2 sm:gap-x-3 gap-y-3">
               {featureList.map((f) => (
                 <li onClick={() => clickFeatureHandler(f)}>
-                  <FilterFeatureContainer title={f} />
+                  <FilterFeatureContainer
+                    title={f}
+                    filtersSelected={filtersSelected}
+                  />
                 </li>
               ))}
             </ul>
@@ -180,7 +218,13 @@ const FilterModal = ({ setOpenTest, setFiltersSelected }: Props) => {
       </div>
 
       <div className="absolute bottom-0 left-0 w-full flex justify-between py-4 px-6 sm:px-8 border-t items-center text-sm sm:text-base h-[50px] sm:h-[70px]">
-        <button className="bg-primary text-white font-bold rounded py-1 sm:py-auto">
+        <button
+          className=" text-sm sm:text-base font-semibold px-0"
+          onClick={clearFilters}
+        >
+          Clear All
+        </button>
+        <button className="bg-primary text-white font-bold rounded py-1 sm:py-auto text-sm sm:text-base ">
           Show
         </button>
       </div>

@@ -1,12 +1,16 @@
 import { useState } from "react";
 import { FaCheck } from "react-icons/fa";
+import { FiltersInterface } from "../../pages/Vendors";
 
 interface Props {
   title: string;
+  filtersSelected: FiltersInterface;
 }
 
-const FilterFeatureContainer = ({ title }: Props) => {
-  const [clicked, setClicked] = useState(false);
+const FilterFeatureContainer = ({ title, filtersSelected }: Props) => {
+  const [clicked, setClicked] = useState(
+    filtersSelected.features?.includes(title)
+  );
   return (
     <div
       className="flex gap-2 items-center cursor-pointer"

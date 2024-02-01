@@ -10,10 +10,10 @@ interface Props {
 }
 
 const Slider = ({ initial, min, max, step, setMinimumRating }: Props) => {
-  const [value, setValue] = useState(initial.toPrecision(1));
+  const [value, setValue] = useState<number>(initial);
 
   const toggleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setValue(e.target.value);
+    setValue(parseFloat(e.target.value));
     setMinimumRating(parseFloat(e.target.value));
   };
 

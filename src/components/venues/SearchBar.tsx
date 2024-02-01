@@ -98,7 +98,12 @@ const SearchBar = ({ setFiltersSelected }: Props) => {
               openTest ? "translate-y-0" : "translate-y-[100vh]"
             }`}
           >
-            {openTest && <FilterModal setOpenTest={setOpenTest} />}
+            {openTest && (
+              <FilterModal
+                setOpenTest={setOpenTest}
+                setFiltersSelected={setFiltersSelected}
+              />
+            )}
           </div>
         </div>
         {/* end test */}

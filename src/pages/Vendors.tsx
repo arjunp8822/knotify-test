@@ -38,6 +38,11 @@ export interface City {
 export interface FiltersInterface {
   city: string | null;
   sort: string | null;
+  categories: string[] | null;
+  rating: number;
+  guests: number | null;
+  budget: number | null;
+  features: string[] | null;
 }
 
 const Home = () => {
@@ -48,6 +53,11 @@ const Home = () => {
   const [filtersSelected, setFiltersSelected] = useState<FiltersInterface>({
     city: null,
     sort: "Best match",
+    categories: [],
+    rating: 3,
+    guests: null,
+    budget: null,
+    features: [],
   });
 
   useEffect(() => {
@@ -77,6 +87,37 @@ const Home = () => {
     if (filtersSelected.sort === "Price - high to low") {
       filteredData = [...filteredData].sort(
         (a, b) => b.min_price - a.min_price
+      );
+    }
+
+    // other filters from filter container
+
+    filteredData = filteredData.filter(
+      (x) => x.rating > filtersSelected.rating
+    );
+
+    if (filtersSelected.guests) {
+      filteredData = filteredData.filter(
+        (x) => x.max_guests > filtersSelected.guests!
+      );
+    }
+
+    if (filtersSelected.budget) {
+      filteredData = filteredData.filter(
+        (x) =>
+          x.min_price < filtersSelected.budget! / (filtersSelected.guests || 80)
+      );
+    }
+
+    if (filtersSelected.categories && filtersSelected.categories.length > 0) {
+      filteredData = filteredData.filter((x) =>
+        filtersSelected.categories!.includes(x.category)
+      );
+    }
+
+    if (filtersSelected.features && filtersSelected.features.length > 0) {
+      filteredData = filteredData.filter((x) =>
+        filtersSelected.features!.every((e) => x.features.includes(e))
       );
     }
 

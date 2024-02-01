@@ -9,7 +9,7 @@ import { IoMdClose } from "react-icons/io";
 import Slider from "./Slider";
 import FilterFeatureContainer from "./FilterFeatureContainer";
 import { useState } from "react";
-import { MdFilterAlt } from "react-icons/md";
+import { FiltersInterface } from "../../pages/Vendors";
 
 export interface FilterData {
   categories: string[] | null;
@@ -28,7 +28,7 @@ const categories = [
   { icon: wine, title: "Winery" },
 ];
 
-const features = [
+const featureList = [
   "Ceremonies",
   "Receptions",
   "External Catering",
@@ -45,9 +45,12 @@ const features = [
 
 interface Props {
   setOpenTest: (open: boolean) => void;
+  setFiltersSelected: (
+    updateFilters: (prev: FiltersInterface) => FiltersInterface
+  ) => void;
 }
 
-const FilterModal = ({ setOpenTest }: Props) => {
+const FilterModal = ({ setOpenTest, setFiltersSelected }: Props) => {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [minimumRating, setMinimumRating] = useState(3);
   const [guests, setGuests] = useState<number | null>(null);
@@ -56,7 +59,14 @@ const FilterModal = ({ setOpenTest }: Props) => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
+    setFiltersSelected((prev) => ({
+      ...prev,
+      rating: minimumRating,
+      guests,
+      budget,
+      categories: selectedCategories,
+      features: selectedFeatures,
+    }));
     // add filter functionality here
 
     // setFilterButtonClicked(true);
@@ -159,9 +169,9 @@ const FilterModal = ({ setOpenTest }: Props) => {
               Select all your favourite features
             </p>
             <ul className="grid grid-cols-2 gap-x-2 sm:gap-x-3 gap-y-3">
-              {features.map((c) => (
-                <li onClick={() => clickFeatureHandler(c)}>
-                  <FilterFeatureContainer title={c} />
+              {featureList.map((f) => (
+                <li onClick={() => clickFeatureHandler(f)}>
+                  <FilterFeatureContainer title={f} />
                 </li>
               ))}
             </ul>

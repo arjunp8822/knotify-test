@@ -44,15 +44,15 @@ const PackageModal = ({
             </p>
           )}
           <div className="flex flex-col lg:flex-row justify-center gap-2 mb-8 text-sm sm:text-base">
-            <div className="flex gap-2 justify-center items-center w-full lg:w-72 border p-2 rounded-xl">
+            <div className="flex gap-2 justify-center items-center w-full lg:w-72 border p-2 rounded">
               <CiClock2 />
               <div>{packageData?.duration} hours</div>
             </div>
-            <div className="flex gap-2 justify-center items-center w-full lg:w-72 border p-2 rounded-xl">
+            <div className="flex gap-2 justify-center items-center w-full lg:w-72 border p-2 rounded">
               <CiDollar />
               <div>From ${packageData?.priceStarting}pp</div>
             </div>
-            <div className="flex gap-2 justify-center items-center w-full lg:w-72 border p-2 rounded-xl">
+            <div className="flex gap-2 justify-center items-center w-full lg:w-72 border p-2 rounded">
               <CiUser />
               <div>
                 Between {packageData?.minGuests} and {packageData?.maxGuests}{" "}

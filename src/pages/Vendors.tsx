@@ -5,6 +5,7 @@ import SearchBar from "../components/venues/SearchBar";
 import { PackageData } from "../components/venuePage/VenuePackages";
 import { FAQs } from "../components/list/VendorFAQ";
 import CityData from "../data/CityData.json";
+import VendorType from "../components/venues/VendorType";
 
 export interface VenueDataInterface {
   id: number;
@@ -144,6 +145,9 @@ const Home = () => {
           filtersSelected={filtersSelected}
           setFiltersSelected={setFiltersSelected}
         />
+      </div>
+      <div className="flex justify-center items-center">
+        <VendorType />
       </div>
       <ul className="grid gap-x-5 sm:gap-x-10 gap-y-8 md:gap-y-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {data.slice(0, visibleCards).map((venue) => (

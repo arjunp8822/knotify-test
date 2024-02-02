@@ -1,4 +1,5 @@
 import { IoIosClose } from "react-icons/io";
+import { IoSearch } from "react-icons/io5";
 import { GoSortDesc } from "react-icons/go";
 import SortContainer from "./SortContainer";
 import { useEffect, useState } from "react";
@@ -70,20 +71,23 @@ const SearchBar = ({ filtersSelected, setFiltersSelected }: Props) => {
         <input
           type="text"
           placeholder="Search by any city"
-          className="border border-gray-300 text-sm sm:text-[15px] w-full sm:w-96 px-4 py-2 rounded-lg h-[38px]"
+          className="border border-gray-300 text-sm sm:text-[15px] w-full sm:w-96 px-6 py-2 rounded-full h-[45px]"
           onChange={toggleChange}
           value={search}
         />
-        {search.length > 0 && (
-          <div
-            className="absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer text-lg"
-            onClick={clearHandler}
-          >
-            <IoIosClose />
-          </div>
-        )}
+        <div className="absolute top-1/2 right-2 -translate-y-1/2 w-8 h-8 rounded-full flex justify-center items-center bg-black text-white">
+          {search.length === 0 ? (
+            <div>
+              <IoSearch />
+            </div>
+          ) : (
+            <div className="text-xl cursor-pointer" onClick={clearHandler}>
+              <IoIosClose />
+            </div>
+          )}
+        </div>
         {filtersSelected.city && (
-          <div className="absolute top-0 left-2 h-[85%] flex items-center text-sm sm:text-[15px] px-4 py-2 translate-y-[10%] bg-white">
+          <div className="absolute top-0 left-2 h-[85%] flex items-center text-sm sm:text-[15px] px-4 py-2 translate-y-[10%] bg-white max-w-[80%] whitespace-nowrap overflow-hidden">
             {filtersSelected.location}
           </div>
         )}
@@ -91,7 +95,7 @@ const SearchBar = ({ filtersSelected, setFiltersSelected }: Props) => {
       <div className="static sm:absolute right-0 flex justify-center items-center gap-2 sm:gap-4">
         {/* test */}
         <button
-          className={`border flex items-center gap-2 text-gray-500 px-3 h-[38px] ${
+          className={`border flex items-center gap-2 text-black px-3 h-[38px] ${
             filterButtonRed
               ? "border-green-500 text-green-500 bg-green-100"
               : ""
@@ -117,7 +121,7 @@ const SearchBar = ({ filtersSelected, setFiltersSelected }: Props) => {
         {/* end test */}
 
         <div
-          className="border border-gray-300 py-1 px-2 rounded text-gray-500 cursor-pointer h-[38px] flex justify-center items-center text-2xl"
+          className="border border-gray-300 py-1 px-2 rounded text-black cursor-pointer h-[38px] flex justify-center items-center text-2xl"
           onClick={() => setShowSortContainer(!showSortContainer)}
         >
           <GoSortDesc />

@@ -1,6 +1,7 @@
 export const Data = [
   {
     id: 0,
+    vendorType: "venue",
     featured: true,
     sample: false,
     name: "Ventuno Restaurant",
@@ -129,6 +130,7 @@ export const Data = [
 
   {
     id: 1,
+    vendorType: "venue",
     featured: true,
     sample: false,
     name: "Ripples Chowder Bay",
@@ -267,6 +269,7 @@ export const Data = [
 
   {
     id: 2,
+    vendorType: "venue",
     featured: true,
     sample: false,
     name: "Ripples Little Manly",
@@ -441,6 +444,7 @@ export const Data = [
 
   {
     id: 3,
+    vendorType: "venue",
     featured: false,
     sample: false,
     name: "The Fenwick",
@@ -608,6 +612,7 @@ export const Data = [
 
   {
     id: 4,
+    vendorType: "venue",
     featured: false,
     sample: false,
     name: "Sails on Lavender Bay",
@@ -701,6 +706,7 @@ export const Data = [
   },
   {
     id: 5,
+    vendorType: "venue",
     featured: false,
     sample: true,
     name: "O Bar & Dining",
@@ -886,6 +892,7 @@ export const Data = [
   },
   {
     id: 6,
+    vendorType: "venue",
     featured: false,
     sample: true,
     name: "Ovolo Woolloomooloo",
@@ -1071,6 +1078,7 @@ export const Data = [
   },
   {
     id: 7,
+    vendorType: "venue",
     featured: false,
     sample: true,
     name: "Cruise Bar",
@@ -1262,6 +1270,7 @@ export const Data = [
   },
   {
     id: 8,
+    vendorType: "venue",
     featured: false,
     sample: true,
     name: "Coogee Bay Hotel",
@@ -1446,6 +1455,7 @@ export const Data = [
   },
   {
     id: 9,
+    vendorType: "venue",
     featured: false,
     sample: true,
     name: "Will & Mike's",
@@ -1629,6 +1639,7 @@ export const Data = [
   },
   {
     id: 10,
+    vendorType: "venue",
     featured: false,
     sample: true,
     name: "Bathers' Pavilion",
@@ -1813,6 +1824,7 @@ export const Data = [
   },
   {
     id: 11,
+    vendorType: "venue",
     featured: false,
     sample: true,
     name: "Centennial Homestead",
@@ -1997,6 +2009,7 @@ export const Data = [
   },
   {
     id: 12,
+    vendorType: "venue",
     featured: false,
     sample: true,
     name: "Estate Tuscany",
@@ -2208,6 +2221,7 @@ export const Data = [
   },
   {
     id: 13,
+    vendorType: "venue",
     featured: false,
     sample: true,
     name: "Chateau Elan",
@@ -2398,6 +2412,7 @@ export const Data = [
   },
   {
     id: 14,
+    vendorType: "venue",
     featured: false,
     sample: true,
     name: "Olio",

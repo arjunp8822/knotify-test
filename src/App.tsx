@@ -30,7 +30,9 @@ function App() {
           <Route path="/privacy" element={<Privacy />} />
         </Routes>
       </div>
-      <Footer />
+      <div className="bg-gray-100">
+        <Footer />
+      </div>
     </div>
   );
 }

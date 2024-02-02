@@ -22,7 +22,7 @@ function App() {
         } `}
       >
         <Routes>
-          {/* <Route path="/" element={<Home />} /> */}
+          {/* <Route path="/test" element={<Home />} /> */}
           <Route path="/" element={<Vendors />} />
           <Route path="/list" element={<List />} />
           <Route path="/vendors/:id" element={<VendorPage />} />

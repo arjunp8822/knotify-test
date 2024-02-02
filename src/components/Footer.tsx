@@ -7,7 +7,9 @@ const Footer = () => {
   return (
     <div className="container flex flex-col">
       <div className="py-6 md:py-8 mb-4 sm:mb-0">
-        <h5 className="text-3xl md:text-4xl font-marley">Knotify</h5>
+        <h5 className="text-3xl md:text-4xl font-marley text-primary">
+          Knotify
+        </h5>
       </div>
       <div className="pb-12 flex flex-col md:flex-row gap-12 border-b border-gray-300">
         <form className="w-full md:w-1/3 flex flex-col">

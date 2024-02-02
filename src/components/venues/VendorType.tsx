@@ -1,8 +1,15 @@
-import { useState } from "react";
 import VendorTypeCard from "./VendorTypeCard";
+import { FiltersInterface } from "../../pages/Vendors";
 
 export interface vendorTypeInterface {
   title: string;
+}
+
+interface Props {
+  filtersSelected: FiltersInterface;
+  setFiltersSelected: (
+    updateFilters: (prev: FiltersInterface) => FiltersInterface
+  ) => void;
 }
 
 const vendorTypeList: vendorTypeInterface[] = [
@@ -16,16 +23,15 @@ const vendorTypeList: vendorTypeInterface[] = [
   { title: "Transportation" },
 ];
 
-const VendorType = () => {
-  const [selectedType, setSelectedType] = useState("Venues");
+const VendorType = ({ filtersSelected, setFiltersSelected }: Props) => {
   return (
     <div className="border-t w-full py-8">
-      <ul className="flex gap-4 sm:gap-8 justify-center items-center overflow-x-auto custom-scrollbar pb-2">
+      <ul className="flex gap-4 sm:gap-8 justify-start sm:justify-center items-center overflow-x-auto custom-scrollbar pb-2">
         {vendorTypeList.map((v) => (
           <VendorTypeCard
             title={v.title}
-            selectedType={selectedType}
-            setSelectedType={setSelectedType}
+            filtersSelected={filtersSelected}
+            setFiltersSelected={setFiltersSelected}
           />
         ))}
       </ul>

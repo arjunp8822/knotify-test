@@ -29,24 +29,26 @@ const Footer = () => {
           </button>
         </form>
         <div className="w-full md:w-1/3 flex flex-col md:items-center">
-          <h5 className="font-semibold md:text-lg mb-4">Quick Links</h5>
-          <ul className="flex flex-col gap-3 text-sm sm:text-[15px]">
-            <li>
-              <Link to="/" className="hover:underline">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/" className="hover:underline">
-                Vendors
-              </Link>
-            </li>
-            <li>
-              <Link to="/list" className="hover:underline">
-                List With Us
-              </Link>
-            </li>
-          </ul>
+          <div>
+            <h5 className="font-semibold md:text-lg mb-4">Quick Links</h5>
+            <ul className="flex flex-col gap-3 text-sm sm:text-[15px]">
+              <li>
+                <Link to="/" className="hover:underline">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/" className="hover:underline">
+                  Vendors
+                </Link>
+              </li>
+              <li>
+                <Link to="/list" className="hover:underline">
+                  List With Us
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div className="w-full md:w-1/3 flex flex-col md:items-center">

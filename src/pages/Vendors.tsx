@@ -6,6 +6,7 @@ import { PackageData } from "../components/venuePage/VenuePackages";
 import { FAQs } from "../components/list/VendorFAQ";
 import CityData from "../data/CityData.json";
 import VendorType from "../components/venues/VendorType";
+import NoResults from "../components/venues/NoResults";
 
 export interface VenueDataInterface {
   id: number;
@@ -45,6 +46,7 @@ export interface FiltersInterface {
   guests: number | null;
   budget: number | null;
   features: string[] | null;
+  vendorType: string;
 }
 
 const Home = () => {
@@ -61,6 +63,7 @@ const Home = () => {
     guests: null,
     budget: null,
     features: [],
+    vendorType: "Venues",
   });
 
   useEffect(() => {
@@ -80,6 +83,10 @@ const Home = () => {
     if (filtersSelected.sort === "Best match") {
       filteredData = [...filteredData].sort((a, b) => a.id - b.id);
     }
+
+    filteredData = filteredData.filter(
+      (x) => x.vendorType === filtersSelected.vendorType
+    );
 
     if (filtersSelected.sort === "Price - low to high") {
       filteredData = [...filteredData].sort(
@@ -147,23 +154,31 @@ const Home = () => {
         />
       </div>
       <div className="flex justify-center items-center">
-        <VendorType />
+        <VendorType
+          filtersSelected={filtersSelected}
+          setFiltersSelected={setFiltersSelected}
+        />
       </div>
-      <ul className="grid gap-x-5 sm:gap-x-10 gap-y-8 md:gap-y-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-        {data.slice(0, visibleCards).map((venue) => (
-          <VenueCard
-            key={venue.id}
-            name={venue.name}
-            link={venue.id.toString()}
-            location={venue.location}
-            rating={venue.rating}
-            review_count={venue.review_count}
-            min_price={venue.min_price}
-            max_guests={venue.max_guests}
-            img={venue.img}
-          />
-        ))}
-      </ul>
+      {data.length > 0 ? (
+        <ul className="grid gap-x-5 sm:gap-x-10 gap-y-8 md:gap-y-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          {data.slice(0, visibleCards).map((venue) => (
+            <VenueCard
+              key={venue.id}
+              name={venue.name}
+              link={venue.id.toString()}
+              location={venue.location}
+              rating={venue.rating}
+              review_count={venue.review_count}
+              min_price={venue.min_price}
+              max_guests={venue.max_guests}
+              img={venue.img}
+            />
+          ))}
+        </ul>
+      ) : (
+        <NoResults /> // change this to be not found card
+      )}
+
       {data.length > visibleCards && (
         <div className="flex justify-center mt-12">
           <button

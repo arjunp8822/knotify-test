@@ -1,18 +1,31 @@
+import { FiltersInterface } from "../../pages/Vendors";
+
 interface Props {
   title: string;
-  selectedType: string;
-  setSelectedType: (selected: string) => void;
+  filtersSelected: FiltersInterface;
+  setFiltersSelected: (
+    updateFilters: (prev: FiltersInterface) => FiltersInterface
+  ) => void;
 }
 
-const VendorTypeCard = ({ title, selectedType, setSelectedType }: Props) => {
+const VendorTypeCard = ({
+  title,
+  filtersSelected,
+  setFiltersSelected,
+}: Props) => {
   return (
     <li
       className="flex flex-col justify-center items-center gap-2 rounded cursor-pointer"
-      onClick={() => setSelectedType(title)}
+      onClick={() =>
+        setFiltersSelected((prev) => ({
+          ...prev,
+          vendorType: title,
+        }))
+      }
     >
       <span
         className={`text-sm sm:text-[15px] pb-2 transition-opacity ${
-          selectedType === title
+          filtersSelected.vendorType === title
             ? "font-semibold border-b-2 border-black text-black"
             : "opacity-60"
         }`}

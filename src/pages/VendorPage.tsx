@@ -89,20 +89,20 @@ const VenuePage = () => {
         <img
           src={`https://res.cloudinary.com/dkxs4o9vt/image/upload/v1705560129/${data.img[0]}`}
           alt="Venue Image 1"
-          className="w-full sm:w-2/3 object-cover rounded-lg sm:rounded-none sm:rounded-l-lg cursor-pointer"
+          className="w-full sm:w-2/3 object-cover rounded-lg sm:rounded-none sm:rounded-l-lg cursor-pointer min-h-[260px]"
           onClick={() => setShowImageModal(true)}
         />
         <div>
           <img
             src={`https://res.cloudinary.com/dkxs4o9vt/image/upload/v1705560129/${data.img[1]}`}
             alt="Venue Image 1"
-            className="w-full hidden sm:flex h-1/2 object-cover rounded-lg sm:rounded-none sm:rounded-tr-lg cursor-pointer"
+            className="w-full hidden sm:flex h-1/2 object-cover rounded-lg sm:rounded-none sm:rounded-tr-lg cursor-pointer min-h-[260px]"
             onClick={() => setShowImageModal(true)}
           />
           <img
             src={`https://res.cloudinary.com/dkxs4o9vt/image/upload/v1705560129/${data.img[2]}`}
             alt="Venue Image 1"
-            className="w-full hidden sm:flex h-1/2 object-cover rounded-lg sm:rounded-none sm:rounded-br-lg cursor-pointer"
+            className="w-full hidden sm:flex h-1/2 object-cover rounded-lg sm:rounded-none sm:rounded-br-lg cursor-pointer min-h-[260px]"
             onClick={() => setShowImageModal(true)}
           />
         </div>

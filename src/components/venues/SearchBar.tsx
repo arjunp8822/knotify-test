@@ -121,7 +121,7 @@ const SearchBar = ({ filtersSelected, setFiltersSelected }: Props) => {
         {/* end test */}
 
         <div
-          className="border border-gray-300 py-1 px-2 rounded text-black cursor-pointer h-[38px] flex justify-center items-center text-2xl"
+          className="border border py-1 px-2 rounded text-black cursor-pointer h-[38px] flex justify-center items-center text-2xl"
           onClick={() => setShowSortContainer(!showSortContainer)}
         >
           <GoSortDesc />

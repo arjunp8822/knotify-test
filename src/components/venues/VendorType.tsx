@@ -3,6 +3,7 @@ import { FiltersInterface } from "../../pages/Vendors";
 
 export interface vendorTypeInterface {
   title: string;
+  description: string;
 }
 
 interface Props {
@@ -13,14 +14,18 @@ interface Props {
 }
 
 const vendorTypeList: vendorTypeInterface[] = [
-  { title: "Venues" },
-  { title: "Florists" },
-  { title: "Photographers" },
-  { title: "Cakes" },
-  { title: "Entertainment" },
-  { title: "MCs" },
-  { title: "Catering" },
-  { title: "Transportation" },
+  {
+    title: "Venues",
+    description:
+      "From pricing and reviews to capacity and available packages. Delve into the options, shortlist your favourites, and explore regions that resonate with your vision.",
+  },
+  { title: "Florists", description: "" },
+  { title: "Photographers", description: "" },
+  { title: "Cakes", description: "" },
+  { title: "Entertainment", description: "" },
+  { title: "MCs", description: "" },
+  { title: "Catering", description: "" },
+  { title: "Transportation", description: "" },
 ];
 
 const VendorType = ({ filtersSelected, setFiltersSelected }: Props) => {
@@ -35,6 +40,21 @@ const VendorType = ({ filtersSelected, setFiltersSelected }: Props) => {
           />
         ))}
       </ul>
+
+      {vendorTypeList
+        .filter((x) => x.title === filtersSelected.vendorType)
+        .map((v) => (
+          <div className="flex gap-8 sm:gap-8 mt-8 mb-4 flex-col items-center">
+            <h5 className="text-lg sm:text-2xl w-full text-black font-light text-center">
+              {v.description}
+            </h5>
+            <img
+              src="/assets/bow.png"
+              alt="Bow"
+              className="w-[140px] sm:w-[200px]"
+            />
+          </div>
+        ))}
     </div>
   );
 };

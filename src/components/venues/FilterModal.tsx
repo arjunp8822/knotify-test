@@ -6,10 +6,12 @@ import water from "/assets/categories/water.png";
 import wine from "/assets/categories/wine.png";
 import FilterCategoryContainer from "./FilterCategoryContainer";
 import { IoMdClose } from "react-icons/io";
-import Slider from "./Slider";
 import FilterFeatureContainer from "./FilterFeatureContainer";
 import { useState } from "react";
 import { FiltersInterface } from "../../pages/Vendors";
+import RatingSlider from "./RatingSlider";
+import GuestSlider from "./GuestSlider";
+import BudgetSlider from "./BudgetSlider";
 
 export interface FilterData {
   categories: string[] | null;
@@ -62,8 +64,10 @@ const FilterModal = ({
     filtersSelected.categories || null
   );
   const [minimumRating, setMinimumRating] = useState(filtersSelected.rating);
-  const [guests, setGuests] = useState<number | null>(filtersSelected.guests);
-  const [budget, setBudget] = useState<number | null>(filtersSelected.budget);
+  const [minGuests, setMinGuests] = useState<number>(filtersSelected.minGuests);
+  const [maxGuests, setMaxGuests] = useState<number>(filtersSelected.maxGuests);
+  const [minBudget, setMinBudget] = useState<number>(filtersSelected.minBudget);
+  const [maxBudget, setMaxBudget] = useState<number>(filtersSelected.maxBudget);
   const [selectedFeatures, setSelectedFeatures] = useState<string[] | null>(
     filtersSelected.features || null
   );
@@ -73,8 +77,10 @@ const FilterModal = ({
     setFiltersSelected((prev) => ({
       ...prev,
       rating: minimumRating,
-      guests,
-      budget,
+      minGuests,
+      maxGuests,
+      minBudget,
+      maxBudget,
       categories: selectedCategories,
       features: selectedFeatures,
     }));
@@ -86,21 +92,23 @@ const FilterModal = ({
     e.preventDefault();
     setSelectedCategories([]);
     setMinimumRating(3);
-    setGuests(null);
-    setBudget(null);
+    setMinGuests(20);
+    setMaxGuests(500);
+    setMinBudget(2000);
+    setMaxBudget(50000);
     setSelectedFeatures([]);
     setFiltersSelected((prev) => ({
       ...prev,
       rating: 3,
-      guests: null,
-      budget: null,
+      minGuests: 20,
+      maxGuests: 500,
+      minBudget: 2000,
+      maxBudget: 50000,
       categories: [],
       features: [],
     }));
     setFilterButtonRed(false);
     setOpenTest(false);
-    console.log(filtersSelected);
-    console.log("first");
   };
 
   // handle clicks of categories and features
@@ -161,12 +169,9 @@ const FilterModal = ({
             <p className="text-gray-500 text-sm sm:text-base mb-2 sm:mb-4">
               What is the minimum rating you desire?
             </p>
-            <Slider
-              initial={filtersSelected.rating}
-              min={0}
-              max={5}
-              step={0.1}
-              setMinimumRating={(v) => setMinimumRating(v)}
+            <RatingSlider
+              minimumRating={minimumRating}
+              setMinimumRating={setMinimumRating}
             />
           </div>
 
@@ -175,26 +180,24 @@ const FilterModal = ({
             <p className="text-gray-500 text-sm sm:text-base mb-2 sm:mb-4">
               How many guests do you think will attend?
             </p>
-            <input
-              type="number"
-              placeholder="80"
-              className="rounded-lg"
-              onChange={(e) => setGuests(parseInt(e.target.value))}
-              value={guests?.toString()}
+            <GuestSlider
+              minGuests={minGuests}
+              maxGuests={maxGuests}
+              setMinGuests={setMinGuests}
+              setMaxGuests={setMaxGuests}
             />
           </div>
 
           <div>
             <h3 className="font-semibold mb-1 sm:mb-2">Budget</h3>
             <p className="text-gray-500 text-sm sm:text-base mb-2 sm:mb-4">
-              What do you want to spend on the venue?
+              How much do you want to spend on the venue?
             </p>
-            <input
-              type="number"
-              placeholder="$10,000"
-              className="rounded-lg"
-              onChange={(e) => setBudget(parseInt(e.target.value))}
-              value={budget?.toString()}
+            <BudgetSlider
+              minBudget={minBudget}
+              maxBudget={maxBudget}
+              setMinBudget={setMinBudget}
+              setMaxBudget={setMaxBudget}
             />
           </div>
 

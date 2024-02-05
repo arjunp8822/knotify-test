@@ -43,8 +43,10 @@ export interface FiltersInterface {
   sort: string | null;
   categories: string[] | null;
   rating: number;
-  guests: number | null;
-  budget: number | null;
+  minGuests: number;
+  maxGuests: number;
+  minBudget: number;
+  maxBudget: number;
   features: string[] | null;
   vendorType: string;
 }
@@ -59,9 +61,11 @@ const Home = () => {
     location: "",
     sort: "Best match",
     categories: [],
-    rating: 3,
-    guests: null,
-    budget: null,
+    rating: 0,
+    minGuests: 20,
+    maxGuests: 500,
+    minBudget: 2000,
+    maxBudget: 50000,
     features: [],
     vendorType: "Venues",
   });

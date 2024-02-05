@@ -96,9 +96,7 @@ const SearchBar = ({ filtersSelected, setFiltersSelected }: Props) => {
         {/* test */}
         <button
           className={`border flex items-center gap-2 text-black px-3 h-[38px] ${
-            filterButtonRed
-              ? "border-green-500 text-green-500 bg-green-100"
-              : ""
+            filterButtonRed ? "border-black text-black bg-gray-100" : ""
           }`}
           onClick={filterClickHandler}
         >
@@ -121,7 +119,7 @@ const SearchBar = ({ filtersSelected, setFiltersSelected }: Props) => {
         {/* end test */}
 
         <div
-          className="border border py-1 px-2 rounded text-black cursor-pointer h-[38px] flex justify-center items-center text-2xl"
+          className="border py-1 px-2 rounded text-black cursor-pointer h-[38px] flex justify-center items-center text-2xl"
           onClick={() => setShowSortContainer(!showSortContainer)}
         >
           <GoSortDesc />

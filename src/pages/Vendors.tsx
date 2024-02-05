@@ -63,9 +63,9 @@ const Home = () => {
     categories: [],
     rating: 0,
     minGuests: 20,
-    maxGuests: 500,
+    maxGuests: 250,
     minBudget: 2000,
-    maxBudget: 50000,
+    maxBudget: 100000,
     features: [],
     vendorType: "Venues",
   });
@@ -110,18 +110,14 @@ const Home = () => {
       (x) => x.rating > filtersSelected.rating
     );
 
-    if (filtersSelected.guests) {
-      filteredData = filteredData.filter(
-        (x) => x.max_guests > filtersSelected.guests!
-      );
-    }
+    filteredData = filteredData.filter(
+      (x) => x.max_guests > filtersSelected.minGuests!
+    );
 
-    if (filtersSelected.budget) {
-      filteredData = filteredData.filter(
-        (x) =>
-          x.min_price < filtersSelected.budget! / (filtersSelected.guests || 80)
-      );
-    }
+    filteredData = filteredData.filter(
+      (x) =>
+        x.min_price < filtersSelected.maxBudget! / filtersSelected.maxGuests
+    );
 
     if (filtersSelected.categories && filtersSelected.categories.length > 0) {
       filteredData = filteredData.filter((x) =>

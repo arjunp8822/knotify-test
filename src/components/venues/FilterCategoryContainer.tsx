@@ -13,15 +13,16 @@ const CategoryContainer = ({ icon, title, filtersSelected }: Props) => {
   );
   return (
     <div
-      className={`flex rounded-lg justify-center items-center p-2 gap-4 cursor-pointer ${
-        clicked ? "border border-black" : "border"
+      className={`flex rounded justify-center items-center p-2 gap-4 cursor-pointer border box-border ${
+        clicked ? "border-2 border-black" : ""
       }`}
       onClick={() => setClicked(!clicked)}
+      style={{ padding: clicked ? "13px" : "14px" }}
     >
       <img src={icon} alt={title} className="w-4" />
       <h5
         className={`text-sm sm:text-base ${
-          clicked ? "font-normal" : "font-light"
+          clicked ? "text-black font-semibold" : ""
         }`}
       >
         {title}

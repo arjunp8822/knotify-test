@@ -93,17 +93,17 @@ const FilterModal = ({
     setSelectedCategories([]);
     setMinimumRating(3);
     setMinGuests(20);
-    setMaxGuests(500);
+    setMaxGuests(250);
     setMinBudget(2000);
-    setMaxBudget(50000);
+    setMaxBudget(100000);
     setSelectedFeatures([]);
     setFiltersSelected((prev) => ({
       ...prev,
       rating: 3,
       minGuests: 20,
-      maxGuests: 500,
+      maxGuests: 250,
       minBudget: 2000,
-      maxBudget: 50000,
+      maxBudget: 100000,
       categories: [],
       features: [],
     }));
@@ -146,7 +146,7 @@ const FilterModal = ({
 
       <div className="h-[calc(100%-100px)] sm:h-[calc(100%-140px)] translate-y-[50px] sm:translate-y-[70px] p-4 sm:p-8 overflow-y-scroll">
         <div className="flex flex-col gap-3 sm:gap-6">
-          <div>
+          <div className="border-b pb-8 mb-2 sm:mb-0">
             <h3 className="font-semibold mb-1 sm:mb-2">Categories</h3>
             <p className="text-gray-500 text-sm sm:text-base mb-2 sm:mb-4">
               Select your favourite styles
@@ -164,7 +164,7 @@ const FilterModal = ({
             </ul>
           </div>
 
-          <div>
+          <div className="border-b pb-8 mb-2 sm:mb-0">
             <h3 className="font-semibold mb-1 sm:mb-2">Rating</h3>
             <p className="text-gray-500 text-sm sm:text-base mb-2 sm:mb-4">
               What is the minimum rating you desire?
@@ -175,7 +175,7 @@ const FilterModal = ({
             />
           </div>
 
-          <div>
+          <div className="border-b pb-8 mb-2 sm:mb-0">
             <h3 className="font-semibold mb-1 sm:mb-2">Guests</h3>
             <p className="text-gray-500 text-sm sm:text-base mb-2 sm:mb-4">
               How many guests do you think will attend?
@@ -188,7 +188,7 @@ const FilterModal = ({
             />
           </div>
 
-          <div>
+          <div className="border-b pb-8 mb-2 sm:mb-0">
             <h3 className="font-semibold mb-1 sm:mb-2">Budget</h3>
             <p className="text-gray-500 text-sm sm:text-base mb-2 sm:mb-4">
               How much do you want to spend on the venue?

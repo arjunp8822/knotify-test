@@ -25,7 +25,7 @@ const GuestSlider = ({
         trackClassName="example-track"
         defaultValue={[minGuests, maxGuests]}
         min={20}
-        max={500}
+        max={250}
         onChange={(value) => toggleChange(value)}
         pearling
         minDistance={10}
@@ -39,7 +39,7 @@ const GuestSlider = ({
           <p className="text-[12px] sm:text-[14px] text-gray-500">Maximum</p>
           <span className="text-sm sm:text-base">
             {maxGuests}
-            {maxGuests === 500 ? "+" : ""}
+            {maxGuests === 250 ? "+" : ""}
           </span>
         </div>
       </div>

@@ -25,7 +25,7 @@ const BudgetSlider = ({
         trackClassName="example-track"
         defaultValue={[minBudget, maxBudget]}
         min={2000}
-        max={50000}
+        max={100000}
         onChange={(value) => toggleChange(value)}
         pearling
         minDistance={100}
@@ -41,7 +41,7 @@ const BudgetSlider = ({
           <p className="text-[12px] sm:text-[14px] text-gray-500">Maximum</p>
           <span className="text-sm sm:text-base">
             ${maxBudget.toLocaleString()}
-            {maxBudget === 500 ? "+" : ""}
+            {maxBudget === 100000 ? "+" : ""}
           </span>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { IoIosCloseCircleOutline } from "react-icons/io";
+import { IoIosClose } from "react-icons/io";
 import { RxHamburgerMenu } from "react-icons/rx";
 import NavItem from "./NavItem";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
@@ -34,12 +34,12 @@ const Navbar = ({ openNav, setOpenNav }: Props) => {
           } sm:static sm:h-auto sm:w-auto sm:top-auto sm:right-auto sm:translate-x-0`}
         >
           <div
-            className="flex justify-start items-center cursor-pointer h-[60px] sm:hidden text-3xl ml-2 mt-2 absolute"
+            className="flex justify-start items-center cursor-pointer h-[60px] sm:hidden text-3xl ml-2 mt-2 absolute z-10"
             onClick={() => setOpenNav(false)}
           >
-            <IoIosCloseCircleOutline />
+            <IoIosClose />
           </div>
-          <ul className="flex flex-col justify-center items-center gap-12 h-[100vh] sm:flex-row sm:h-auto font-semibold">
+          <ul className="flex flex-col justify-center items-center gap-12 h-[100vh] sm:flex-row sm:h-auto font-semibold -translate-y-6 sm:translate-y-0">
             {navLinks.map((l) => (
               <NavItem
                 key={l.title}
@@ -53,13 +53,15 @@ const Navbar = ({ openNav, setOpenNav }: Props) => {
           <div className="absolute bottom-0 w-full h-[100px] flex justify-center items-center sm:hidden gap-8">
             <Link
               className="text-lg bg-gray-100 text-gray-700 p-2 rounded-full"
-              to={""}
+              to={"https://www.facebook.com/knotifyweddings/"}
+              target="_blank"
             >
               <FaFacebookF />
             </Link>
             <Link
               className="text-lg bg-gray-100 text-gray-700 p-2 rounded-full"
-              to={""}
+              to={"https://www.instagram.com/knotifyweddings/"}
+              target="_blank"
             >
               <FaInstagram />
             </Link>

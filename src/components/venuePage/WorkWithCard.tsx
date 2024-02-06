@@ -12,7 +12,7 @@ interface Props {
 const WorkWithCard = ({ img, name, rating, reviews, link }: Props) => {
   return (
     <div>
-      <Link to={`/venues/${link}`}>
+      <Link to={`/vendors/${link}`}>
         <img
           src={`https://res.cloudinary.com/dkxs4o9vt/image/upload/v1705560129/${img}`}
           alt={name}

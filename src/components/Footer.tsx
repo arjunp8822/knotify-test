@@ -86,12 +86,20 @@ const Footer = () => {
           </li>
         </ul>
         <div className="flex text-xl gap-4">
-          <div className="hover:text-primary cursor-pointer transition-all">
-            <FaInstagram />
-          </div>
-          <div className="hover:text-primary cursor-pointer transition-all">
+          <Link
+            to={"https://www.facebook.com/knotifyweddings/"}
+            className="hover:text-primary cursor-pointer transition-all"
+            target="_blank"
+          >
             <FaFacebookF />
-          </div>
+          </Link>
+          <Link
+            to={"https://www.instagram.com/knotifyweddings/"}
+            className="hover:text-primary cursor-pointer transition-all"
+            target="_blank"
+          >
+            <FaInstagram />
+          </Link>
         </div>
       </div>
     </div>

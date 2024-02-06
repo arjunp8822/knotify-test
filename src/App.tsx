@@ -8,8 +8,8 @@ import VendorPage from "./pages/VendorPage";
 import Footer from "./components/Footer";
 import { useState } from "react";
 import Privacy from "./pages/Privacy";
-import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
+// import NotFound from "./pages/NotFound";
 // import Home from "./pages/Home";
 
 function App() {
@@ -31,7 +31,8 @@ function App() {
           <Route path="/vendors/:id" element={<VendorPage />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/privacy" element={<Privacy />} />
-          <Route path="*" element={<NotFound />} />
+          {/* Fallback route if not found */}
+          {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
       </div>
       {/* footer */}

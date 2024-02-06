@@ -1,7 +1,6 @@
 import beach from "/assets/categories/beach.png";
 import country from "/assets/categories/garden.png";
-import garden from "/assets/categories/luxury.png";
-import luxury from "/assets/categories/country.png";
+import garden from "/assets/categories/country.png";
 import water from "/assets/categories/water.png";
 import wine from "/assets/categories/wine.png";
 import FilterCategoryContainer from "./FilterCategoryContainer";
@@ -24,8 +23,7 @@ export interface FilterData {
 const categories = [
   { icon: beach, title: "Beach" },
   { icon: country, title: "Garden" },
-  { icon: garden, title: "Luxury" },
-  { icon: luxury, title: "Country" },
+  { icon: garden, title: "Country" },
   { icon: water, title: "Waterview" },
   { icon: wine, title: "Winery" },
 ];
@@ -42,6 +40,7 @@ const featureList = [
   "Parking",
   "Exceptional Menus",
   "Stunning Views",
+  "Alfresco",
   "Pet Friendly",
 ];
 

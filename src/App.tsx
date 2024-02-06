@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import { useState } from "react";
 import Privacy from "./pages/Privacy";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "./components/ScrollToTop";
 // import Home from "./pages/Home";
 
 function App() {
@@ -32,9 +33,13 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
+      {/* footer */}
       <div className="bg-gray-100">
         <Footer />
       </div>
+
+      {/* scroll to top */}
+      <ScrollToTop />
     </div>
   );
 }

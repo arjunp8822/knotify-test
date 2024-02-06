@@ -23,7 +23,7 @@ const ImageModal = ({
   return (
     <div
       className={`fixed top-0 left-0 right-0 h-full w-full bg-black transition-transform z-30 ${
-        showModal ? "translate-y-0" : "translate-y-full"
+        showModal ? "translate-y-0" : "translate-y-[110vh]"
       }`}
     >
       <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-8 md:px-12 relative flex justify-end py-6 text-sm sm:text-base">

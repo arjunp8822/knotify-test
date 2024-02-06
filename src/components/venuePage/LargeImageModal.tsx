@@ -32,7 +32,7 @@ const LargeImageModal = ({
   return (
     <div
       className={`fixed top-0 left-0 right-0 h-full bg-black container transition-transform z-30 overflow-y-auto flex justify-center items-center ${
-        showLargeImageModal ? "translate-y-0" : "translate-y-full"
+        showLargeImageModal ? "translate-y-0 no-scrollbar" : "translate-y-full"
       }`}
     >
       <button
@@ -47,7 +47,7 @@ const LargeImageModal = ({
             img[largeImageIdx!]
           }`}
           alt="Venue Image"
-          className="object-cover cursor-pointer h-[40vh] w-full landscape-image"
+          className="object-contain cursor-pointer max-h-[95vh] w-full"
         />
       </div>
       {largeImageIdx !== 0 && (

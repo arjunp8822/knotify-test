@@ -35,13 +35,13 @@ const ImageModal = ({
         </div>
       </div>
       <div className="overflow-y-auto h-full no-scrollbar">
-        <ul className="flex flex-col justify-center items-center gap-4">
+        <ul className="flex flex-col justify-center items-center gap-4 px-4 pb-[120px]">
           {img.map((x, index) => (
             <li className="w-full flex justify-center items-center">
               <img
                 src={`https://res.cloudinary.com/dkxs4o9vt/image/upload/v1705560129/${x}`}
                 alt="Venue Image"
-                className="w-[800px] h-[250px] sm:h-[350px] md:h-[450px] object-cover cursor-pointer"
+                className="w-full sm:w-[800px] h-[250px] sm:h-[350px] md:h-[450px] object-cover cursor-pointer"
                 onClick={() => clickHandler(index)}
               />
             </li>

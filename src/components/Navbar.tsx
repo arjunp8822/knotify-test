@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { IoIosClose } from "react-icons/io";
+import logo from "/assets/logo.png";
 import { RxHamburgerMenu } from "react-icons/rx";
 import NavItem from "./NavItem";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
@@ -19,13 +20,9 @@ const Navbar = ({ openNav, setOpenNav }: Props) => {
   return (
     <nav className={`bg-white`}>
       <div className="navbar w-full  flex justify-between items-center sm:py-12">
-        <div
-          className={`font-marley text-3xl md:text-4xl text-primary ${
-            openNav ? "blur-[2px]" : ""
-          }`}
-        >
+        <div className={`mt-1 sm:mt-0 ${openNav ? "blur-[2px]" : ""}`}>
           <Link to={"/"} onClick={() => setOpenNav(false)}>
-            Knotify
+            <img src={logo} alt="Knotify" className="w-[100px] sm:w-[120px]" />
           </Link>
         </div>
         <div

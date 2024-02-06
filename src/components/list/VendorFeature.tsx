@@ -20,7 +20,7 @@ const VendorFeature = ({ data }: Props) => {
           className="object-cover w-full h-full"
         />
         {data.comingSoon && (
-          <span className="bg-green-100 font-semibold text-green-500 border border-green-500 rounded-xl px-2 py-1 w-fit absolute top-2 right-2 text-sm">
+          <span className="font-semibold bg-black text-white rounded-xl px-2 py-1 w-fit absolute top-2 right-2 text-sm">
             Coming Soon
           </span>
         )}

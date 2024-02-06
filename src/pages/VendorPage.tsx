@@ -30,6 +30,21 @@ const VenuePage = () => {
   const [fixedContactSection, setFixedContactSection] = useState(false);
   const { id } = useParams();
 
+  const handleClick = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+    targetId: string
+  ) => {
+    e.preventDefault();
+
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -119,25 +134,39 @@ const VenuePage = () => {
           {/* nav */}
           <ul className="flex gap-4 sm:gap-8 sm:justify-center items-center overflow-x-scroll no-scrollbar mb-4 pb-4 sm:mb-8 sm:pb-8 border-b">
             <li className="cursor-pointer font-semibold hover:text-primary hover:underline">
-              <a href="#photos">Photos</a>
+              <a href="#photos" onClick={(e) => handleClick(e, "photos")}>
+                Photos
+              </a>
             </li>
             <li className="cursor-pointer font-semibold hover:text-primary hover:underline">
-              <a href="#features">Features</a>
+              <a href="#features" onClick={(e) => handleClick(e, "features")}>
+                Features
+              </a>
             </li>
             <li className="cursor-pointer font-semibold hover:text-primary hover:underline">
-              <a href="#about">About</a>
+              <a href="#about" onClick={(e) => handleClick(e, "about")}>
+                About
+              </a>
             </li>
             <li className="cursor-pointer font-semibold hover:text-primary hover:underline">
-              <a href="#packages">Packages</a>
+              <a href="#packages" onClick={(e) => handleClick(e, "packages")}>
+                Packages
+              </a>
             </li>
             <li className="cursor-pointer font-semibold hover:text-primary hover:underline">
-              <a href="#faq">FAQ</a>
+              <a href="#faq" onClick={(e) => handleClick(e, "faq")}>
+                FAQ
+              </a>
             </li>
             <li className="cursor-pointer font-semibold hover:text-primary hover:underline">
-              <a href="#contact">Contact</a>
+              <a href="#contact" onClick={(e) => handleClick(e, "contact")}>
+                Contact
+              </a>
             </li>
             <li className="cursor-pointer font-semibold hover:text-primary hover:underline">
-              <a href="#related">Related</a>
+              <a href="#related" onClick={(e) => handleClick(e, "related")}>
+                Related
+              </a>
             </li>
           </ul>
           {/* features */}

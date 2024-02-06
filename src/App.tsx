@@ -21,7 +21,8 @@ function App() {
       <div
         className={`container bg-white transition-all ${
           openNav ? "blur-[2px]" : ""
-        } `}
+        }`}
+        onClick={() => setOpenNav(false)}
       >
         <Routes>
           {/* <Route path="/test" element={<Home />} /> */}

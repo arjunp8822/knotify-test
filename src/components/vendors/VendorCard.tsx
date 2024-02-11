@@ -6,17 +6,19 @@ import { Link } from "react-router-dom";
 
 interface Props {
   name: string;
+  vendorType: string;
   link: string;
   location: string;
   rating: number;
   review_count: number;
   min_price: number;
-  max_guests: number;
+  max_guests?: number;
   img: string[];
 }
 
 const VenueCard = ({
   name,
+  vendorType,
   link,
   location,
   rating,
@@ -94,12 +96,16 @@ const VenueCard = ({
         <p className="mb-3 text-sm sm:text-[15px] text-gray-500">{location}</p>
         <div className="flex justify-between">
           <span className="text-sm sm:text-[15px] font-semibold">
-            ${min_price}pp
+            {vendorType === "Venues"
+              ? "Starting from $" + min_price.toLocaleString() + "pp"
+              : "Packages from $" + min_price.toLocaleString()}
           </span>
-          <div className="flex gap-1 justify-center items-center">
-            <IoMdPeople />
-            <span className="text-sm sm:text-[15px]">{max_guests}</span>
-          </div>
+          {vendorType === "Venues" && (
+            <div className="flex gap-1 justify-center items-center">
+              <IoMdPeople />
+              <span className="text-sm sm:text-[15px]">{max_guests}</span>
+            </div>
+          )}
         </div>
       </Link>
     </li>

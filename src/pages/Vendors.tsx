@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
 import { Data } from "../data/VenueData";
-import VenueCard from "../components/venues/VenueCard";
-import SearchBar from "../components/venues/SearchBar";
-import { PackageData } from "../components/venuePage/VenuePackages";
+import VenueCard from "../components/vendors/VendorCard";
+import SearchBar from "../components/filter/SearchBar";
+import { PackageData } from "../components/vendorPage/VenuePackages";
 import { FAQs } from "../components/list/VendorFAQ";
 import CityData from "../data/CityData.json";
-import VendorType from "../components/venues/VendorType";
-import NoResults from "../components/venues/NoResults";
+import VendorType from "../components/vendors/VendorType";
+import NoResults from "../components/vendors/NoResults";
 
 export interface VenueDataInterface {
   id: number;
   featured: boolean;
+  vendorType: string;
   name: string;
   email: string;
   phone: string;
@@ -20,7 +21,7 @@ export interface VenueDataInterface {
   rating: number;
   review_count: number;
   min_price: number;
-  max_guests: number;
+  max_guests?: number;
   short_description: string;
   img: string[];
   features: string[];
@@ -88,10 +89,6 @@ const Home = () => {
       filteredData = [...filteredData].sort((a, b) => a.id - b.id);
     }
 
-    filteredData = filteredData.filter(
-      (x) => x.vendorType === filtersSelected.vendorType
-    );
-
     if (filtersSelected.sort === "Price - low to high") {
       filteredData = [...filteredData].sort(
         (a, b) => a.min_price - b.min_price
@@ -104,20 +101,40 @@ const Home = () => {
       );
     }
 
+    // vendor type
+
+    filteredData = filteredData.filter(
+      (x) => x.vendorType === filtersSelected.vendorType
+    );
+
     // other filters from filter container
 
     filteredData = filteredData.filter(
       (x) => x.rating > filtersSelected.rating
     );
 
-    filteredData = filteredData.filter(
-      (x) => x.max_guests > filtersSelected.minGuests!
-    );
+    // THESE FILTERS ARE CAUSING AN ISSUE DUE TO DIFFERENT VENDOR TYPE
+    // THESE FILTERS ARE CAUSING AN ISSUE DUE TO DIFFERENT VENDOR TYPE
+    // THESE FILTERS ARE CAUSING AN ISSUE DUE TO DIFFERENT VENDOR TYPE
 
-    filteredData = filteredData.filter(
-      (x) =>
-        x.min_price < filtersSelected.maxBudget! / filtersSelected.maxGuests
-    );
+    // VENUE SPECIFIC
+
+    if (filtersSelected.vendorType === "Venues") {
+      filteredData = filteredData.filter(
+        (x) => x.max_guests! > filtersSelected.minGuests!
+      );
+    }
+
+    if (filtersSelected.vendorType === "Venues") {
+      filteredData = filteredData.filter(
+        (x) =>
+          x.min_price < filtersSelected.maxBudget! / filtersSelected.maxGuests
+      );
+    }
+
+    // THESE FILTERS ARE CAUSING AN ISSUE DUE TO DIFFERENT VENDOR TYPE
+    // THESE FILTERS ARE CAUSING AN ISSUE DUE TO DIFFERENT VENDOR TYPE
+    // THESE FILTERS ARE CAUSING AN ISSUE DUE TO DIFFERENT VENDOR TYPE
 
     if (filtersSelected.categories && filtersSelected.categories.length > 0) {
       filteredData = filteredData.filter((x) =>
@@ -165,6 +182,7 @@ const Home = () => {
             <VenueCard
               key={venue.id}
               name={venue.name}
+              vendorType={venue.vendorType}
               link={venue.id.toString()}
               location={venue.location}
               rating={venue.rating}

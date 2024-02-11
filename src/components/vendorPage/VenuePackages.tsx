@@ -3,17 +3,21 @@ import VenuePackage from "./VenuePackage";
 export interface PackageData {
   title: string;
   name: string;
-  duration: number;
+  duration?: number;
   days: string[];
   description: string;
   disclaimer: string;
-  minGuests: number;
-  maxGuests: number;
+  minGuests?: number;
+  maxGuests?: number;
   priceStarting: number;
-  venueInclusions: string[];
-  serviceInclusions: string[];
-  planningInclusions: string[];
-  diningInclusions: string[];
+  venueInclusions?: string[];
+  serviceInclusions?: string[];
+  planningInclusions?: string[];
+  diningInclusions?: string[];
+  setupInclusions?: string[];
+  ceremonyInclusions?: string[];
+  receptionInclusions?: string[];
+  deliveryInclusions?: string[];
 }
 
 interface Props {

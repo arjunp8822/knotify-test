@@ -3,17 +3,17 @@ import { FaStar } from "react-icons/fa";
 import { Data } from "../data/VenueData";
 import { Link, useParams } from "react-router-dom";
 import NotFound from "./NotFound";
-import ImageModal from "../components/venuePage/ImageModal";
-import LargeImageModal from "../components/venuePage/LargeImageModal";
-import VenueForm from "../components/venuePage/VenueForm";
-import VenueFeatures from "../components/venuePage/VenueFeatures";
-import VenuePackages from "../components/venuePage/VenuePackages";
-import PackageModal from "../components/venuePage/PackageModal";
-import { PackageData } from "../components/venuePage/VenuePackages";
+import ImageModal from "../components/vendorPage/ImageModal";
+import LargeImageModal from "../components/vendorPage/LargeImageModal";
+import VenueForm from "../components/vendorPage/VenueForm";
+import VenueFeatures from "../components/vendorPage/VenueFeatures";
+import VenuePackages from "../components/vendorPage/VenuePackages";
+import PackageModal from "../components/vendorPage/PackageModal";
+import { PackageData } from "../components/vendorPage/VenuePackages";
 import { MdOutlineMailOutline, MdOutlinePhoneEnabled } from "react-icons/md";
-import QuestionAnswer from "../components/venuePage/QuestionAnswer";
+import QuestionAnswer from "../components/vendorPage/QuestionAnswer";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
-import WorkWithCard from "../components/venuePage/WorkWithCard";
+import WorkWithCard from "../components/vendorPage/WorkWithCard";
 import { FiArrowUpRight } from "react-icons/fi";
 import { VenueDataInterface } from "./Vendors";
 
@@ -88,9 +88,18 @@ const VenuePage = () => {
           {data.location}
         </span>
         <div className="flex gap-2 justify-start items-center text-sm sm:text-base mb-4">
-          <span>${data.min_price} per person</span>
-          <div className="bg-black h-[4px] w-[4px] rounded-full translate-y-[1px]"></div>
-          <span>{data.max_guests} guests</span>
+          {data.vendorType === "Venues" ? (
+            <span>${data.min_price} per person</span>
+          ) : (
+            <span>Starting from ${data.min_price}</span>
+          )}
+          {data.vendorType === "Venues" && (
+            <div className="flex justify-center items-center gap-2">
+              <div className="bg-black h-[4px] w-[4px] rounded-full translate-y-[1px]"></div>
+              <span>{data.max_guests} guests</span>
+            </div>
+          )}
+
           <div className="bg-black h-[4px] w-[4px] rounded-full translate-y-[1px]"></div>
           <span className="flex justify-center items-center gap-1">
             <span className="text-yellow-500">
@@ -171,19 +180,19 @@ const VenuePage = () => {
           </ul>
           {/* features */}
           <div className="mb-4 sm:mb-8 border-b pb-4 sm:pb-8" id="features">
-            <h3 className="font-semibold text-xl mb-4">Venue features</h3>
+            <h3 className="font-semibold text-xl mb-4">Our features</h3>
             <VenueFeatures features={data.features} />
           </div>
           {/* description */}
           <div className="mb-4 pb-4 sm:mb-8 sm:pb-8 border-b" id="about">
-            <h3 className="font-semibold text-xl mb-4">About the venue</h3>
+            <h3 className="font-semibold text-xl mb-4">About us</h3>
             {data.short_description.split("\n").map((x) => (
               <p className="text-sm sm:text-base mt-6 text-gray-700">{x}</p>
             ))}
           </div>
           {/* packages */}
           <div className="mb-4 pb-4 sm:mb-8 sm:pb-8 border-b" id="packages">
-            <h3 className="font-semibold text-xl mb-4">Venue packages</h3>
+            <h3 className="font-semibold text-xl mb-4">Our packages</h3>
             <VenuePackages
               packages={data.packages}
               setShowPackageModal={setShowPackageModal}
@@ -204,7 +213,7 @@ const VenuePage = () => {
           {/* Related */}
           <div className="sm:mb-4 sm:pb-4" id="related">
             <h3 className="font-semibold text-xl mb-4">
-              Venues similar to {data.name}
+              Similar to {data.name}
             </h3>
             <div className="flex overflow-x-auto gap-4 custom-scrollbar pb-6">
               {workWithData?.map((x) => (
@@ -329,6 +338,7 @@ const VenuePage = () => {
         showPackageModal={showPackageModal}
         setShowPackageModal={setShowPackageModal}
         packageData={packageData}
+        vendorType={data.vendorType}
       />
 
       {/* image modal */}

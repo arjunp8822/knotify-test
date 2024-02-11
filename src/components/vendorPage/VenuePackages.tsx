@@ -27,6 +27,9 @@ export interface PackageData {
   preEventCateringServices?: string[];
   eventDayCateringServices?: string[];
   postEventCateringServices?: string[];
+  preHireServices?: string[];
+  duringHireServices?: string[];
+  postHireServices?: string[];
 }
 
 interface Props {

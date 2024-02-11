@@ -18,6 +18,15 @@ export interface PackageData {
   ceremonyInclusions?: string[];
   receptionInclusions?: string[];
   deliveryInclusions?: string[];
+  preWeddingInclusions?: string[];
+  weddingDayInclusions?: string[];
+  postWeddingInclusions?: string[];
+  preOrderCakeInclusions?: string[];
+  weddingDayCakeInclusions?: string[];
+  postWeddingCakeInclusions?: string[];
+  preEventCateringServices?: string[];
+  eventDayCateringServices?: string[];
+  postEventCateringServices?: string[];
 }
 
 interface Props {

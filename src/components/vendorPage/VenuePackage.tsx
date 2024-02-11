@@ -21,6 +21,18 @@ interface Props {
     ceremonyInclusions?: string[];
     receptionInclusions?: string[];
     deliveryInclusions?: string[];
+    preWeddingInclusions?: string[];
+    weddingDayInclusions?: string[];
+    postWeddingInclusions?: string[];
+    preOrderCakeInclusions?: string[];
+    weddingDayCakeInclusions?: string[];
+    postWeddingCakeInclusions?: string[];
+    preEventCateringServices?: string[];
+    eventDayCateringServices?: string[];
+    postEventCateringServices?: string[];
+    preHireServices?: string[];
+    duringHireServices?: string[];
+    postHireServices?: string[];
   };
   setShowPackageModal: (showPackageModal: boolean) => void;
   setPackageData: (data: PackageData) => void;

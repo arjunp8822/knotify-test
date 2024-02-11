@@ -2741,43 +2741,42 @@ export const Data = [
       "Splendid6",
     ],
     features: [
-      "Ceremony Decor",
-      "Reception Decor",
-      "Custom Designs",
-      "Rental Services",
-      "Delivery & Setup",
-      "Seasonal Blooms",
-      "Bouquets",
-      "Centerpieces",
-    ], // limit this to - ["Ceremony Decor", "Reception Decor", "Custom Designs", "Rental Services", "Delivery & Setup", "Seasonal Blooms", "Bouquets", "Centerpieces"]
+      "Photo Editing",
+      "Candid Shots",
+      "Portrait Sessions",
+      "Custom Albums",
+      "Drone Photography",
+      "Receptions",
+      "Ceremonies",
+      "Multiple Shooters",
+    ], // limit this to - ["Photo Editing", "Candid Shots", "Portrait Sessions", "Custom Albums", "Drone Photography", "Receptions", "Ceremonies", "Multiple Shooters"]
     faqs: [
       {
         id: 1,
-        question:
-          "What is the ideal timeline for booking floral services for a wedding?",
+        question: "How far in advance should I book my wedding photographer?",
         answer:
-          "It's advisable to book your floral services around 6 to 12 months before your wedding date. This allows ample time for consultations, planning, and ensuring the availability of your preferred florist.",
+          "It's recommended to book your wedding photographer as soon as you have your wedding date and venue secured. Many popular photographers' calendars fill up quickly, especially during peak wedding seasons. Booking 9 to 12 months in advance ensures you secure your preferred photographer and allows ample time for planning and consultations.",
       },
       {
         id: 2,
         question:
-          "How can I ensure that the floral arrangements align with my wedding theme and personal style?",
+          "Do you offer engagement sessions as part of your wedding photography services?",
         answer:
-          "Our florists specialize in personalised consultations to understand your vision, preferences, and wedding theme. We encourage you to bring any inspiration, such as color swatches, Pinterest boards, or magazine clippings, to your consultation. ",
+          "Yes, we offer engagement sessions as part of our wedding photography packages. An engagement session is a great opportunity for us to get to know each other better and for you to become comfortable in front of the camera. It also allows us to capture some beautiful images of you and your partner in a more relaxed setting, which you can use for save-the-date cards, wedding invitations, or simply as cherished memories.",
       },
       {
         id: 3,
         question:
-          "What happens if I need to make changes to my floral order after it's been finalised?",
+          "Can I provide a shot list or specific photos I want captured on my wedding day?",
         answer:
-          "We understand that plans may change, and we're here to accommodate adjustments to your floral order whenever possible. We recommend communicating any changes as soon as you're aware of them. Depending on the timing and nature of the changes, there may be adjustments to the cost or availability of certain blooms.",
+          "Absolutely! We encourage our clients to provide us with a shot list or any specific photo requests they may have. Whether it's a particular pose, a special moment, or a group shot with family and friends, we want to ensure we capture all the important moments and details of your wedding day.",
       },
     ], //limit this to 5
     workWith: [2, 3, 4, 5], //limit this to 4
     packages: [
       {
         title: "Package 1",
-        name: "Elegant Blooms Wedding Package",
+        name: "Diamond Memories Package",
         days: [
           "Monday",
           "Tuesday",
@@ -2788,29 +2787,291 @@ export const Data = [
           "Sunday",
         ],
         description:
-          "The Elegant Blooms Wedding Package offers a comprehensive selection of floral arrangements to enhance the beauty of your wedding day. From the bride's bouquet to the ceremony and reception decor, each piece is meticulously crafted to reflect your style and vision.",
+          "This package offers comprehensive wedding photography coverage from the pre-wedding moments to the post-wedding celebrations. With a focus on capturing authentic moments and creating timeless memories, this package includes engagement photoshoot, full-day coverage with two photographers, and personalised consultation to ensure every detail is captured according to your preferences. After the wedding, you'll receive a beautifully crafted wedding album, digital image gallery, and print credit to preserve and share your cherished memories for years to come.",
         disclaimer:
-          "Pricing and package details are subject to customization based on individual preferences, venue requirements, and seasonal availability of flowers. Additional enhancements or substitutions may be accommodated at an additional cost.",
-        priceStarting: 1500,
-        setupInclusions: [
-          "On-site setup",
-          "Ensuring proper placement of floral arrangements",
+          "Pricing and package details are subject to customisation based on individual preferences and venue requirements. Additional enhancements or substitutions may be accommodated at an additional cost.",
+        priceStarting: 3099,
+        preWeddingInclusions: [
+          "Engagement Photoshoot",
+          "Consultation Meeting",
+          "Customised Shot List",
         ],
-        ceremonyInclusions: [
-          "Ceremony arch decor",
-          "Floral arrangements for altar",
-          "Pew or aisle decorations",
+        weddingDayInclusions: [
+          "Full-Day Coverage",
+          "Two Photographers",
+          "Ceremony & Reception Coverage",
+          "Digital Image Gallery",
         ],
-        receptionInclusions: [
-          "Reception centerpieces (x10)",
-          "Escort card table arrangement",
-          "Sweetheart table decor",
+        postWeddingInclusions: [
+          "Custom Wedding Album",
+          "Print Credit",
+          "Thank You Cards",
         ],
-        deliveryInclusions: [
-          "Professional delivery",
-          "Timely delivery to the wedding venue",
-          "Careful handling of floral arrangements during transit",
-          "Coordination with venue staff for setup logistics",
+      },
+    ],
+  },
+  {
+    id: 17,
+    vendorType: "Cakes",
+    featured: false,
+    sample: true,
+    name: "Art Of Baking",
+    email: "artofbaking@iinet.net.au",
+    phone: "0414586840",
+    facebook: "https://www.facebook.com/SydneyAOB",
+    instagram: "https://www.instagram.com/artofbaking/",
+    website: "https://www.artofbaking.com.au/",
+    location: "Gladesville, NSW",
+    city: "Sydney",
+    state: "NSW",
+    category: "Traditional", // limit this to [Traditional, Modern, Rustic, Floral, Themed]
+    rating: 4.4,
+    review_count: 47,
+    min_price: 550, // packages starting from
+    short_description:
+      "Sweet treats and exquisite creations await you at Art Of Baking, Sydney. Whether you’re looking for a traditional wedding cake or something a little bolder, you’ll be well catered to by the passionate and dedicated team from Art of Baking. You’ll be able to taste the Art of Baking difference; these cakes are carefully made from scratch using the finest ingredients and decorated by hand.",
+    img: ["artofbaking1", "artofbaking2", "artofbaking3", "artofbaking4"],
+    features: [
+      "Custom Design",
+      "Delicious Flavors",
+      "Elegant Presentation",
+      "Fresh Ingredients",
+      "Personalised Details",
+      "Tiered Structure",
+      "Edible Decorations",
+      "Buttercream Frosting",
+      "Fondant Finish",
+      "Gluten-Free Options",
+    ], // limit this to - ["Custom Design", "Delicious Flavors", "Elegant Presentation", "Fresh Ingredients", "Personalised Details", "Tiered Structure", "Edible Decorations", "Buttercream Frosting", "Fondant Finish", "Gluten-Free Options",]
+    faqs: [
+      {
+        id: 1,
+        question: "How far in advance should I order my wedding cake?",
+        answer:
+          "It's best to place your order for the wedding cake at least 3 to 6 months before your wedding date. This allows ample time for consultations, design planning, and scheduling with the cake baker. However, if you have a specific bakery in mind, especially one known for their expertise or popularity, it's advisable to book even earlier to secure your spot on their calendar.",
+      },
+      {
+        id: 2,
+        question: "Can I request a tasting before ordering my wedding cake?",
+        answer:
+          "Absolutely! Most bakeries offer cake tasting consultations where you can sample various cake flavors and discuss design options with the baker. It's a great opportunity to ensure that the cake not only looks beautiful but also tastes delicious. We recommend scheduling your tasting consultation well in advance to ensure availability and allow time for decision-making.",
+      },
+      {
+        id: 3,
+        question: "What size cake do I need for my wedding?",
+        answer:
+          "The size of your wedding cake depends on several factors, including the number of guests you'll be serving and whether you'll have other dessert options available. As a general guideline, a three-tier cake typically serves 50 to 100 guests, while a five-tier cake can serve 200 or more guests. It's always a good idea to consult with your cake baker to determine the appropriate size based on your guest count and serving preferences.",
+      },
+    ], //limit this to 5
+    workWith: [2, 3, 4, 5], //limit this to 4
+    packages: [
+      {
+        title: "Package 1",
+        name: "Sweet Elegance Package",
+        days: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        description:
+          "This package offers comprehensive wedding photography coverage from the pre-wedding moments to the post-wedding celebrations. With a focus on capturing authentic moments and creating timeless memories, this package includes engagement photoshoot, full-day coverage with two photographers, and personalised consultation to ensure every detail is captured according to your preferences. After the wedding, you'll receive a beautifully crafted wedding album, digital image gallery, and print credit to preserve and share your cherished memories for years to come.",
+        disclaimer:
+          "Pricing and package details are subject to customisation based on individual preferences and venue requirements. Additional enhancements or substitutions may be accommodated at an additional cost.",
+        priceStarting: 600,
+        preOrderCakeInclusions: [
+          "Cake Tasting Consultation",
+          "Custom Design Concept",
+          "Sketch of Design",
+        ],
+        weddingDayCakeInclusions: ["Delivery & Setup", "Cake Stand Rental"],
+        postWeddingCakeInclusions: [
+          "Cake Cutting Guide",
+          "Top Tier Preservation",
+          "Thank You Note",
+        ],
+      },
+    ],
+  },
+  {
+    id: 18,
+    vendorType: "Catering",
+    featured: false,
+    sample: true,
+    name: "Top Cat Catering",
+    email: "https://topcatcatering.com.au/",
+    phone: "0418862666",
+    facebook: "https://www.facebook.com/HorizonsBeachVenue/",
+    instagram: "https://www.instagram.com/horizonsbeachvenue/",
+    website: "https://www.artofbaking.com.au/",
+    location: "South Maroubra, NSW",
+    city: "Sydney",
+    state: "NSW",
+    category: "Modern", // limit this to [Traditional, Modern, Cultural, Casual, Gourmet, Fine Dining]
+    rating: 4.9,
+    review_count: 49,
+    min_price: 75, // packages starting from
+    short_description:
+      "Top Cat Catering has a highly regarded reputation for catering and have catered some of Sydneys best weddings and parties.\n\nWeddings with Top Cat Catering are a truly personal affair, where we will work with you to plan your day to suit your individual needs and style. We provide creative vision, seamless service and ...exceptional food by Jennifer Eliades.",
+    img: ["topcat1", "topcat2", "topcat4", "topcat5"],
+    features: [
+      "Custom Menus",
+      "Professional Staff",
+      "Flexible Packages",
+      "On-Site Cooking",
+      "Buffet Service",
+      "Plated Meals",
+      "Vegetarian Options",
+      "Gluten-Free Options",
+      "Dessert Stations",
+      "Beverage Packages",
+    ], // limit this to - [ "Custom Menus", "Professional Staff", "Flexible Packages", "On-Site Cooking", "Buffet Service", "Plated Meals", "Vegetarian Options", "Gluten-Free Options", "Dessert Stations", "Beverage Packages",]
+    faqs: [
+      {
+        id: 1,
+        question: "What types of cuisine options do you offer?",
+        answer:
+          "We offer a diverse range of cuisine options to cater to different tastes and preferences. From traditional favorites to international cuisines, our menu selections are customizable to suit your wedding theme and dietary requirements.",
+      },
+      {
+        id: 2,
+        question: "Can you accommodate special dietary needs or restrictions?",
+        answer:
+          "Yes, we understand the importance of catering to special dietary needs and restrictions. Whether it's vegetarian, vegan, gluten-free, or any other dietary requirement, our culinary team can create delicious and satisfying options to ensure all your guests are well taken care of.",
+      },
+      {
+        id: 3,
+        question: "How do you handle catering for large guest counts?",
+        answer:
+          "We have experience in catering for weddings of all sizes, including large guest counts. Our professional staff and efficient kitchen operations allow us to handle the logistics smoothly, ensuring that all guests are served promptly and with the highest quality of service.",
+      },
+    ], //limit this to 5
+    workWith: [2, 3, 4, 5], //limit this to 4
+    packages: [
+      {
+        title: "Package 1",
+        name: "Exquisite Dining Package",
+        days: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        description:
+          "The Exquisite Dining Package offers an exceptional culinary experience for your wedding day, providing a seamless and memorable dining experience for you and your guests. From pre-event consultations to post-event cleanup, this comprehensive package is designed to cater to all your dining needs with elegance and sophistication.",
+        disclaimer:
+          "Pricing and package details are subject to customisation based on individual preferences and venue requirements. Additional enhancements or substitutions may be accommodated at an additional cost.",
+        priceStarting: 75,
+        preEventCateringServices: [
+          "Initial Consultation",
+          "Custom Menu Planning",
+          "Tasting Session",
+        ],
+        eventDayCateringServices: [
+          "Professional Service Staff",
+          "Buffet Setup or Plated Service",
+          "Beverage Station",
+        ],
+        postEventCateringServices: [
+          "Leftover Food Packing",
+          "Cleanup and Removal",
+          "Follow-Up Consultation",
+        ],
+      },
+    ],
+  },
+  {
+    id: 19,
+    vendorType: "Transportation",
+    featured: false,
+    sample: true,
+    name: "Evolution Car Hire",
+    email: "evolutionhire@optusnet.com.au",
+    phone: "0405000588",
+    facebook: "https://www.facebook.com/evolutioncarhire1999",
+    instagram: "https://www.instagram.com/kombievolutioncarhire/",
+    website: "https://www.evolutioncarhire.com/",
+    location: "Kings Park, NSW",
+    city: "Sydney",
+    state: "NSW",
+    category: "Vintage", // limit this to [Luxury, Vintage, Exotic, Classic]
+    rating: 5.0,
+    review_count: 28,
+    min_price: 1000, // packages starting from
+    short_description:
+      "Seeking the Volkswagen experience for your wedding? Evolution Car Hire is one of Sydney's premier wedding car companies. With over 24 years of experience in the business, Evolution Car Hire provides the highest quality vehicles and exceptional service. When you choose Evolution Car Hire, you're booking a company with a long-standing reputation as the founders of Volkswagen hire in Australia.",
+    img: ["Evolution1", "Evolution2", "Evolution3", "Evolution4", "Evolution5"],
+    features: [
+      "Luxury Fleet",
+      "Chauffeur Service",
+      "Flexible Booking",
+      "24/7 Support",
+      "GPS Navigation",
+      "Child Seats",
+      "Airport Transfers",
+      "Insurance Coverage",
+      "Fuel Efficiency",
+      "Unlimited Mileage",
+    ], // limit this to - ["Luxury Fleet", "Chauffeur Service", "Flexible Booking", "24/7 Support", "GPS Navigation", "Child Seats", "Airport Transfers", "Insurance Coverage", "Fuel Efficiency", "Unlimited Mileage"]
+    faqs: [
+      {
+        id: 1,
+        question: "What is the minimum age requirement for renting a car?",
+        answer:
+          "The minimum age requirement for renting a car varies depending on the rental company and the location. In general, most rental companies require drivers to be at least 21 years old. However, drivers under the age of 25 may incur additional fees or restrictions.",
+      },
+      {
+        id: 2,
+        question: "What documents do I need to rent a car?",
+        answer:
+          "To rent a car, you typically need a valid driver's license, a credit card in the name of the primary driver, and proof of insurance. International renters may also need a passport and an international driver's permit, depending on the country's regulations.",
+      },
+      {
+        id: 3,
+        question: "Can I add additional drivers to my rental agreement?",
+        answer:
+          "Yes, many car rental companies allow you to add additional drivers to your rental agreement for an extra fee. Each additional driver must meet the rental company's age and licensing requirements and may need to provide their driver's license and other documentation at the time of rental.",
+      },
+    ], //limit this to 5
+    workWith: [2, 3, 4, 5], //limit this to 4
+    packages: [
+      {
+        title: "Package 1",
+        name: "Luxury Travel Package",
+        days: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        description:
+          "The Luxury Travel Package offers an unparalleled experience for your transportation needs, providing luxurious vehicles and exceptional service for your travels.",
+        disclaimer:
+          "Pricing and package details are subject to customisation based on individual preferences and venue requirements. Additional enhancements or substitutions may be accommodated at an additional cost.",
+        priceStarting: 1000,
+        preHireServices: [
+          "Online Reservation",
+          "Vehicle Selection Assistance",
+          "Quote Comparison",
+        ],
+        duringHireServices: [
+          "Luxury Car Rental",
+          "Chauffeur Service",
+          "24/7 Support",
+        ],
+        postHireServices: [
+          "Return Assistance",
+          "Feedback Collection",
+          "Discounts for Future Bookings",
         ],
       },
     ],

@@ -68,7 +68,7 @@ const PackageModal = ({
                   <BiDollar />
                 </div>
                 <div>
-                  {vendorType === "Venues"
+                  {vendorType === "Venues" || vendorType === "Catering"
                     ? "$" + packageData?.priceStarting + "pp"
                     : "$" + packageData?.priceStarting}
                 </div>
@@ -184,6 +184,162 @@ const PackageModal = ({
               {packageData?.deliveryInclusions?.map((item) => (
                 <li className="mb-2">{item}</li>
               ))}
+            </ul>
+
+            {/* Photographer specific inclusions */}
+
+            {packageData?.preWeddingInclusions &&
+              packageData?.preWeddingInclusions?.length > 0 && (
+                <h3 className="font-semibold mb-6 text-center text-lg">
+                  Pre-Wedding Services
+                </h3>
+              )}
+            <ul className="mb-6 text-center text-sm sm:text-base text-gray-500 font-light">
+              {packageData?.preWeddingInclusions &&
+                packageData?.preWeddingInclusions?.map((item) => (
+                  <li className="mb-2">{item}</li>
+                ))}
+            </ul>
+            {packageData?.weddingDayInclusions &&
+              packageData?.weddingDayInclusions?.length > 0 && (
+                <h3 className="font-semibold mb-6 text-center text-lg">
+                  Wedding Day Coverage
+                </h3>
+              )}
+            <ul className="mb-6 text-center text-sm sm:text-base text-gray-500 font-light">
+              {packageData?.weddingDayInclusions &&
+                packageData?.weddingDayInclusions?.map((item) => (
+                  <li className="mb-2">{item}</li>
+                ))}
+            </ul>
+            {packageData?.postWeddingInclusions &&
+              packageData?.postWeddingInclusions?.length > 0 && (
+                <h3 className="font-semibold mb-6 text-center text-lg">
+                  Post-Wedding Services
+                </h3>
+              )}
+            <ul className="mb-6 text-center text-sm sm:text-base text-gray-500 font-light">
+              {packageData?.postWeddingInclusions &&
+                packageData?.postWeddingInclusions?.map((item) => (
+                  <li className="mb-2">{item}</li>
+                ))}
+            </ul>
+
+            {/* Cake specific inclusions */}
+
+            {packageData?.preOrderCakeInclusions &&
+              packageData?.preOrderCakeInclusions?.length > 0 && (
+                <h3 className="font-semibold mb-6 text-center text-lg">
+                  Pre-Wedding Services
+                </h3>
+              )}
+            <ul className="mb-6 text-center text-sm sm:text-base text-gray-500 font-light">
+              {packageData?.preOrderCakeInclusions &&
+                packageData?.preOrderCakeInclusions?.map((item) => (
+                  <li className="mb-2">{item}</li>
+                ))}
+            </ul>
+            {packageData?.weddingDayCakeInclusions &&
+              packageData?.weddingDayCakeInclusions?.length > 0 && (
+                <h3 className="font-semibold mb-6 text-center text-lg">
+                  Wedding Day Coverage
+                </h3>
+              )}
+            <ul className="mb-6 text-center text-sm sm:text-base text-gray-500 font-light">
+              {packageData?.weddingDayCakeInclusions &&
+                packageData?.weddingDayCakeInclusions?.map((item) => (
+                  <li className="mb-2">{item}</li>
+                ))}
+            </ul>
+            {packageData?.postWeddingCakeInclusions &&
+              packageData?.postWeddingCakeInclusions?.length > 0 && (
+                <h3 className="font-semibold mb-6 text-center text-lg">
+                  Post-Wedding Services
+                </h3>
+              )}
+            <ul className="mb-6 text-center text-sm sm:text-base text-gray-500 font-light">
+              {packageData?.postWeddingCakeInclusions &&
+                packageData?.postWeddingCakeInclusions?.map((item) => (
+                  <li className="mb-2">{item}</li>
+                ))}
+            </ul>
+
+            {/* Catering specific inclusions */}
+
+            {packageData?.preEventCateringServices &&
+              packageData?.preEventCateringServices?.length > 0 && (
+                <h3 className="font-semibold mb-6 text-center text-lg">
+                  Pre-Wedding Services
+                </h3>
+              )}
+            <ul className="mb-6 text-center text-sm sm:text-base text-gray-500 font-light">
+              {packageData?.preEventCateringServices &&
+                packageData?.preEventCateringServices?.map((item) => (
+                  <li className="mb-2">{item}</li>
+                ))}
+            </ul>
+            {packageData?.eventDayCateringServices &&
+              packageData?.eventDayCateringServices?.length > 0 && (
+                <h3 className="font-semibold mb-6 text-center text-lg">
+                  Wedding Day Coverage
+                </h3>
+              )}
+            <ul className="mb-6 text-center text-sm sm:text-base text-gray-500 font-light">
+              {packageData?.eventDayCateringServices &&
+                packageData?.eventDayCateringServices?.map((item) => (
+                  <li className="mb-2">{item}</li>
+                ))}
+            </ul>
+            {packageData?.postEventCateringServices &&
+              packageData?.postEventCateringServices?.length > 0 && (
+                <h3 className="font-semibold mb-6 text-center text-lg">
+                  Post-Wedding Services
+                </h3>
+              )}
+            <ul className="mb-6 text-center text-sm sm:text-base text-gray-500 font-light">
+              {packageData?.postEventCateringServices &&
+                packageData?.postEventCateringServices?.map((item) => (
+                  <li className="mb-2">{item}</li>
+                ))}
+            </ul>
+
+            {/* Transportation specific inclusions */}
+
+            {packageData?.preHireServices &&
+              packageData?.preHireServices?.length > 0 && (
+                <h3 className="font-semibold mb-6 text-center text-lg">
+                  Pre-Hire Services
+                </h3>
+              )}
+            <ul className="mb-6 text-center text-sm sm:text-base text-gray-500 font-light">
+              {packageData?.preHireServices &&
+                packageData?.preHireServices?.map((item) => (
+                  <li className="mb-2">{item}</li>
+                ))}
+            </ul>
+            {packageData?.duringHireServices &&
+              packageData?.duringHireServices?.length > 0 && (
+                <h3 className="font-semibold mb-6 text-center text-lg">
+                  During-Hire Services
+                </h3>
+              )}
+            <ul className="mb-6 text-center text-sm sm:text-base text-gray-500 font-light">
+              {packageData?.duringHireServices &&
+                packageData?.duringHireServices?.map((item) => (
+                  <li className="mb-2">{item}</li>
+                ))}
+            </ul>
+            {packageData?.postHireServices &&
+              packageData?.postHireServices?.length > 0 && (
+                <h3 className="font-semibold mb-6 text-center text-lg">
+                  Post-Hire Services
+                </h3>
+              )}
+            <ul className="mb-6 text-center text-sm sm:text-base text-gray-500 font-light">
+              {packageData?.postHireServices &&
+                packageData?.postHireServices?.map((item) => (
+                  <li className="mb-2">{item}</li>
+                ))}
             </ul>
           </div>
         )}

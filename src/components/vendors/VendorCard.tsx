@@ -96,7 +96,7 @@ const VenueCard = ({
         <p className="mb-3 text-sm sm:text-[15px] text-gray-500">{location}</p>
         <div className="flex justify-between">
           <span className="text-sm sm:text-[15px] font-semibold">
-            {vendorType === "Venues"
+            {vendorType === "Venues" || vendorType === "Catering"
               ? "Starting from $" + min_price.toLocaleString() + "pp"
               : "Packages from $" + min_price.toLocaleString()}
           </span>

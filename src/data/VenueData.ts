@@ -2712,4 +2712,107 @@ export const Data = [
       },
     ],
   },
+  {
+    id: 16,
+    vendorType: "Photographers",
+    featured: false,
+    sample: true,
+    name: "Splendid Photos & Video",
+    email: "info@splendid.net.au",
+    phone: "02 9572 8886",
+    facebook: "https://www.facebook.com/splendidphotovideo/",
+    instagram: "https://www.instagram.com/splendidweddingphotography/",
+    website: "https://splendid.net.au/",
+    location: "Leichhardt, NSW",
+    city: "Sydney",
+    state: "NSW",
+    category: "Traditional", // limit this to [Traditional, Photojournalistic, Candid, Cultural]
+    rating: 4.7,
+    review_count: 182,
+    min_price: 3099, // packages starting from
+    short_description:
+      "We, at Splendid Photos & Video, believe that love, weddings, and commitment are a huge aspect of what life is all about. It is our honour to capture these subtle and meaningful exchanges and turn them into your beautiful story!\n\nOur boutique studio is based in Leichhardt, Sydney. Our 10 years of valuable experience of shooting weddings have made us highly recognised, trusted, and talented wedding photographers. Our works have been featured many times in well-known wedding magazines and blog sites.",
+    img: [
+      "Splendid2",
+      "Splendid1",
+      "Splendid3",
+      "Splendid4",
+      "Splendid5",
+      "Splendid6",
+    ],
+    features: [
+      "Ceremony Decor",
+      "Reception Decor",
+      "Custom Designs",
+      "Rental Services",
+      "Delivery & Setup",
+      "Seasonal Blooms",
+      "Bouquets",
+      "Centerpieces",
+    ], // limit this to - ["Ceremony Decor", "Reception Decor", "Custom Designs", "Rental Services", "Delivery & Setup", "Seasonal Blooms", "Bouquets", "Centerpieces"]
+    faqs: [
+      {
+        id: 1,
+        question:
+          "What is the ideal timeline for booking floral services for a wedding?",
+        answer:
+          "It's advisable to book your floral services around 6 to 12 months before your wedding date. This allows ample time for consultations, planning, and ensuring the availability of your preferred florist.",
+      },
+      {
+        id: 2,
+        question:
+          "How can I ensure that the floral arrangements align with my wedding theme and personal style?",
+        answer:
+          "Our florists specialize in personalised consultations to understand your vision, preferences, and wedding theme. We encourage you to bring any inspiration, such as color swatches, Pinterest boards, or magazine clippings, to your consultation. ",
+      },
+      {
+        id: 3,
+        question:
+          "What happens if I need to make changes to my floral order after it's been finalised?",
+        answer:
+          "We understand that plans may change, and we're here to accommodate adjustments to your floral order whenever possible. We recommend communicating any changes as soon as you're aware of them. Depending on the timing and nature of the changes, there may be adjustments to the cost or availability of certain blooms.",
+      },
+    ], //limit this to 5
+    workWith: [2, 3, 4, 5], //limit this to 4
+    packages: [
+      {
+        title: "Package 1",
+        name: "Elegant Blooms Wedding Package",
+        days: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        description:
+          "The Elegant Blooms Wedding Package offers a comprehensive selection of floral arrangements to enhance the beauty of your wedding day. From the bride's bouquet to the ceremony and reception decor, each piece is meticulously crafted to reflect your style and vision.",
+        disclaimer:
+          "Pricing and package details are subject to customization based on individual preferences, venue requirements, and seasonal availability of flowers. Additional enhancements or substitutions may be accommodated at an additional cost.",
+        priceStarting: 1500,
+        setupInclusions: [
+          "On-site setup",
+          "Ensuring proper placement of floral arrangements",
+        ],
+        ceremonyInclusions: [
+          "Ceremony arch decor",
+          "Floral arrangements for altar",
+          "Pew or aisle decorations",
+        ],
+        receptionInclusions: [
+          "Reception centerpieces (x10)",
+          "Escort card table arrangement",
+          "Sweetheart table decor",
+        ],
+        deliveryInclusions: [
+          "Professional delivery",
+          "Timely delivery to the wedding venue",
+          "Careful handling of floral arrangements during transit",
+          "Coordination with venue staff for setup logistics",
+        ],
+      },
+    ],
+  },
 ];

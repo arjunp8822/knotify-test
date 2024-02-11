@@ -109,26 +109,36 @@ const VenuePage = () => {
           </span>
         </div>
       </div>
-      <div className="flex relative mb-4" id="photos">
-        <img
-          src={`https://res.cloudinary.com/dkxs4o9vt/image/upload/v1705560129/${data.img[0]}`}
-          alt="Venue Image 1"
-          className="w-full sm:w-2/3 object-cover rounded sm:rounded-none sm:rounded-l cursor-pointer min-h-[260px]"
-          onClick={() => setShowImageModal(true)}
-        />
-        <div>
+
+      <div
+        className="h-[65vw] max-h-[600px] w-full flex mb-4 relative"
+        id="photos"
+      >
+        <div className="h-full w-full md:w-2/3">
           <img
-            src={`https://res.cloudinary.com/dkxs4o9vt/image/upload/v1705560129/${data.img[1]}`}
-            alt="Venue Image 2"
-            className="w-full hidden sm:flex h-1/2 object-cover rounded sm:rounded-none sm:rounded-tr cursor-pointer min-h-[260px]"
+            src={`https://res.cloudinary.com/dkxs4o9vt/image/upload/v1705560129/${data.img[0]}`}
+            alt="Venue Image 1"
+            className="w-full h-full object-cover rounded sm:rounded-none sm:rounded-l cursor-pointer"
             onClick={() => setShowImageModal(true)}
           />
-          <img
-            src={`https://res.cloudinary.com/dkxs4o9vt/image/upload/v1705560129/${data.img[2]}`}
-            alt="Venue Image 3"
-            className="w-full hidden sm:flex h-1/2 object-cover rounded sm:rounded-none sm:rounded-br cursor-pointer min-h-[260px]"
-            onClick={() => setShowImageModal(true)}
-          />
+        </div>
+        <div className="flex-col w-1/3 hidden md:flex">
+          <div className="h-1/2 w-full">
+            <img
+              src={`https://res.cloudinary.com/dkxs4o9vt/image/upload/v1705560129/${data.img[1]}`}
+              alt="Venue Image 2"
+              className="w-full hidden sm:flex object-cover rounded sm:rounded-none sm:rounded-tr cursor-pointer h-full"
+              onClick={() => setShowImageModal(true)}
+            />
+          </div>
+          <div className="h-1/2 w-full">
+            <img
+              src={`https://res.cloudinary.com/dkxs4o9vt/image/upload/v1705560129/${data.img[2]}`}
+              alt="Venue Image 3"
+              className="w-full hidden sm:flex object-cover rounded sm:rounded-none sm:rounded-br cursor-pointer h-full"
+              onClick={() => setShowImageModal(true)}
+            />
+          </div>
         </div>
         <button
           className="absolute bottom-2 right-2 bg-white border rounded text-sm sm:text-base"

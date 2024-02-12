@@ -40,7 +40,7 @@ const vendorTypeList: vendorTypeInterface[] = [
       "Elevate your wedding festivities with our entertainment options. From live bands and DJs to dancers and performers, discover the perfect act to keep your guests entertained.",
   },
   {
-    title: "MCs",
+    title: "MCs and Celebrants",
     description:
       "Explore our list of charismatic and experienced MCs, complete with pricing and reviews. Choose an MC who can add a touch of personality and professionalism to your event.",
   },

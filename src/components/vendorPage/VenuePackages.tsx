@@ -30,6 +30,12 @@ export interface PackageData {
   preHireServices?: string[];
   duringHireServices?: string[];
   postHireServices?: string[];
+  preEventEntertainmentServices?: string[];
+  duringEventEntertainmentServices?: string[];
+  postEventEntertainmentServices?: string[];
+  preEventMCServices?: string[];
+  duringEventMCServices?: string[];
+  postEventMCServices?: string[];
 }
 
 interface Props {

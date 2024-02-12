@@ -3076,4 +3076,188 @@ export const Data = [
       },
     ],
   },
+  {
+    id: 20,
+    vendorType: "Entertainment",
+    featured: false,
+    sample: true,
+    name: "Timeless Wedding Entertainment",
+    email: "info@timelessweddingentertainment.com.au",
+    phone: "1800811981",
+    facebook: "https://www.facebook.com/TimelessWeddingEntertainment",
+    instagram: "https://www.instagram.com/TimelessWeddingEntertainment/",
+    website: "https://timelessweddingentertainment.com.au/",
+    location: "Kincumber, NSW",
+    city: "Sydney",
+    state: "NSW",
+    category: "Live Bands", // limit this to [Live Bands, DJs, Solo Musicians, Magicians, Photo Booths]
+    rating: 5.0,
+    review_count: 213,
+    min_price: 550, // packages starting from
+    short_description:
+      "For more than 25 years, Timeless Wedding Entertainment has provided exceptional musicians, entertainers, DJs, and MCs to weddings and special events across NSW and beyond. Timeless Wedding Entertainment supplies performers for your ceremony, canape hour, and reception. With classical musicians, soloists, and full bands, your wedding entertainment is all here in one place.",
+    img: ["Timeless1", "Timeless2", "Timeless3", "Timeless4", "Timeless5"],
+    features: [
+      "Interactive Performers",
+      "Custom Playlist",
+      "Professional Lighting",
+      "Live Music",
+      "DJ Services",
+      "Themed Entertainment",
+      "Engaging MC",
+      "Audience Participation",
+    ], // limit this to - ["Interactive Performers", "Custom Playlist", "Professional Lighting", "Photo Booth", "Live Music", "DJ Services", "Magical Moments", "Themed Entertainment", "Engaging MC", "Audience Participation"]
+    faqs: [
+      {
+        id: 1,
+        question: "How far in advance should I book my wedding entertainment?",
+        answer:
+          "It's recommended to book your wedding entertainment as early as possible, ideally 9 to 12 months before your wedding date. Popular entertainers and performers often have busy schedules, so booking early ensures you secure your preferred choice and allows time for planning and customization.",
+      },
+      {
+        id: 2,
+        question: "What type of entertainment is best for my wedding?",
+        answer:
+          "The best type of entertainment for your wedding depends on your personal preferences, wedding theme, and budget. Options include live bands, DJs, solo musicians, magicians, and more. Consider the atmosphere you want to create and the preferences of your guests when selecting your entertainment.",
+      },
+      {
+        id: 3,
+        question:
+          "Can I request specific songs or performances from the entertainers?",
+        answer:
+          "Yes, many entertainers are happy to accommodate special song requests or specific performances to personalize your wedding entertainment experience. It's recommended to discuss your preferences with the entertainers during the booking process to ensure they can accommodate your requests.",
+      },
+    ], //limit this to 5
+    workWith: [2, 3, 4, 5], //limit this to 4
+    packages: [
+      {
+        title: "Package 1",
+        name: "Ultimate Entertainment Experience",
+        days: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        description:
+          "The Ultimate Entertainment Experience package offers a comprehensive range of entertainment services to elevate your wedding celebration. From pre-event consultations to post-event follow-up, this package ensures a seamless and memorable entertainment experience for you and your guests.",
+        disclaimer:
+          "Pricing and package details are subject to customisation based on individual preferences and venue requirements. Additional enhancements or substitutions may be accommodated at an additional cost.",
+        priceStarting: 2000,
+        preEventEntertainmentServices: [
+          "Initial Consultation",
+          "Custom Playlist Creation",
+          "Venue Walkthrough",
+        ],
+        duringEventEntertainmentServices: [
+          "Live Band Performance",
+          "Professional DJ Services",
+          "Interactive Games and Activities",
+        ],
+        postEventEntertainmentServices: [
+          "Customized Video Recap",
+          "Follow-Up Meeting",
+          "Discounts for Future Events",
+        ],
+      },
+    ],
+  },
+  {
+    id: 21,
+    vendorType: "MCs and Celebrants",
+    featured: false,
+    sample: true,
+    name: "Jeremiah Hartmann",
+    email: "jeremiah@jeremiahhartmann.com.au",
+    phone: "0430197244",
+    facebook: "https://www.facebook.com/MCJeremiahHartmann/",
+    instagram: "https://www.instagram.com/jeremiahhartmann/",
+    website: "https://www.jeremiahhartmann.com.au/",
+    location: "Sydney, NSW",
+    city: "Sydney",
+    state: "NSW",
+    category: "MCs", // limit this to [MCs, Celebrants]
+    rating: 5.0,
+    review_count: 39,
+    min_price: 550, // packages starting from
+    short_description:
+      "Is planning your wedding keeping you up at night? Have you noticed there are just too many moving parts to manage and you just want to relax and have fun when the day finally arrives?\n\nWhat you need is a right-hand man, someone you can trust to have your back—that on the day when it counts won’t get drunk, randomly disappear or hit on your bridesmaids. More importantly, you need someone sharp and refined that can strike the right balance between let’s party and lets keep it classy for nan.\n\nI am Jeremiah Hartmann, and I think I can be your guy. As a professional Live Event Host & MC, I am an expert in connecting and bringing people together. I do it with passion, I do it with integrity, and I do it with a good amount of heart.",
+    img: [
+      "Jeremiah1",
+      "Jeremiah2",
+      "Jeremiah3",
+      "Jeremiah4",
+      "Jeremiah5",
+      "Jeremiah6",
+    ],
+    features: [
+      "MC and Celebrant",
+      "Own Microphone",
+      "Award Winner",
+      "Free Consultation",
+      "Run Sheet Creation",
+      "Wedding Games",
+      "Interstate Services",
+    ], // limit this to - ["MC and Celebrant", "Own Microphone", "Award Winner", "Free Consultation", "Run Sheet Creation", "Wedding Games", "Interstate Services",]
+    faqs: [
+      {
+        id: 1,
+        question: "How far in advance should I book my wedding MC?",
+        answer:
+          "It's recommended to book your wedding MC as early as possible, ideally 6 to 12 months before your wedding date. This allows you to secure the services of your preferred MC and gives you ample time to discuss your vision, preferences, and itinerary for the reception.",
+      },
+      {
+        id: 2,
+        question: "What role does the wedding MC play?",
+        answer:
+          "The wedding MC serves as the master of ceremonies for your reception, responsible for keeping the event running smoothly and ensuring that all formalities and announcements are made at the appropriate times. They also help create a lively and engaging atmosphere, interact with guests, and facilitate transitions between different parts of the reception.",
+      },
+      {
+        id: 3,
+        question:
+          "Can the wedding MC help with planning the reception timeline?",
+        answer:
+          "Yes, many wedding MCs offer assistance with planning the reception timeline to ensure that it flows smoothly and that all important moments are included. They can work closely with you and your wedding planner to create a timeline that accommodates your preferences, special requests, and any cultural or religious traditions you wish to incorporate.",
+      },
+    ], //limit this to 5
+    workWith: [2, 3, 4, 5], //limit this to 4
+    packages: [
+      {
+        title: "Package 1",
+        name: "Complete MC Experience",
+        days: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        description:
+          "The Complete MC Experience package offers a polished and engaging master of ceremonies service for your wedding reception. From personalized scripting to seamless event management, our experienced MC will ensure a memorable and smoothly run celebration from start to finish.",
+        disclaimer:
+          "Pricing and package details are subject to customisation based on individual preferences and venue requirements. Additional enhancements or substitutions may be accommodated at an additional cost.",
+        priceStarting: 800,
+        preEventMCServices: [
+          "Initial Consultation",
+          "Customized Script Development",
+          "Venue Walkthrough",
+        ],
+        duringEventMCServices: [
+          "Master of Ceremonies Duties",
+          "Announcements and Introductions",
+          "Interactive Games and Activities",
+        ],
+        postEventMCServices: [
+          "Follow-Up Meeting",
+          "Feedback Collection",
+          "Thank You Note",
+        ],
+      },
+    ],
+  },
 ];

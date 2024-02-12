@@ -33,6 +33,12 @@ interface Props {
     preHireServices?: string[];
     duringHireServices?: string[];
     postHireServices?: string[];
+    preEventEntertainmentServices?: string[];
+    duringEventEntertainmentServices?: string[];
+    postEventEntertainmentServices?: string[];
+    preEventMCServices?: string[];
+    duringEventMCServices?: string[];
+    postEventMCServices?: string[];
   };
   setShowPackageModal: (showPackageModal: boolean) => void;
   setPackageData: (data: PackageData) => void;

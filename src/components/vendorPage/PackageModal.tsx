@@ -40,7 +40,6 @@ const PackageModal = ({
             <h1 className="text-2xl sm:text-4xl font-semibold mb-8 text-center mt-12">
               {packageData?.name} Inclusions
             </h1>
-
             <h2 className="text-center mb-4 text-sm sm:text-base">
               {packageData?.description}
             </h2>
@@ -52,7 +51,6 @@ const PackageModal = ({
             <div className="mb-12 flex justify-center items-center">
               <img src={bow} alt="Ribbon" className="w-[150px] sm:w-[200px]" />
             </div>
-
             <div className="flex justify-center gap-6 sm:gap-2 mb-16 text-sm sm:text-base flex-wrap">
               {vendorType === "Venues" && (
                 <div className="flex gap-2 justify-center items-center sm:w-[140px]">
@@ -84,9 +82,7 @@ const PackageModal = ({
                 </div>
               )}
             </div>
-
             {/* Venue specific inclusions */}
-
             {packageData?.venueInclusions &&
               packageData?.venueInclusions?.length > 0 && (
                 <h3 className="font-semibold mb-6 text-center text-lg">
@@ -135,9 +131,7 @@ const PackageModal = ({
                   <li className="mb-2">{item}</li>
                 ))}
             </ul>
-
             {/* Florist specific inclusions */}
-
             {packageData?.setupInclusions &&
               packageData?.setupInclusions?.length > 0 && (
                 <h3 className="font-semibold mb-6 text-center text-lg">
@@ -185,9 +179,7 @@ const PackageModal = ({
                 <li className="mb-2">{item}</li>
               ))}
             </ul>
-
             {/* Photographer specific inclusions */}
-
             {packageData?.preWeddingInclusions &&
               packageData?.preWeddingInclusions?.length > 0 && (
                 <h3 className="font-semibold mb-6 text-center text-lg">
@@ -224,9 +216,7 @@ const PackageModal = ({
                   <li className="mb-2">{item}</li>
                 ))}
             </ul>
-
             {/* Cake specific inclusions */}
-
             {packageData?.preOrderCakeInclusions &&
               packageData?.preOrderCakeInclusions?.length > 0 && (
                 <h3 className="font-semibold mb-6 text-center text-lg">
@@ -263,9 +253,7 @@ const PackageModal = ({
                   <li className="mb-2">{item}</li>
                 ))}
             </ul>
-
             {/* Catering specific inclusions */}
-
             {packageData?.preEventCateringServices &&
               packageData?.preEventCateringServices?.length > 0 && (
                 <h3 className="font-semibold mb-6 text-center text-lg">
@@ -302,9 +290,7 @@ const PackageModal = ({
                   <li className="mb-2">{item}</li>
                 ))}
             </ul>
-
             {/* Transportation specific inclusions */}
-
             {packageData?.preHireServices &&
               packageData?.preHireServices?.length > 0 && (
                 <h3 className="font-semibold mb-6 text-center text-lg">
@@ -338,6 +324,82 @@ const PackageModal = ({
             <ul className="mb-6 text-center text-sm sm:text-base text-gray-500 font-light">
               {packageData?.postHireServices &&
                 packageData?.postHireServices?.map((item) => (
+                  <li className="mb-2">{item}</li>
+                ))}
+            </ul>
+
+            {/* Entertainment specific inclusions */}
+            {packageData?.preEventEntertainmentServices &&
+              packageData?.preEventEntertainmentServices?.length > 0 && (
+                <h3 className="font-semibold mb-6 text-center text-lg">
+                  Pre-Event Services
+                </h3>
+              )}
+            <ul className="mb-6 text-center text-sm sm:text-base text-gray-500 font-light">
+              {packageData?.preEventEntertainmentServices &&
+                packageData?.preEventEntertainmentServices?.map((item) => (
+                  <li className="mb-2">{item}</li>
+                ))}
+            </ul>
+            {packageData?.duringEventEntertainmentServices &&
+              packageData?.duringEventEntertainmentServices?.length > 0 && (
+                <h3 className="font-semibold mb-6 text-center text-lg">
+                  During-Event Services
+                </h3>
+              )}
+            <ul className="mb-6 text-center text-sm sm:text-base text-gray-500 font-light">
+              {packageData?.duringEventEntertainmentServices &&
+                packageData?.duringEventEntertainmentServices?.map((item) => (
+                  <li className="mb-2">{item}</li>
+                ))}
+            </ul>
+            {packageData?.postEventEntertainmentServices &&
+              packageData?.postEventEntertainmentServices?.length > 0 && (
+                <h3 className="font-semibold mb-6 text-center text-lg">
+                  Post-Event Services
+                </h3>
+              )}
+            <ul className="mb-6 text-center text-sm sm:text-base text-gray-500 font-light">
+              {packageData?.postEventEntertainmentServices &&
+                packageData?.postEventEntertainmentServices?.map((item) => (
+                  <li className="mb-2">{item}</li>
+                ))}
+            </ul>
+
+            {/* MC specific inclusions */}
+            {packageData?.preEventMCServices &&
+              packageData?.preEventMCServices?.length > 0 && (
+                <h3 className="font-semibold mb-6 text-center text-lg">
+                  Pre-Event Services
+                </h3>
+              )}
+            <ul className="mb-6 text-center text-sm sm:text-base text-gray-500 font-light">
+              {packageData?.preEventMCServices &&
+                packageData?.preEventMCServices?.map((item) => (
+                  <li className="mb-2">{item}</li>
+                ))}
+            </ul>
+            {packageData?.duringEventMCServices &&
+              packageData?.duringEventMCServices?.length > 0 && (
+                <h3 className="font-semibold mb-6 text-center text-lg">
+                  During-Event Services
+                </h3>
+              )}
+            <ul className="mb-6 text-center text-sm sm:text-base text-gray-500 font-light">
+              {packageData?.duringEventMCServices &&
+                packageData?.duringEventMCServices?.map((item) => (
+                  <li className="mb-2">{item}</li>
+                ))}
+            </ul>
+            {packageData?.postEventMCServices &&
+              packageData?.postEventMCServices?.length > 0 && (
+                <h3 className="font-semibold mb-6 text-center text-lg">
+                  Post-Event Services
+                </h3>
+              )}
+            <ul className="mb-6 text-center text-sm sm:text-base text-gray-500 font-light">
+              {packageData?.postEventMCServices &&
+                packageData?.postEventMCServices?.map((item) => (
                   <li className="mb-2">{item}</li>
                 ))}
             </ul>

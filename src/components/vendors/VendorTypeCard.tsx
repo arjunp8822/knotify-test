@@ -24,7 +24,7 @@ const VendorTypeCard = ({
       }
     >
       <span
-        className={`text-sm sm:text-[15px] pb-2 transition-opacity ${
+        className={`text-sm sm:text-[15px] pb-2 transition-opacity truncate ${
           filtersSelected.vendorType === title
             ? "font-semibold border-b-2 border-black text-black"
             : "opacity-60"

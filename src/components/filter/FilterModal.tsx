@@ -1,8 +1,3 @@
-import beach from "/assets/categories/beach.png";
-import country from "/assets/categories/garden.png";
-import garden from "/assets/categories/country.png";
-import water from "/assets/categories/water.png";
-import wine from "/assets/categories/wine.png";
 import FilterCategoryContainer from "./FilterCategoryContainer";
 import { IoMdClose } from "react-icons/io";
 import FilterFeatureContainer from "./FilterFeatureContainer";
@@ -11,6 +6,7 @@ import { FiltersInterface } from "../../pages/Vendors";
 import RatingSlider from "./RatingSlider";
 import GuestSlider from "./GuestSlider";
 import BudgetSlider from "./BudgetSlider";
+import { categories, features } from "./FilterModalData";
 
 export interface FilterData {
   categories: string[] | null;
@@ -19,30 +15,6 @@ export interface FilterData {
   budget: number | null;
   features: string[] | null;
 }
-
-const categories = [
-  { icon: beach, title: "Beach" },
-  { icon: country, title: "Garden" },
-  { icon: garden, title: "Country" },
-  { icon: water, title: "Waterview" },
-  { icon: wine, title: "Winery" },
-];
-
-const featureList = [
-  "Ceremonies",
-  "Receptions",
-  "External Catering",
-  "MC Services",
-  "Amenities",
-  "Accessible Location",
-  "Outdoor",
-  "Accommodation",
-  "Parking",
-  "Exceptional Menus",
-  "Stunning Views",
-  "Alfresco",
-  "Pet Friendly",
-];
 
 interface Props {
   setOpenTest: (open: boolean) => void;
@@ -151,11 +123,12 @@ const FilterModal = ({
               Select your favourite styles
             </p>
             <ul className="grid grid-cols-2 md:grid-cols-3 gap-3">
-              {categories.map((c) => (
-                <li onClick={() => clickCategoryHandler(c.title)}>
+              {categories[
+                filtersSelected.vendorType as keyof typeof categories
+              ].map((c) => (
+                <li onClick={() => clickCategoryHandler(c)}>
                   <FilterCategoryContainer
-                    icon={c.icon}
-                    title={c.title}
+                    title={c}
                     filtersSelected={filtersSelected}
                   />
                 </li>
@@ -206,7 +179,9 @@ const FilterModal = ({
               Select all your favourite features
             </p>
             <ul className="grid grid-cols-2 gap-x-2 sm:gap-x-3 gap-y-3">
-              {featureList.map((f) => (
+              {features[
+                filtersSelected.vendorType as keyof typeof features
+              ].map((f) => (
                 <li onClick={() => clickFeatureHandler(f)}>
                   <FilterFeatureContainer
                     title={f}

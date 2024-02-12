@@ -3,6 +3,7 @@ import { FiltersInterface } from "../../pages/Vendors";
 interface Props {
   title: string;
   filtersSelected: FiltersInterface;
+  test: () => void;
   setFiltersSelected: (
     updateFilters: (prev: FiltersInterface) => FiltersInterface
   ) => void;
@@ -10,18 +11,21 @@ interface Props {
 
 const VendorTypeCard = ({
   title,
+  test,
   filtersSelected,
   setFiltersSelected,
 }: Props) => {
+  const handleClick = () => {
+    setFiltersSelected((prev) => ({
+      ...prev,
+      vendorType: title,
+    }));
+    test();
+  };
   return (
     <li
       className="flex flex-col justify-center items-center gap-2 rounded cursor-pointer"
-      onClick={() =>
-        setFiltersSelected((prev) => ({
-          ...prev,
-          vendorType: title,
-        }))
-      }
+      onClick={handleClick}
     >
       <span
         className={`text-sm sm:text-[15px] pb-2 transition-opacity truncate ${

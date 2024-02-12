@@ -8,6 +8,7 @@ export interface vendorTypeInterface {
 
 interface Props {
   filtersSelected: FiltersInterface;
+  test: () => void;
   setFiltersSelected: (
     updateFilters: (prev: FiltersInterface) => FiltersInterface
   ) => void;
@@ -56,7 +57,7 @@ const vendorTypeList: vendorTypeInterface[] = [
   },
 ];
 
-const VendorType = ({ filtersSelected, setFiltersSelected }: Props) => {
+const VendorType = ({ filtersSelected, setFiltersSelected, test }: Props) => {
   return (
     <div className="border-t w-full py-8">
       <ul className="flex gap-4 sm:gap-8 justify-start sm:justify-center items-center overflow-x-auto custom-scrollbar pb-2">
@@ -65,6 +66,7 @@ const VendorType = ({ filtersSelected, setFiltersSelected }: Props) => {
             title={v.title}
             filtersSelected={filtersSelected}
             setFiltersSelected={setFiltersSelected}
+            test={test}
           />
         ))}
       </ul>

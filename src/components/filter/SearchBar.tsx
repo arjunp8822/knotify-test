@@ -2,7 +2,7 @@ import { IoIosClose } from "react-icons/io";
 import { IoSearch } from "react-icons/io5";
 import { GoSortDesc } from "react-icons/go";
 import SortContainer from "./SortContainer";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import FilterModal from "./FilterModal";
 import CitySearch from "./CitySearch";
 import { City, FiltersInterface } from "../../pages/Vendors";
@@ -11,12 +11,17 @@ import CityData from "../../data/CityData.json";
 
 interface Props {
   filtersSelected: FiltersInterface;
+  triggerClear: boolean;
   setFiltersSelected: (
     updateFilters: (prev: FiltersInterface) => FiltersInterface
   ) => void;
 }
 
-const SearchBar = ({ filtersSelected, setFiltersSelected }: Props) => {
+const SearchBar = ({
+  filtersSelected,
+  setFiltersSelected,
+  triggerClear,
+}: Props) => {
   const toggleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearch(e.target.value);
   };
@@ -39,6 +44,43 @@ const SearchBar = ({ filtersSelected, setFiltersSelected }: Props) => {
   const [cityData, setCityData] = useState<City[]>([]);
   const [showSortContainer, setShowSortContainer] = useState(false);
   const [filterButtonRed, setFilterButtonRed] = useState(false);
+  const [selectedCategories, setSelectedCategories] = useState<string[] | null>(
+    filtersSelected.categories || null
+  );
+  const [minimumRating, setMinimumRating] = useState(filtersSelected.rating);
+  const [minGuests, setMinGuests] = useState<number>(filtersSelected.minGuests);
+  const [maxGuests, setMaxGuests] = useState<number>(filtersSelected.maxGuests);
+  const [minBudget, setMinBudget] = useState<number>(filtersSelected.minBudget);
+  const [maxBudget, setMaxBudget] = useState<number>(filtersSelected.maxBudget);
+  const [selectedFeatures, setSelectedFeatures] = useState<string[] | null>(
+    filtersSelected.features || null
+  );
+
+  const clearFilters = useCallback(() => {
+    setSelectedCategories([]);
+    setMinimumRating(3);
+    setMinGuests(20);
+    setMaxGuests(250);
+    setMinBudget(2000);
+    setMaxBudget(100000);
+    setSelectedFeatures([]);
+    setFiltersSelected((prev) => ({
+      ...prev,
+      rating: 3,
+      minGuests: 20,
+      maxGuests: 250,
+      minBudget: 2000,
+      maxBudget: 100000,
+      categories: [],
+      features: [],
+    }));
+    setFilterButtonRed(false);
+    setOpenTest(false);
+  }, [setFiltersSelected]);
+
+  useEffect(() => {
+    clearFilters();
+  }, [triggerClear, clearFilters]);
 
   // toggle search bar on user input
 
@@ -112,6 +154,21 @@ const SearchBar = ({ filtersSelected, setFiltersSelected }: Props) => {
                 filtersSelected={filtersSelected}
                 setFiltersSelected={setFiltersSelected}
                 setFilterButtonRed={setFilterButtonRed}
+                selectedCategories={selectedCategories}
+                setSelectedCategories={setSelectedCategories}
+                minimumRating={minimumRating}
+                setMinimumRating={setMinimumRating}
+                minGuests={minGuests}
+                setMinGuests={setMinGuests}
+                maxGuests={maxGuests}
+                setMaxGuests={setMaxGuests}
+                minBudget={minBudget}
+                setMinBudget={setMinBudget}
+                maxBudget={maxBudget}
+                setMaxBudget={setMaxBudget}
+                selectedFeatures={selectedFeatures}
+                setSelectedFeatures={setSelectedFeatures}
+                clearFilters={clearFilters}
               />
             </div>
           </div>

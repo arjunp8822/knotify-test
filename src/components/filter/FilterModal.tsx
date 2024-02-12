@@ -1,7 +1,6 @@
 import FilterCategoryContainer from "./FilterCategoryContainer";
 import { IoMdClose } from "react-icons/io";
 import FilterFeatureContainer from "./FilterFeatureContainer";
-import { useState } from "react";
 import { FiltersInterface } from "../../pages/Vendors";
 import RatingSlider from "./RatingSlider";
 import GuestSlider from "./GuestSlider";
@@ -23,6 +22,21 @@ interface Props {
     updateFilters: (prev: FiltersInterface) => FiltersInterface
   ) => void;
   setFilterButtonRed: (red: boolean) => void;
+  selectedCategories: string[] | null;
+  setSelectedCategories: (arr: string[]) => void;
+  minimumRating: number;
+  setMinimumRating: (num: number) => void;
+  minGuests: number;
+  setMinGuests: (num: number) => void;
+  maxGuests: number;
+  setMaxGuests: (num: number) => void;
+  minBudget: number;
+  setMinBudget: (num: number) => void;
+  maxBudget: number;
+  setMaxBudget: (num: number) => void;
+  selectedFeatures: string[] | null;
+  setSelectedFeatures: (arr: string[]) => void;
+  clearFilters: () => void;
 }
 
 const FilterModal = ({
@@ -30,19 +44,22 @@ const FilterModal = ({
   filtersSelected,
   setFiltersSelected,
   setFilterButtonRed,
+  selectedCategories,
+  setSelectedCategories,
+  minimumRating,
+  setMinimumRating,
+  minGuests,
+  setMinGuests,
+  maxGuests,
+  setMaxGuests,
+  minBudget,
+  setMinBudget,
+  maxBudget,
+  setMaxBudget,
+  selectedFeatures,
+  setSelectedFeatures,
+  clearFilters,
 }: Props) => {
-  const [selectedCategories, setSelectedCategories] = useState<string[] | null>(
-    filtersSelected.categories || null
-  );
-  const [minimumRating, setMinimumRating] = useState(filtersSelected.rating);
-  const [minGuests, setMinGuests] = useState<number>(filtersSelected.minGuests);
-  const [maxGuests, setMaxGuests] = useState<number>(filtersSelected.maxGuests);
-  const [minBudget, setMinBudget] = useState<number>(filtersSelected.minBudget);
-  const [maxBudget, setMaxBudget] = useState<number>(filtersSelected.maxBudget);
-  const [selectedFeatures, setSelectedFeatures] = useState<string[] | null>(
-    filtersSelected.features || null
-  );
-
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setFiltersSelected((prev) => ({
@@ -56,29 +73,6 @@ const FilterModal = ({
       features: selectedFeatures,
     }));
     setFilterButtonRed(true);
-    setOpenTest(false);
-  };
-
-  const clearFilters = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    setSelectedCategories([]);
-    setMinimumRating(3);
-    setMinGuests(20);
-    setMaxGuests(250);
-    setMinBudget(2000);
-    setMaxBudget(100000);
-    setSelectedFeatures([]);
-    setFiltersSelected((prev) => ({
-      ...prev,
-      rating: 3,
-      minGuests: 20,
-      maxGuests: 250,
-      minBudget: 2000,
-      maxBudget: 100000,
-      categories: [],
-      features: [],
-    }));
-    setFilterButtonRed(false);
     setOpenTest(false);
   };
 

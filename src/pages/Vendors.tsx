@@ -54,6 +54,11 @@ export interface FiltersInterface {
 
 const Home = () => {
   const [data, setData] = useState<VenueDataInterface[]>(Data);
+  const [triggerClear, setTriggerClear] = useState(false);
+
+  const test = () => {
+    setTriggerClear(!triggerClear);
+  };
 
   // filter functionality
 
@@ -168,12 +173,14 @@ const Home = () => {
         <SearchBar
           filtersSelected={filtersSelected}
           setFiltersSelected={setFiltersSelected}
+          triggerClear={triggerClear}
         />
       </div>
       <div className="flex justify-center items-center">
         <VendorType
           filtersSelected={filtersSelected}
           setFiltersSelected={setFiltersSelected}
+          test={test}
         />
       </div>
       {data.length > 0 ? (

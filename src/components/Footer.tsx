@@ -114,15 +114,20 @@ const Footer = () => {
           </div>
         </div>
         <div className="py-6 md:py-8 flex flex-col gap-8 sm:gap-0 sm:flex-row justify-between text-sm sm:text-[15px]">
-          <ul className="flex gap-4 text-gray-500">
+          <ul className="flex gap-4 text-gray-500 flex-wrap">
+            <li className="flex items-center gap-1">
+              <AiOutlineCopyrightCircle />
+              <span>2024 Knotify Pty Ltd</span>
+            </li>
             <li>
               <Link to="/privacy" className="hover:underline">
                 Privacy Policy
               </Link>
             </li>
-            <li className="flex items-center gap-1">
-              <AiOutlineCopyrightCircle />
-              <span>2024 Knotify Pty Ltd</span>
+            <li>
+              <Link to="/terms" className="hover:underline">
+                Terms and Conditions
+              </Link>
             </li>
           </ul>
           <div className="flex text-xl gap-4">

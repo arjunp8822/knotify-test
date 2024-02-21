@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import { useState } from "react";
 import Privacy from "./pages/Privacy";
 import ScrollToTop from "./components/ScrollToTop";
+import Terms from "./pages/Terms";
 // import NotFound from "./pages/NotFound";
 // import Home from "./pages/Home";
 
@@ -31,6 +32,7 @@ function App() {
           <Route path="/vendors/:id" element={<VendorPage />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
           {/* Fallback route if not found */}
           {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>

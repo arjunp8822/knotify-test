@@ -55,6 +55,7 @@ const Footer = () => {
               name="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              required
             />
             <input
               type="email"
@@ -63,8 +64,9 @@ const Footer = () => {
               name="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              required
             />
-            <button className="text-black border border-black font-semibold mt-4 py-1 text-sm sm:text-[15px]">
+            <button className="text-black border border-black font-semibold mt-4 py-1 text-sm sm:text-[15px] hover:bg-black hover:text-white transition-all">
               Join Now
             </button>
           </form>

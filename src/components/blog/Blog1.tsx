@@ -22,7 +22,7 @@ const Blog1 = () => {
       </p>
       <img src={blog1} alt="Wedding Image" className="max-w-[600px]" />
       <div className="flex gap-2 flex-col">
-        <h4 className="font-semibold">Establish Priorities:</h4>
+        <h4 className="font-semibold">Establish Priorities</h4>
         <p className="text-gray-500 text-sm sm:text-base font-light">
           Before diving into the details, take the time to sit down with your
           partner and establish your priorities for the wedding. Discuss what
@@ -33,7 +33,7 @@ const Blog1 = () => {
         </p>
       </div>
       <div className="flex gap-2 flex-col">
-        <h4 className="font-semibold">Set a Budget:</h4>
+        <h4 className="font-semibold">Set a Budget</h4>
         <p className="text-gray-500 text-sm sm:text-base font-light">
           One of the first and most critical steps in wedding planning is
           setting a realistic budget. Determine how much you're willing and able
@@ -45,7 +45,7 @@ const Blog1 = () => {
       </div>
       <img src={blog2} alt="Wedding Image" className="max-w-[600px]" />
       <div className="flex gap-2 flex-col">
-        <h4 className="font-semibold">Do Your Research:</h4>
+        <h4 className="font-semibold">Do Your Research</h4>
         <p className="text-gray-500 text-sm sm:text-base font-light">
           With so many options available, from venues and vendors to themes and
           decor, it's essential to do your research before making any decisions.
@@ -57,7 +57,7 @@ const Blog1 = () => {
         </p>
       </div>
       <div className="flex gap-2 flex-col">
-        <h4 className="font-semibold">Stay Organised:</h4>
+        <h4 className="font-semibold">Stay Organised</h4>
         <p className="text-gray-500 text-sm sm:text-base font-light">
           As you begin the wedding planning process, it's crucial to stay
           organized to avoid feeling overwhelmed. Consider using a wedding
@@ -69,7 +69,7 @@ const Blog1 = () => {
       </div>
       <img src={blog3} alt="Wedding Image" className="max-w-[600px]" />
       <div className="flex gap-2 flex-col">
-        <h4 className="font-semibold">Seek Support:</h4>
+        <h4 className="font-semibold">Seek Support</h4>
         <p className="text-gray-500 text-sm sm:text-base font-light">
           Planning a wedding can be a massive undertaking, so don't hesitate to
           seek support from friends, family, or professional wedding planners if

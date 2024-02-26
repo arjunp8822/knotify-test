@@ -24,7 +24,7 @@ const Blog2 = () => {
       <img src={blog1} alt="Wedding Image" className="max-w-[600px]" />
 
       <div className="flex gap-2 flex-col">
-        <h4 className="font-semibold">Start the Day with Relaxation:</h4>
+        <h4 className="font-semibold">Start the Day with Relaxation</h4>
         <p className="text-gray-500 text-sm sm:text-base font-light">
           Begin your wedding day with moments of relaxation and calm. Whether
           it's enjoying a quiet breakfast together, practicing mindfulness
@@ -34,7 +34,7 @@ const Blog2 = () => {
       </div>
       <img src={blog2} alt="Wedding Image" className="max-w-[600px]" />
       <div className="flex gap-2 flex-col">
-        <h4 className="font-semibold">Stick to the Timeline:</h4>
+        <h4 className="font-semibold">Stick to the Timeline</h4>
         <p className="text-gray-500 text-sm sm:text-base font-light">
           Creating a detailed timeline for the day's events is crucial for
           staying organized and ensuring everything runs smoothly. Communicate
@@ -44,7 +44,7 @@ const Blog2 = () => {
         </p>
       </div>
       <div className="flex gap-2 flex-col">
-        <h4 className="font-semibold">Delegate Responsibilities:</h4>
+        <h4 className="font-semibold">Delegate Responsibilities</h4>
         <p className="text-gray-500 text-sm sm:text-base font-light">
           While it's natural to want to oversee every aspect of your wedding
           day, delegating responsibilities to trusted friends or family members
@@ -55,7 +55,7 @@ const Blog2 = () => {
       </div>
       <img src={blog3} alt="Wedding Image" className="max-w-[600px]" />
       <div className="flex gap-2 flex-col">
-        <h4 className="font-semibold">Have a Plan B:</h4>
+        <h4 className="font-semibold">Have a Plan B</h4>
         <p className="text-gray-500 text-sm sm:text-base font-light">
           No matter how meticulously you plan, unexpected circumstances can
           arise on your wedding day. Be prepared by having a backup plan in
@@ -66,7 +66,7 @@ const Blog2 = () => {
         </p>
       </div>
       <div className="flex gap-2 flex-col">
-        <h4 className="font-semibold">Stay Hydrated and Nourished:</h4>
+        <h4 className="font-semibold">Stay Hydrated and Nourished</h4>
         <p className="text-gray-500 text-sm sm:text-base font-light">
           With all the excitement and activity of the day, it's essential to
           stay hydrated and nourished. Keep a water bottle and healthy snacks on
@@ -75,7 +75,7 @@ const Blog2 = () => {
         </p>
       </div>
       <div className="flex gap-2 flex-col">
-        <h4 className="font-semibold">Take Moments to Connect: </h4>
+        <h4 className="font-semibold">Take Moments to Connect</h4>
         <p className="text-gray-500 text-sm sm:text-base font-light">
           Amidst the whirlwind of activity, take moments throughout the day to
           connect with your partner. Whether it's stealing a quiet moment alone
@@ -86,7 +86,7 @@ const Blog2 = () => {
       </div>
       <img src={blog4} alt="Wedding Image" className="max-w-[600px]" />
       <div className="flex gap-2 flex-col">
-        <h4 className="font-semibold">Trust Your Vendors:</h4>
+        <h4 className="font-semibold">Trust Your Vendors</h4>
         <p className="text-gray-500 text-sm sm:text-base font-light">
           You've carefully selected a team of vendors to bring your wedding
           vision to life, so trust in their expertise and professionalism. Allow
@@ -96,7 +96,7 @@ const Blog2 = () => {
         </p>
       </div>
       <div className="flex gap-2 flex-col">
-        <h4 className="font-semibold">Embrace Imperfection:</h4>
+        <h4 className="font-semibold">Embrace Imperfection</h4>
         <p className="text-gray-500 text-sm sm:text-base font-light">
           Perfection is an unrealistic expectation, especially on a day as
           significant as your wedding. Embrace the inevitable imperfections and
@@ -105,7 +105,7 @@ const Blog2 = () => {
         </p>
       </div>
       <div className="flex gap-2 flex-col">
-        <h4 className="font-semibold">Stay Present:</h4>
+        <h4 className="font-semibold">Stay Present</h4>
         <p className="text-gray-500 text-sm sm:text-base font-light">
           Amidst the excitement and whirlwind of the day, make a conscious
           effort to stay present and savor each moment as it unfolds. Take
@@ -115,7 +115,7 @@ const Blog2 = () => {
       </div>
       <img src={blog5} alt="Wedding Image" className="max-w-[600px]" />
       <div className="flex gap-2 flex-col">
-        <h4 className="font-semibold">Have Fun:</h4>
+        <h4 className="font-semibold">Have Fun</h4>
         <p className="text-gray-500 text-sm sm:text-base font-light">
           Above all, remember that your wedding day is a celebration of your
           love and commitment to each other. Let go of stress and expectations,

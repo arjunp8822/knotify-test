@@ -23,7 +23,7 @@ const Blog3 = () => {
       <img src={blog1} alt="Wedding Image" className="max-w-[600px]" />
 
       <div className="flex gap-2 flex-col">
-        <h4 className="font-semibold">Plan Ahead:</h4>
+        <h4 className="font-semibold">Plan Ahead</h4>
         <p className="text-gray-500 text-sm sm:text-base font-light">
           The key to a stress-free celebration lies in thorough planning. Start
           by establishing a clear vision for the event and creating a detailed
@@ -33,7 +33,7 @@ const Blog3 = () => {
         </p>
       </div>
       <div className="flex gap-2 flex-col">
-        <h4 className="font-semibold">Keep It Simple:</h4>
+        <h4 className="font-semibold">Keep It Simple</h4>
         <p className="text-gray-500 text-sm sm:text-base font-light">
           In the midst of planning, it's easy to get caught up in elaborate
           decorations, extravagant menus, and intricate details. However,
@@ -45,7 +45,7 @@ const Blog3 = () => {
         </p>
       </div>
       <div className="flex gap-2 flex-col">
-        <h4 className="font-semibold">Delegate Tasks:</h4>
+        <h4 className="font-semibold">Delegate Tasks</h4>
         <p className="text-gray-500 text-sm sm:text-base font-light">
           You don't have to tackle every aspect of planning and preparation on
           your own. Enlist the help of friends, family members, or trusted
@@ -57,7 +57,7 @@ const Blog3 = () => {
       </div>
       <img src={blog2} alt="Wedding Image" className="max-w-[600px]" />
       <div className="flex gap-2 flex-col">
-        <h4 className="font-semibold">Stay Flexible:</h4>
+        <h4 className="font-semibold">Stay Flexible</h4>
         <p className="text-gray-500 text-sm sm:text-base font-light">
           No matter how well you plan, unexpected challenges or changes may
           arise during the celebration. Instead of letting these moments derail
@@ -68,7 +68,7 @@ const Blog3 = () => {
         </p>
       </div>
       <div className="flex gap-2 flex-col">
-        <h4 className="font-semibold">Be Present:</h4>
+        <h4 className="font-semibold">Be Present</h4>
         <p className="text-gray-500 text-sm sm:text-base font-light">
           Amidst the hustle and bustle of the celebration, make a conscious
           effort to be fully present in the moment. Put down your phone, engage

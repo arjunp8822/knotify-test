@@ -6,7 +6,7 @@ const Featured = () => {
   console.log(featuredVendors);
 
   return (
-    <div className="mt-20">
+    <div className="mt-10 border-t pt-10">
       <h3 className="text-gray-500 sm:text-lg">
         Explore top rated services and products
       </h3>

@@ -10,7 +10,7 @@ interface Props {
 const NavItem = ({ title, link, button, setOpen }: Props) => {
   if (!button) {
     return (
-      <li key={title} className="hover:text-primary transition-all">
+      <li key={title} className="hover:text-primary transition-all uppercase">
         <Link to={link} onClick={() => setOpen(false)}>
           {title}
         </Link>
@@ -19,7 +19,7 @@ const NavItem = ({ title, link, button, setOpen }: Props) => {
   } else {
     return (
       <li key={title}>
-        <button className="bg-primary text-white w-fit hover:bg-white hover:text-primary border border-primary transition-all">
+        <button className="bg-primary text-white w-fit hover:bg-white hover:text-primary border border-primary transition-all uppercase">
           <Link to={link} onClick={() => setOpen(false)}>
             {title}
           </Link>

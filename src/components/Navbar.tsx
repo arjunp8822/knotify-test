@@ -11,9 +11,10 @@ interface Props {
 }
 
 const navLinks = [
+  { title: "Home", link: "/test", button: false },
   { title: "Vendors", link: "/", button: false },
-  // { title: "Blog", link: "/blog", button: false },
-  { title: "List with us", link: "/list", button: true },
+  { title: "Blog", link: "/blog", button: false },
+  { title: "List with us", link: "/list", button: false },
 ];
 
 const Navbar = ({ openNav, setOpenNav }: Props) => {

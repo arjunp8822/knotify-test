@@ -50,7 +50,7 @@ const VenueCard = ({
           <img
             src={`https://res.cloudinary.com/dkxs4o9vt/image/upload/v1705560129/${img[currentImg]}`}
             alt={name}
-            className="rounded mb-2 w-full h-[250px] object-cover"
+            className=" mb-2 w-full h-[250px] object-cover"
             onMouseEnter={() => setShowArrow(true)}
             onMouseLeave={() => setShowArrow(false)}
           />
@@ -58,7 +58,7 @@ const VenueCard = ({
         <div>
           {currentImg > 0 && (
             <div
-              className={`absolute top-1/2 left-2 -translate-y-1/2 bg-white text-black w-6 h-6 rounded-full flex justify-center items-center text-[8px] cursor-pointer transition-opacity ${
+              className={`absolute top-1/2 left-2 -translate-y-1/2 bg-white text-black w-6 h-6 -full flex justify-center items-center text-[8px] cursor-pointer transition-opacity ${
                 showArrow ? "opacity-100" : "opacity-100 sm:opacity-0"
               }`}
               onClick={toggleImgDown}
@@ -70,7 +70,7 @@ const VenueCard = ({
           )}
           {currentImg < img.length - 1 && (
             <div
-              className={`absolute top-1/2 right-2 -translate-y-1/2 bg-white text-black w-6 h-6 rounded-full flex justify-center items-center text-[8px] cursor-pointer transition-opacity ${
+              className={`absolute top-1/2 right-2 -translate-y-1/2 bg-white text-black w-6 h-6 -full flex justify-center items-center text-[8px] cursor-pointer transition-opacity ${
                 showArrow ? "opacity-100" : "opacity-100 sm:opacity-0"
               }`}
               onClick={toggleImgUp}

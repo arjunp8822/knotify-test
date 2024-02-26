@@ -28,7 +28,7 @@ const PackageModal = ({
         <div className="flex justify-end">
           <div
             onClick={() => setShowPackageModal(false)}
-            className="border rounded-full p-2 border-black cursor-pointer"
+            className="border -full p-2 border-black cursor-pointer"
           >
             <FaAngleDown className="translate-y-[1px]" />
           </div>
@@ -54,7 +54,7 @@ const PackageModal = ({
             <div className="flex justify-center gap-6 sm:gap-2 mb-16 text-sm sm:text-base flex-wrap">
               {vendorType === "Venues" && (
                 <div className="flex gap-2 justify-center items-center sm:w-[140px]">
-                  <div className="bg-primary p-2 rounded-full text-white">
+                  <div className="bg-primary p-2 -full text-white">
                     <LuClock5 />
                   </div>
                   <div>{packageData?.duration} hours</div>
@@ -62,7 +62,7 @@ const PackageModal = ({
               )}
 
               <div className="flex gap-2 justify-center items-center sm:w-[140px]">
-                <div className="bg-primary p-2 rounded-full text-white">
+                <div className="bg-primary p-2 -full text-white">
                   <BiDollar />
                 </div>
                 <div>
@@ -73,7 +73,7 @@ const PackageModal = ({
               </div>
               {vendorType === "Venues" && (
                 <div className="flex gap-2 justify-center items-center sm:w-[140px]">
-                  <div className="bg-primary p-2 rounded-full text-white">
+                  <div className="bg-primary p-2 -full text-white">
                     <FaUsers />
                   </div>
                   <div>

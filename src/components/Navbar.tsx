@@ -49,14 +49,14 @@ const Navbar = ({ openNav, setOpenNav }: Props) => {
           </ul>
           <div className="absolute bottom-0 w-full h-[100px] flex justify-center items-center sm:hidden gap-8">
             <Link
-              className="text-lg bg-gray-100 text-gray-700 p-2 rounded-full"
+              className="text-lg bg-gray-100 text-gray-700 p-2 -full"
               to={"https://www.facebook.com/knotifyweddings/"}
               target="_blank"
             >
               <FaFacebookF />
             </Link>
             <Link
-              className="text-lg bg-gray-100 text-gray-700 p-2 rounded-full"
+              className="text-lg bg-gray-100 text-gray-700 p-2 -full"
               to={"https://www.instagram.com/knotifyweddings/"}
               target="_blank"
             >

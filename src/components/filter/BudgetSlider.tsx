@@ -31,13 +31,13 @@ const BudgetSlider = ({
         minDistance={100}
       />
       <div className="flex gap-4">
-        <div className="border rounded p-2 flex flex-col gap-1 w-full">
+        <div className="border  p-2 flex flex-col gap-1 w-full">
           <p className="text-[12px] sm:text-[14px] text-gray-500">Minimum</p>
           <span className="text-sm sm:text-base">
             ${minBudget.toLocaleString()}
           </span>
         </div>
-        <div className="border rounded p-2 flex flex-col gap-1 w-full">
+        <div className="border  p-2 flex flex-col gap-1 w-full">
           <p className="text-[12px] sm:text-[14px] text-gray-500">Maximum</p>
           <span className="text-sm sm:text-base">
             ${maxBudget.toLocaleString()}

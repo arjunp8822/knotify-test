@@ -24,7 +24,7 @@ const VendorTypeCard = ({
   };
   return (
     <li
-      className="flex flex-col justify-center items-center gap-2 rounded cursor-pointer"
+      className="flex flex-col justify-center items-center gap-2  cursor-pointer"
       onClick={handleClick}
     >
       <span

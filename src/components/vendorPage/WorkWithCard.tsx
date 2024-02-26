@@ -16,7 +16,7 @@ const WorkWithCard = ({ img, name, rating, reviews, link }: Props) => {
         <img
           src={`https://res.cloudinary.com/dkxs4o9vt/image/upload/v1705560129/${img}`}
           alt={name}
-          className="rounded mb-2 w-full object-cover h-[95%]"
+          className=" mb-2 w-full object-cover h-[95%]"
         />
       </Link>
       <div className="w-[300px]">

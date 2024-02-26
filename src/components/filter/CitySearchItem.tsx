@@ -30,7 +30,7 @@ const CitySearchItem = ({
       className="flex gap-4 items-center cursor-pointer"
       onClick={clickHandler}
     >
-      <div className="text-2xl bg-gray-200 p-2 sm:p-3 rounded-lg font-semibold">
+      <div className="text-2xl bg-gray-200 p-2 sm:p-3 -lg font-semibold">
         <CiLocationOn />
       </div>
       <div className="text-sm sm:text-[15px]">{`${city}, ${state}`}</div>

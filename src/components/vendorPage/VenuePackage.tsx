@@ -56,7 +56,7 @@ const VenuePackage = ({
 
   return (
     <li
-      className="flex flex-col text-sm sm:text-base justify-start gap-4 border p-4 rounded"
+      className="flex flex-col text-sm sm:text-base justify-start gap-4 border p-4 "
       onClick={clickHandler}
     >
       <div className="flex items-center gap-4 text-gray-700">
@@ -64,7 +64,7 @@ const VenuePackage = ({
         <div>{venuePackage.title}</div>
       </div>
       <div className="font-semibold mb-4">{venuePackage.name}</div>
-      <button className="border rounded border-primary flex gap-2 items-center">
+      <button className="border  border-primary flex gap-2 items-center">
         <span className="text-primary font-semibold">See More</span>
         <div className="text-[10px] text-primary mt-[2px]">
           <FaAngleRight />

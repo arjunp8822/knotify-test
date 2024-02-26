@@ -13,7 +13,7 @@ const QuestionAnswer = ({ question, answer }: Props) => {
     <li className="border-b py-4 flex flex-col gap-6 text-sm sm:text-base">
       <div className="flex gap-4 items-center">
         <button
-          className="border border-black p-2 rounded-full transition-all duration-150"
+          className="border border-black p-2 -full transition-all duration-150"
           onClick={() => setShowAnswer(!showAnswer)}
         >
           {showAnswer ? (

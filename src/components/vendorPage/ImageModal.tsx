@@ -28,7 +28,7 @@ const ImageModal = ({
     >
       <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-8 md:px-12 relative flex justify-end py-6 text-sm sm:text-base">
         <div
-          className="border border-white rounded-full text-white cursor-pointer p-2"
+          className="border border-white -full text-white cursor-pointer p-2"
           onClick={() => setShowModal(false)}
         >
           <FaAngleDown className="translate-y-[1px]" />

@@ -1843,7 +1843,7 @@ export const Data = [
     min_price: 115,
     max_guests: 1000,
     short_description:
-      "Centennial Homestead is a premium Sydney venue nestled in the heart of Centennial Park. Surrounded by rolling green lawns, wooded groves, and winding lakes, the luxury venue is one of Sydney’s best-kept secrets.\n\nOffering a number of enchanting Outdoor spaces, Centennial Homestead is a colourful and memorable setting for a number of celebrations, including weddings, corporate functions, and social parties.\n\nJust moments from Sydney CBD, Centennial Homestead transports guests from the hustle and bustle of the city to a tranquil and idyllic natural setting that feels a million miles away.",
+      "Centennial Homestead is a premium Sydney venue nestled in the heart of Centennial Park. Sur by rolling green lawns, wooded groves, and winding lakes, the luxury venue is one of Sydney’s best-kept secrets.\n\nOffering a number of enchanting Outdoor spaces, Centennial Homestead is a colourful and memorable setting for a number of celebrations, including weddings, corporate functions, and social parties.\n\nJust moments from Sydney CBD, Centennial Homestead transports guests from the hustle and bustle of the city to a tranquil and idyllic natural setting that feels a million miles away.",
     img: [
       "CentennialHomestead1",
       "CentennialHomestead2",

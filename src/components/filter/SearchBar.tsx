@@ -113,11 +113,11 @@ const SearchBar = ({
         <input
           type="text"
           placeholder="Search by any city"
-          className="border border-gray-300 text-sm sm:text-[15px] w-full sm:w-96 px-6 py-2 rounded-full h-[45px]"
+          className="border border-gray-300 text-sm sm:text-[15px] w-full sm:w-96 px-6 py-2 -full h-[45px]"
           onChange={toggleChange}
           value={search}
         />
-        <div className="absolute top-1/2 right-2 -translate-y-1/2 w-8 h-8 rounded-full flex justify-center items-center bg-black text-white">
+        <div className="absolute top-1/2 right-2 -translate-y-1/2 w-8 h-8 -full flex justify-center items-center bg-black text-white">
           {search.length === 0 ? (
             <div>
               <IoSearch />
@@ -176,7 +176,7 @@ const SearchBar = ({
         {/* end test */}
 
         <div
-          className="border py-1 px-2 rounded text-black cursor-pointer h-[38px] flex justify-center items-center text-2xl"
+          className="border py-1 px-2  text-black cursor-pointer h-[38px] flex justify-center items-center text-2xl"
           onClick={() => setShowSortContainer(!showSortContainer)}
         >
           <GoSortDesc />

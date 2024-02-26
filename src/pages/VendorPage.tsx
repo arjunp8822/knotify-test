@@ -95,12 +95,12 @@ const VenuePage = () => {
           )}
           {data.vendorType === "Venues" && (
             <div className="flex justify-center items-center gap-2">
-              <div className="bg-black h-[4px] w-[4px] rounded-full translate-y-[1px]"></div>
+              <div className="bg-black h-[4px] w-[4px] -full translate-y-[1px]"></div>
               <span>{data.max_guests} guests</span>
             </div>
           )}
 
-          <div className="bg-black h-[4px] w-[4px] rounded-full translate-y-[1px]"></div>
+          <div className="bg-black h-[4px] w-[4px] -full translate-y-[1px]"></div>
           <span className="flex justify-center items-center gap-1">
             <span className="text-yellow-500">
               <FaStar />
@@ -118,7 +118,7 @@ const VenuePage = () => {
           <img
             src={`https://res.cloudinary.com/dkxs4o9vt/image/upload/v1705560129/${data.img[0]}`}
             alt="Venue Image 1"
-            className="w-full h-full object-cover rounded sm:rounded-none sm:rounded-l cursor-pointer"
+            className="w-full h-full object-cover  sm:-none sm:-l cursor-pointer"
             onClick={() => setShowImageModal(true)}
           />
         </div>
@@ -127,7 +127,7 @@ const VenuePage = () => {
             <img
               src={`https://res.cloudinary.com/dkxs4o9vt/image/upload/v1705560129/${data.img[1]}`}
               alt="Venue Image 2"
-              className="w-full hidden sm:flex object-cover rounded sm:rounded-none sm:rounded-tr cursor-pointer h-full"
+              className="w-full hidden sm:flex object-cover  sm:-none sm:-tr cursor-pointer h-full"
               onClick={() => setShowImageModal(true)}
             />
           </div>
@@ -135,13 +135,13 @@ const VenuePage = () => {
             <img
               src={`https://res.cloudinary.com/dkxs4o9vt/image/upload/v1705560129/${data.img[2]}`}
               alt="Venue Image 3"
-              className="w-full hidden sm:flex object-cover rounded sm:rounded-none sm:rounded-br cursor-pointer h-full"
+              className="w-full hidden sm:flex object-cover  sm:-none sm:-br cursor-pointer h-full"
               onClick={() => setShowImageModal(true)}
             />
           </div>
         </div>
         <button
-          className="absolute bottom-2 right-2 bg-white border rounded text-sm sm:text-base"
+          className="absolute bottom-2 right-2 bg-white border  text-sm sm:text-base"
           onClick={() => setShowImageModal(true)}
         >
           Show More
@@ -261,7 +261,7 @@ const VenuePage = () => {
                   className="flex items-center gap-2"
                 >
                   <Link
-                    className="text-lg bg-primary p-2 rounded-full text-white"
+                    className="text-lg bg-primary p-2 -full text-white"
                     to={`mailto:${data.email}`}
                   >
                     <MdOutlineMailOutline />
@@ -278,7 +278,7 @@ const VenuePage = () => {
                   className="flex items-center gap-2"
                 >
                   <Link
-                    className="text-lg bg-primary p-2 rounded-full text-white"
+                    className="text-lg bg-primary p-2 -full text-white"
                     to={`tel:${data.phone}`}
                   >
                     <MdOutlinePhoneEnabled />
@@ -296,7 +296,7 @@ const VenuePage = () => {
                   target="_blank"
                 >
                   <Link
-                    className="text-lg bg-primary p-2 rounded-full text-white"
+                    className="text-lg bg-primary p-2 -full text-white"
                     to={`${data.website}`}
                     target="_blank"
                   >
@@ -318,14 +318,14 @@ const VenuePage = () => {
               </h5>
               <div className="flex gap-3 items-center">
                 <Link
-                  className="bg-primary text-white p-2 rounded-full cursor-pointer"
+                  className="bg-primary text-white p-2 -full cursor-pointer"
                   to={data.facebook}
                   target="_blank"
                 >
                   <FaFacebookF />
                 </Link>
                 <Link
-                  className="bg-primary text-white p-2 rounded-full cursor-pointer"
+                  className="bg-primary text-white p-2 -full cursor-pointer"
                   to={data.instagram}
                   target="_blank"
                 >

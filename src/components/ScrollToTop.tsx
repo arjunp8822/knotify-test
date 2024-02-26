@@ -40,7 +40,7 @@ const ScrollToTop = () => {
       <div className="fixed bottom-4 w-full mx-auto h-[30px] sm:h-[50px]">
         <div className="max-w-[1400px] mx-auto flex justify-end px-4 sm:px-8 md:px-12">
           <div
-            className="rounded-full bg-black text-white p-2 cursor-pointer"
+            className="-full bg-black text-white p-2 cursor-pointer"
             onClick={scrollToTop}
           >
             <FaArrowUp />

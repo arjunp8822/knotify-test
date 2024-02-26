@@ -26,7 +26,7 @@ const Slider = ({ initial, min, max, step, setMinimumRating }: Props) => {
         step={step}
         value={value}
         onChange={toggleChange}
-        className="appearance-none border-none bg-gray-100 h-1 rounded-full [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-[20px] [&::-webkit-slider-thumb]:w-[20px] [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-black"
+        className="appearance-none border-none bg-gray-100 h-1 -full [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-[20px] [&::-webkit-slider-thumb]:w-[20px] [&::-webkit-slider-thumb]:-full [&::-webkit-slider-thumb]:bg-black"
       />
       <div className="flex items-center gap-2 text-sm sm:text-base">
         <span className="text-gray-500 ">{value}</span>

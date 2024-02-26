@@ -52,7 +52,7 @@ const LargeImageModal = ({
       </div>
       {largeImageIdx !== 0 && (
         <div
-          className="bg-white flex justify-center items-center text-[10px] h-[30px] w-[30px] sm:text-sm p-2 sm:p-3 rounded-full text-black cursor-pointer absolute left-[8%]"
+          className="bg-white flex justify-center items-center text-[10px] h-[30px] w-[30px] sm:text-sm p-2 sm:p-3 -full text-black cursor-pointer absolute left-[8%]"
           onClick={toggleImgDown}
         >
           <FaChevronLeft />
@@ -60,7 +60,7 @@ const LargeImageModal = ({
       )}
       {largeImageIdx !== img.length - 1 && (
         <div
-          className="bg-white flex justify-center items-center text-[10px] h-[30px] w-[30px] sm:text-sm p-2 sm:p-3 rounded-full text-black cursor-pointer absolute right-[8%]"
+          className="bg-white flex justify-center items-center text-[10px] h-[30px] w-[30px] sm:text-sm p-2 sm:p-3 -full text-black cursor-pointer absolute right-[8%]"
           onClick={toggleImgUp}
         >
           <FaChevronRight />

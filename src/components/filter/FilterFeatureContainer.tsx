@@ -17,7 +17,7 @@ const FilterFeatureContainer = ({ title, filtersSelected }: Props) => {
       onClick={() => setClicked(!clicked)}
     >
       <div
-        className={`w-5 h-5 border border-gray-500 rounded text-[9px] justify-center pl-[4px] pt-[4px] ${
+        className={`w-5 h-5 border border-gray-500  text-[9px] justify-center pl-[4px] pt-[4px] ${
           clicked ? "bg-black text-white" : ""
         }`}
       >

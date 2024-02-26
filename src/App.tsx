@@ -11,7 +11,10 @@ import Privacy from "./pages/Privacy";
 import ScrollToTop from "./components/ScrollToTop";
 import Terms from "./pages/Terms";
 // import NotFound from "./pages/NotFound";
-// import Home from "./pages/Home";
+import Home from "./pages/Home";
+import Blog1 from "./components/blog/Blog1";
+import Blog2 from "./components/blog/Blog2";
+import Blog3 from "./components/blog/Blog3";
 
 function App() {
   const [openNav, setOpenNav] = useState(false);
@@ -20,13 +23,14 @@ function App() {
     <div>
       <Navbar openNav={openNav} setOpenNav={setOpenNav} />
       <div
-        className={`container bg-white transition-all ${
-          openNav ? "blur-[2px]" : ""
+        className={` bg-white container transition-all ${
+          openNav ? "blur-[2px] " : ""
         }`}
         onClick={() => setOpenNav(false)}
       >
         <Routes>
-          {/* <Route path="/test" element={<Home />} /> */}
+          <Route path="/test" element={<Home />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/" element={<Vendors />} />
           <Route path="/list" element={<List />} />
           <Route path="/vendors/:id" element={<VendorPage />} />
@@ -35,6 +39,17 @@ function App() {
           <Route path="/terms" element={<Terms />} />
           {/* Fallback route if not found */}
           {/* <Route path="*" element={<NotFound />} /> */}
+
+          {/* Blogs */}
+          <Route
+            path="/navigating-the-wedding-planning-maze"
+            element={<Blog1 />}
+          />
+          <Route path="/ten-on-the-day-wedding-tips" element={<Blog2 />} />
+          <Route
+            path="/tips-for-a-stress-free-celebration"
+            element={<Blog3 />}
+          />
         </Routes>
       </div>
       {/* footer */}

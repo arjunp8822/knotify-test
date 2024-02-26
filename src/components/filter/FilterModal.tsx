@@ -96,7 +96,7 @@ const FilterModal = ({
 
   return (
     <form
-      className={`bg-white z-50 h-[80vh] w-[95vw] sm:w-[600px] relative rounded`}
+      className={`bg-white z-50 h-[80vh] w-[95vw] sm:w-[600px] relative `}
       onSubmit={handleSubmit}
     >
       <div className="flex absolute w-full justify-center items-center py-4 px-6 sm:px-8 border-b h-[50px] sm:h-[70px]">
@@ -195,7 +195,7 @@ const FilterModal = ({
         >
           Clear All
         </button>
-        <button className="bg-primary text-white font-bold rounded py-1 sm:py-auto text-sm sm:text-base ">
+        <button className="bg-primary text-white font-bold  py-1 sm:py-auto text-sm sm:text-base ">
           Show
         </button>
       </div>

@@ -51,7 +51,7 @@ const Footer = () => {
             <input
               type="text"
               placeholder="Name"
-              className="py-[6px] mb-3 border-none rounded text-sm sm:text-[15px]"
+              className="py-[6px] mb-3 border-none  text-sm sm:text-[15px]"
               name="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
@@ -60,7 +60,7 @@ const Footer = () => {
             <input
               type="email"
               placeholder="Email"
-              className="py-[6px] mb-3 border-none rounded text-sm sm:text-[15px]"
+              className="py-[6px] mb-3 border-none  text-sm sm:text-[15px]"
               name="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}

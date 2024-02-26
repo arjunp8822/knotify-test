@@ -12,7 +12,7 @@ interface Props {
 
 const VendorFeature = ({ data }: Props) => {
   return (
-    <div className="flex flex-col gap-4 lg:gap-8 justify-center items-center border overflow-hidden p-2 rounded">
+    <div className="flex flex-col gap-4 lg:gap-8 justify-center items-center border overflow-hidden p-2 ">
       <div className="relative h-[310px] w-full flex items-center">
         <img
           src={data.img}
@@ -20,7 +20,7 @@ const VendorFeature = ({ data }: Props) => {
           className="object-cover w-full h-full"
         />
         {data.comingSoon && (
-          <span className="font-semibold bg-black text-white rounded-xl px-2 py-1 w-fit absolute top-2 right-2 text-sm">
+          <span className="font-semibold bg-black text-white -xl px-2 py-1 w-fit absolute top-2 right-2 text-sm">
             Coming Soon
           </span>
         )}
@@ -33,7 +33,7 @@ const VendorFeature = ({ data }: Props) => {
           {data.content}
         </p>
         <div className="mt-8 flex items-center gap-4 font-semibold h-[70px]">
-          <div className="text-primary border border-primary p-2 rounded-full text-sm sm:text-base">
+          <div className="text-primary border border-primary p-2 -full text-sm sm:text-base">
             <BsFillLightningChargeFill />
           </div>
           <span className="text-sm sm:text-base">{data.benefit}</span>

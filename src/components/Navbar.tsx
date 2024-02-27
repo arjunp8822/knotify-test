@@ -11,8 +11,8 @@ interface Props {
 }
 
 const navLinks = [
-  { title: "Home", link: "/test", button: false },
-  { title: "Vendors", link: "/", button: false },
+  { title: "Home", link: "/", button: false },
+  { title: "Vendors", link: "/vendors", button: false },
   { title: "Blog", link: "/blog", button: false },
   { title: "List with us", link: "/list", button: false },
 ];

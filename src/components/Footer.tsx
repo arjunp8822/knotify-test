@@ -80,8 +80,13 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/" className="hover:underline">
+                  <Link to="/vendors" className="hover:underline">
                     Vendors
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/blog" className="hover:underline">
+                    Blog
                   </Link>
                 </li>
                 <li>

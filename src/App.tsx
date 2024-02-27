@@ -29,9 +29,9 @@ function App() {
         onClick={() => setOpenNav(false)}
       >
         <Routes>
-          <Route path="/test" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/" element={<Vendors />} />
+          <Route path="/vendors" element={<Vendors />} />
           <Route path="/list" element={<List />} />
           <Route path="/vendors/:id" element={<VendorPage />} />
           <Route path="/blog" element={<Blog />} />

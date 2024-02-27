@@ -10,11 +10,13 @@ const Blog = () => {
       <h2 className="font-semibold text-xl sm:text-2xl mb-8">Blog</h2>
       <div className="flex gap-4 sm:gap-8 relative overflow-x-auto">
         <div className="h-[550px] w-[90%] sm:w-full relative flex-shrink-0 sm:flex-shrink flex flex-col justify-between min-w-[300px]">
-          <img
-            src={blog1}
-            alt="Wedding Blog"
-            className="w-full object-cover h-[300px]"
-          />
+          <Link to="/navigating-the-wedding-planning-maze">
+            <img
+              src={blog1}
+              alt="Wedding Blog"
+              className="w-full object-cover h-[300px]"
+            />
+          </Link>
           <h2 className="sm:text-lg font-semibold pt-2 h-[70px] flex items-center">
             Navigating the Wedding Planning Maze
           </h2>
@@ -31,11 +33,13 @@ const Blog = () => {
         </div>
 
         <div className="h-[550px] w-[90%] sm:w-full relative flex-shrink-0 sm:flex-shrink flex flex-col justify-between min-w-[300px]">
-          <img
-            src={blog2}
-            alt="Wedding Blog"
-            className="w-full object-cover h-[300px]"
-          />
+          <Link to="/ten-on-the-day-wedding-tips">
+            <img
+              src={blog2}
+              alt="Wedding Blog"
+              className="w-full object-cover h-[300px]"
+            />
+          </Link>
           <h2 className="sm:text-lg font-semibold pt-2 h-[70px] flex items-center">
             10 On-the-Day Wedding Tips for Couples
           </h2>
@@ -50,11 +54,13 @@ const Blog = () => {
           </button>
         </div>
         <div className="h-[550px] w-[90%] sm:w-full relative flex-shrink-0 sm:flex-shrink flex flex-col justify-between min-w-[300px]">
-          <img
-            src={blog3}
-            alt="Wedding Blog"
-            className="w-full object-cover h-[300px]"
-          />
+          <Link to="/tips-for-a-stress-free-celebration">
+            <img
+              src={blog3}
+              alt="Wedding Blog"
+              className="w-full object-cover h-[300px]"
+            />
+          </Link>
           <h2 className="sm:text-lg font-semibold pt-2 h-[70px] flex items-center">
             5 Tips for a Stress-Free Celebration
           </h2>

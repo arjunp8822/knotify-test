@@ -60,7 +60,7 @@ const VendorFAQ = () => {
             Reach out and a member of our team will get back to you within 24
             hours
           </p>
-          <button className="bg-primary border border-primary text-white font-semibold mt-4 sm:mt-8 hover:bg-white hover:border hover:border-primary hover:text-primary transition-all">
+          <button className="bg-primary border border-primary text-white font-semibold mt-4 sm:mt-8 hover:bg-white hover:border hover:border-primary hover:text-primary transition-all uppercase">
             <a href="#contactform">Find Out More</a>
           </button>
         </div>

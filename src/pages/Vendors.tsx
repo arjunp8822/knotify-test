@@ -207,7 +207,7 @@ const Home = () => {
       {data.length > visibleCards && (
         <div className="flex justify-center mt-12">
           <button
-            className="border border-black text-sm sm:text-[15px] font-semibold"
+            className="border border-black text-sm sm:text-[15px] font-semibold uppercase"
             onClick={handleShowMore}
           >
             Show More

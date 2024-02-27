@@ -1,9 +1,12 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
-import sampleImg from "/assets/blogs/blog0101.jpg";
+import review1 from "/assets/reviews/review2.jpg";
+import review2 from "/assets/reviews/review1.jpg";
+import review3 from "/assets/reviews/review3.jpg";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { Link } from "react-router-dom";
 
 const Reviews = () => {
   return (
@@ -26,7 +29,7 @@ const Reviews = () => {
         <SwiperSlide className="swiperslide flex flex-col md:flex-row justify-center items-center gap-6 sm:gap-12 mb-16 sm:mb-12 md:h-[500px]">
           <div className="w-full md:w-1/2 flex-shrink-0 h-full">
             <img
-              src={sampleImg}
+              src={review1}
               alt="Wedding Image"
               className="object-cover h-full w-full"
             />
@@ -46,13 +49,13 @@ const Reviews = () => {
               Sydney, Australia
             </h5>
             <button className="bg-primary text-white uppercase text-sm sm:text-base">
-              Find Vendors
+              <Link to={"/vendors"}>Find Vendors</Link>
             </button>
           </div>
         </SwiperSlide>
         <SwiperSlide className="swiperslide flex flex-col md:flex-row justify-center items-center gap-6 sm:gap-12 mb-16 sm:mb-12 md:h-[500px]">
           <img
-            src={sampleImg}
+            src={review2}
             alt="Wedding Image"
             className="object-cover w-full md:w-1/2 h-full"
           />
@@ -72,13 +75,13 @@ const Reviews = () => {
               Brisbane, Australia
             </h5>
             <button className="bg-primary text-white uppercase text-sm sm:text-base">
-              Find Vendors
+              <Link to={"/vendors"}>Find Vendors</Link>
             </button>
           </div>
         </SwiperSlide>
         <SwiperSlide className="swiperslide flex flex-col md:flex-row justify-center items-center gap-6 sm:gap-12 mb-16 sm:mb-12 md:h-[500px]">
           <img
-            src={sampleImg}
+            src={review3}
             alt="Wedding Image"
             className="object-cover w-full md:w-1/2 h-full"
           />
@@ -96,7 +99,7 @@ const Reviews = () => {
               Melbourne, Australia
             </h5>
             <button className="bg-primary text-white uppercase text-sm sm:text-base">
-              Find Vendors
+              <Link to={"/vendors"}>Find Vendors</Link>
             </button>
           </div>
         </SwiperSlide>

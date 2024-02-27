@@ -76,7 +76,7 @@ const VendorForm = () => {
           required
           name="website"
         />
-        <button className="bg-primary border font-semibold border-primary text-white hover:bg-white hover:border hover:border-primary hover:text-primary transition-all">
+        <button className="bg-primary border font-semibold border-primary text-white hover:bg-white hover:border hover:border-primary hover:text-primary transition-all uppercase">
           List with us
         </button>
       </form>

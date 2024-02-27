@@ -1,5 +1,6 @@
 import bow from "/public/assets/bow-banner.png";
 import bow2 from "/public/assets/bow-banner-2.png";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -22,8 +23,8 @@ const Banner = () => {
             wedding vendors! Say goodbye to endless research and upfront costs.
             With us, planning your dream wedding is a breeze.
           </p>
-          <button className="bg-primary text-white font-semibold mt-4 sm:mt-6">
-            Find Vendors
+          <button className="bg-primary text-white font-semibold mt-4 sm:mt-6 uppercase">
+            <Link to={"/vendors"}>Find Vendors</Link>
           </button>
         </div>
       </div>
@@ -36,8 +37,8 @@ const Banner = () => {
             couples, handle paperwork effortlessly, all with upfront payments on
             one platform.
           </p>
-          <button className="bg-white text-primary font-semibold mt-4 sm:mt-6">
-            Get Started
+          <button className="bg-white text-primary font-semibold mt-4 sm:mt-6 uppercase">
+            <Link to={"/list"}>Get Started</Link>
           </button>
         </div>
       </div>

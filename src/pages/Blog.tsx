@@ -5,7 +5,7 @@ import blog3 from "/assets/blogs/blog0301.jpg";
 
 const Blog = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-10">
       <div className="h-[500px] sm:h-[600px] flex flex-col gap-4">
         <img
           src={blog1}

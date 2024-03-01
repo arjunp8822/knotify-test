@@ -15,6 +15,7 @@ import Home from "./pages/Home";
 import Blog1 from "./components/blog/Blog1";
 import Blog2 from "./components/blog/Blog2";
 import Blog3 from "./components/blog/Blog3";
+import Onboard from "./pages/Onboard";
 
 function App() {
   const [openNav, setOpenNav] = useState(false);
@@ -33,6 +34,7 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/vendors" element={<Vendors />} />
           <Route path="/list" element={<List />} />
+          <Route path="/onboard" element={<Onboard />} />
           <Route path="/vendors/:id" element={<VendorPage />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/privacy" element={<Privacy />} />

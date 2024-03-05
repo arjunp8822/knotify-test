@@ -1,26 +1,22 @@
-import { useState } from "react";
+import { FormData } from "../../pages/Onboard";
 
 interface Props {
-  formData: FormData | null;
-  setFormData: (formData: FormData) => void;
+  formData: FormData;
+  setFormData: React.Dispatch<React.SetStateAction<FormData>>;
   page: number;
   setPage: (page: number) => void;
 }
 
 const Social = ({ formData, setFormData, page, setPage }: Props) => {
-  const [facebook, setFacebook] = useState("");
-  const [instagram, setInstagram] = useState("");
-  const [pinterest, setPinterest] = useState("");
-
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
   const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const updatedData: Partial<FormData> = {
-      ...formData,
-      facebook: facebook,
-      instagram: instagram,
-      pinterest: pinterest,
-    };
-    setFormData(updatedData as FormData);
     setPage(page + 1);
   };
 
@@ -28,42 +24,49 @@ const Social = ({ formData, setFormData, page, setPage }: Props) => {
     <div>
       <div className="flex flex-col gap-4 mb-6">
         <h1 className="text-xl sm:text-2xl lg:text-4xl font-semibold">
-          Basic Information
+          Social Media Links
         </h1>
         <p className="text-gray-500 text-sm sm:text-base">
-          Let's kick things off by capturing basic information about your
-          business
+          Let couples stay updated, engaged, and connected by adding your social
+          media platforms.
         </p>
       </div>
       <form onSubmit={submitHandler}>
         <div className="grid grid-cols 1 sm:grid-cols-2 gap-4">
           <input
             type="text"
-            value={facebook}
-            onChange={(e) => setFacebook(e.target.value)}
+            value={formData.facebook}
+            onChange={handleChange}
             placeholder="Facebook (optional)"
             className="text-sm sm:text-base text-black"
-            required
+            name="facebook"
           />
           <input
             type="text"
-            value={instagram}
-            onChange={(e) => setInstagram(e.target.value)}
+            value={formData.instagram}
+            onChange={handleChange}
             placeholder="Instagram (optional)"
             className="text-sm sm:text-base text-black"
-            required
+            name="instagram"
           />
           <input
             type="text"
-            value={pinterest}
-            onChange={(e) => setPinterest(e.target.value)}
+            value={formData.pinterest}
+            onChange={handleChange}
             placeholder="Pinterest (optional)"
             className="text-sm sm:text-base text-black"
-            required
+            name="pinterest"
           />
         </div>
         <div className="flex gap-4 mt-8">
-          <button className="uppercase border text-sm sm:text-base">
+          <button
+            className="uppercase bg-gray-100 text-sm sm:text-base"
+            onClick={() => setPage(page - 1)}
+            type="button"
+          >
+            Back
+          </button>
+          <button className="uppercase bg-primary text-white text-sm sm:text-base">
             Next
           </button>
         </div>

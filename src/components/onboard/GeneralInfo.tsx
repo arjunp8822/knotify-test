@@ -1,29 +1,23 @@
-import { useState } from "react";
 import { FormData } from "../../pages/Onboard";
 
 interface Props {
-  formData: FormData | null;
-  setFormData: (formData: FormData) => void;
+  formData: FormData;
+  setFormData: React.Dispatch<React.SetStateAction<FormData>>;
   page: number;
   setPage: (page: number) => void;
 }
 
 const GeneralInfo = ({ formData, setFormData, page, setPage }: Props) => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [website, setWebsite] = useState("");
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
 
   const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const updatedData: Partial<FormData> = {
-      ...formData,
-      name: name,
-      email: email,
-      phone: phone,
-      website: website,
-    };
-    setFormData(updatedData as FormData);
     setPage(page + 1);
   };
 
@@ -35,46 +29,50 @@ const GeneralInfo = ({ formData, setFormData, page, setPage }: Props) => {
         </h1>
         <p className="text-gray-500 text-sm sm:text-base">
           Let's kick things off by capturing basic information about your
-          business
+          business.
         </p>
       </div>
       <form onSubmit={submitHandler}>
         <div className="grid grid-cols 1 sm:grid-cols-2 gap-4">
           <input
             type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            value={formData.name}
+            onChange={handleChange}
             placeholder="Business Name"
             className="text-sm sm:text-base text-black"
             required
+            name="name"
           />
           <input
             type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={formData.email}
+            onChange={handleChange}
             placeholder="Email"
             className="text-sm sm:text-base text-black"
             required
+            name="email"
           />
           <input
             type="tel"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
+            value={formData.phone}
+            onChange={handleChange}
             placeholder="Phone Number"
             className="text-sm sm:text-base text-black"
             required
+            name="phone"
           />
           <input
             type="text"
-            value={website}
-            onChange={(e) => setWebsite(e.target.value)}
+            value={formData.website}
+            onChange={handleChange}
             placeholder="Website"
             className="text-sm sm:text-base text-black"
             required
+            name="website"
           />
         </div>
         <div className="flex gap-4 mt-8">
-          <button className="uppercase border text-sm sm:text-base">
+          <button className="uppercase bg-primary text-white text-sm sm:text-base">
             Next
           </button>
         </div>

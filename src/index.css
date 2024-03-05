@@ -210,6 +210,28 @@ h1 {
   transition: all 0.3s ease;
 }
 
+/* custom drop down arrow */
+
+.custom-select {
+  appearance: none;
+}
+
+.custom-select::-ms-expand {
+  display: none;
+}
+
+/* Adjust the position of the dropdown arrow */
+
+/* Create a custom dropdown arrow */
+.custom-select:after {
+  content: "\25BC"; /* Unicode character for dropdown arrow */
+  position: absolute;
+  right: 10px; /* Adjust this value to move the arrow */
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* Ensure clicks pass through to the select element */
+}
+
 @media (max-width: 767px) {
   .swiper-button-prev,
   .swiper-button-next {

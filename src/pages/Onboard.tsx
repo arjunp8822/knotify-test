@@ -11,6 +11,7 @@ import Categories from "../components/onboard/Categories";
 import Features from "../components/onboard/Features";
 import Packages from "../components/onboard/Packages";
 import Social from "../components/onboard/Social";
+import AdditionalInfo from "../components/onboard/AdditionalInfo";
 
 export interface FormData {
   // general
@@ -28,7 +29,7 @@ export interface FormData {
   suburb: string;
   city: string;
   state: string;
-  postCode: number | null;
+  postCode: string;
 
   //   description
 
@@ -41,22 +42,29 @@ export interface FormData {
   minGuests: number;
   maxGuests: number;
 
+  pricingType: string;
   minPrice: number;
   maxPrice: number;
 
-  images: string[];
+  imageFiles: File[];
+  imageLinks: string[];
 
   categories: string[];
 
   features: string[];
 
-  packages: string[];
+  packageFiles: File[];
+  packageLinks: string[];
+
+  // additional
+
+  additionalInfo: string;
 }
 
 const Onboard = () => {
   const [page, setPage] = useState(1);
   const [opacity, setOpacity] = useState(1);
-  const [formData, setFormData] = useState<FormData | null>({
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     phone: "",
@@ -67,17 +75,21 @@ const Onboard = () => {
     suburb: "",
     city: "",
     state: "",
-    postCode: null,
+    postCode: "",
     description: "",
-    vendorType: "",
+    additionalInfo: "",
+    vendorType: "Venues",
     minGuests: 20,
     maxGuests: 250,
+    pricingType: "Total",
     minPrice: 500,
     maxPrice: 50000,
-    images: [],
+    imageFiles: [],
+    imageLinks: [],
     categories: [],
     features: [],
-    packages: [],
+    packageFiles: [],
+    packageLinks: [],
   });
 
   const handleComponentChange = (newPage: number) => {
@@ -101,15 +113,66 @@ const Onboard = () => {
       page={page}
       setPage={handleComponentChange}
     />,
-    <LocationInfo formData={formData} setFormData={setFormData} />,
-    <Description />,
-    <VendorType />,
-    <Guests />,
-    <Pricing />,
-    <Images />,
-    <Categories />,
-    <Features />,
-    <Packages />,
+    <LocationInfo
+      formData={formData}
+      setFormData={setFormData}
+      page={page}
+      setPage={handleComponentChange}
+    />,
+    <Description
+      formData={formData}
+      setFormData={setFormData}
+      page={page}
+      setPage={handleComponentChange}
+    />,
+    <VendorType
+      formData={formData}
+      setFormData={setFormData}
+      page={page}
+      setPage={handleComponentChange}
+    />,
+    <Guests
+      formData={formData}
+      setFormData={setFormData}
+      page={page}
+      setPage={handleComponentChange}
+    />,
+    <Pricing
+      formData={formData}
+      setFormData={setFormData}
+      page={page}
+      setPage={handleComponentChange}
+    />,
+    <Images
+      formData={formData}
+      setFormData={setFormData}
+      page={page}
+      setPage={handleComponentChange}
+    />,
+    <Categories
+      formData={formData}
+      setFormData={setFormData}
+      page={page}
+      setPage={handleComponentChange}
+    />,
+    <Features
+      formData={formData}
+      setFormData={setFormData}
+      page={page}
+      setPage={handleComponentChange}
+    />,
+    <Packages
+      formData={formData}
+      setFormData={setFormData}
+      page={page}
+      setPage={handleComponentChange}
+    />,
+    <AdditionalInfo
+      formData={formData}
+      setFormData={setFormData}
+      page={page}
+      setPage={handleComponentChange}
+    />,
   ];
 
   return (

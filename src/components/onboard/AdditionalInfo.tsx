@@ -1,7 +1,6 @@
 import { useRef, useState } from "react";
 import { FormData as Data } from "../../pages/Onboard";
 import emailjs from "@emailjs/browser";
-import axios from "axios";
 import Loading from "./Loading";
 import Thankyou from "./Thankyou";
 
@@ -16,55 +15,10 @@ const AdditionalInfo = ({ formData, setFormData, page, setPage }: Props) => {
   const [loading, setLoading] = useState(false);
   const form = useRef<HTMLFormElement>(null);
   const [thankYouModal, setThankYouModal] = useState(false);
+
   const submitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-
-    // image upload to cloudinary
-    try {
-      const links: string[] = [];
-      await Promise.all(
-        formData.imageFiles.map(async (image) => {
-          const formData = new FormData();
-          formData.append("file", image);
-          formData.append("upload_preset", "knotify");
-          const response = await axios.post(
-            "https://api.cloudinary.com/v1_1/dkxs4o9vt/image/upload",
-            formData
-          );
-          links.push(response.data.public_id);
-        })
-      );
-      setFormData((prevFormData) => ({
-        ...prevFormData,
-        imageLinks: links,
-      }));
-    } catch (e) {
-      console.log(e);
-    }
-
-    // package upload to cloudinary
-    try {
-      const links: string[] = [];
-      await Promise.all(
-        formData.packageFiles.map(async (pkg) => {
-          const formData = new FormData();
-          formData.append("file", pkg);
-          formData.append("upload_preset", "knotify");
-          const response = await axios.post(
-            "https://api.cloudinary.com/v1_1/dkxs4o9vt/image/upload",
-            formData
-          );
-          links.push(response.data.public_id);
-        })
-      );
-      setFormData((prevFormData) => ({
-        ...prevFormData,
-        packageLinks: links,
-      }));
-    } catch (e) {
-      console.log(e);
-    }
 
     // email to me
 
@@ -82,6 +36,7 @@ const AdditionalInfo = ({ formData, setFormData, page, setPage }: Props) => {
     setThankYouModal(true);
     setLoading(false);
   };
+
   return (
     <div>
       <div className="flex flex-col gap-4 mb-6">

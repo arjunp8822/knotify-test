@@ -85,29 +85,54 @@ const Pricing = ({ formData, setFormData, page, setPage }: Props) => {
                 thumbClassName="example-thumb"
                 trackClassName="example-track"
                 defaultValue={[formData.minPrice, formData.maxPrice]}
-                min={100}
+                min={500}
                 max={50000}
                 onChange={(value: number[]) => toggleChange(value)}
                 pearling
                 minDistance={100}
+                step={100}
               />
               <div className="flex gap-4 max-w-[600px]">
                 <div className="border rounded p-2 flex flex-col gap-1 w-full">
                   <p className="text-[12px] sm:text-[14px] text-gray-500">
                     Minimum
                   </p>
-                  <span className="text-sm sm:text-base">
-                    ${formData.minPrice.toLocaleString()}
-                  </span>
+                  <div className="flex justify-start items-center gap-1">
+                    <span>$</span>
+                    <input
+                      type="number"
+                      value={formData.minPrice}
+                      className="text-sm sm:text-base border-none p-0 text-black"
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          minPrice: parseInt(e.target.value),
+                        })
+                      }
+                    />
+                  </div>
                 </div>
                 <div className="border rounded p-2 flex flex-col gap-1 w-full">
                   <p className="text-[12px] sm:text-[14px] text-gray-500">
                     Maximum
                   </p>
-                  <span className="text-sm sm:text-base">
-                    ${formData.maxPrice.toLocaleString()}
-                    {formData.maxPrice === 50000 ? "+" : ""}
-                  </span>
+                  <div className="flex justify-start items-center gap-1">
+                    <span>$</span>
+                    <input
+                      type="text"
+                      value={formData.maxPrice}
+                      className="text-sm sm:text-base border-none p-0 text-black w-[50px]"
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          maxPrice: parseInt(e.target.value),
+                        })
+                      }
+                    />
+                    {formData.maxPrice === 50000 && (
+                      <span className="w-full">+</span>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
@@ -124,24 +149,49 @@ const Pricing = ({ formData, setFormData, page, setPage }: Props) => {
                 onChange={(value: number[]) => toggleChange(value)}
                 pearling
                 minDistance={1}
+                step={10}
               />
               <div className="flex gap-4 max-w-[600px]">
                 <div className="border rounded p-2 flex flex-col gap-1 w-full">
                   <p className="text-[12px] sm:text-[14px] text-gray-500">
                     Minimum
                   </p>
-                  <span className="text-sm sm:text-base">
-                    ${formData.minPrice.toLocaleString()}
-                  </span>
+                  <div className="flex justify-start items-center gap-1">
+                    <span>$</span>
+                    <input
+                      type="text"
+                      value={formData.minPrice}
+                      className="text-sm sm:text-base border-none p-0 text-black"
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          minPrice: parseInt(e.target.value),
+                        })
+                      }
+                    />
+                  </div>
                 </div>
                 <div className="border rounded p-2 flex flex-col gap-1 w-full">
                   <p className="text-[12px] sm:text-[14px] text-gray-500">
                     Maximum
                   </p>
-                  <span className="text-sm sm:text-base">
-                    ${formData.maxPrice.toLocaleString()}
-                    {formData.maxPrice === 500 ? "+" : ""}
-                  </span>
+                  <div className="flex justify-start items-center gap-1">
+                    <span>$</span>
+                    <input
+                      type="text"
+                      value={formData.maxPrice}
+                      className="text-sm sm:text-base border-none p-0 text-black w-[28px]"
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          maxPrice: parseInt(e.target.value),
+                        })
+                      }
+                    />
+                    {formData.maxPrice === 500 && (
+                      <span className="w-full">+</span>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>

@@ -31,7 +31,7 @@ const Categories = ({ formData, setFormData, page, setPage }: Props) => {
           Categories
         </h1>
         <p className="text-gray-500 text-sm sm:text-base">
-          Select any categories that apply to you
+          Select any categories that apply to you.
         </p>
       </div>
       <form onSubmit={submitHandler} className="flex flex-col gap-2">

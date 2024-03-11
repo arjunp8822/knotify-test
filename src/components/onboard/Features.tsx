@@ -31,7 +31,7 @@ const Features = ({ formData, setFormData, page, setPage }: Props) => {
           Features
         </h1>
         <p className="text-gray-500 text-sm sm:text-base">
-          Select any features that apply to you
+          Select any features that apply to you.
         </p>
       </div>
       <form onSubmit={submitHandler} className="flex flex-col gap-2">

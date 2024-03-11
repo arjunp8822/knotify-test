@@ -22,7 +22,7 @@ const VendorType = ({ formData, setFormData, page, setPage }: Props) => {
         </h1>
         <p className="text-gray-500 text-sm sm:text-base">
           Let us know what type of vendor you are to help couples find your
-          services more easily
+          services more easily.
         </p>
       </div>
       <form onSubmit={submitHandler} className="flex flex-col gap-2">

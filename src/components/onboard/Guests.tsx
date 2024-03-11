@@ -48,18 +48,37 @@ const Guests = ({ formData, setFormData, page, setPage }: Props) => {
               <p className="text-[12px] sm:text-[14px] text-gray-500">
                 Minimum
               </p>
-              <span className="text-sm sm:text-base">
-                {formData.minGuests.toLocaleString()}
-              </span>
+              <input
+                type="text"
+                value={formData.minGuests}
+                className="text-sm sm:text-base border-none p-0 text-black"
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    minGuests: parseInt(e.target.value),
+                  })
+                }
+              />
             </div>
             <div className="border rounded p-2 flex flex-col gap-1 w-full">
               <p className="text-[12px] sm:text-[14px] text-gray-500">
                 Maximum
               </p>
-              <span className="text-sm sm:text-base">
-                {formData.maxGuests.toLocaleString()}
-                {formData.maxGuests === 250 ? "+" : ""}
-              </span>
+              <input
+                type="text"
+                value={
+                  formData.maxGuests >= 250
+                    ? formData.maxGuests + "+"
+                    : formData.maxGuests
+                }
+                className="text-sm sm:text-base border-none p-0 text-black"
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    maxGuests: parseInt(e.target.value),
+                  })
+                }
+              />
             </div>
           </div>
         </div>

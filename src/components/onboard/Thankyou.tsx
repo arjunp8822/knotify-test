@@ -16,8 +16,8 @@ const Thankyou = ({ setThankYouModal }: Props) => {
   return (
     <div className="fixed top-0 right-0 left-0 bottom-0 h-screen w-screen z-[200] flex justify-center items-center">
       <div className="bg-black opacity-25 h-screen w-screen z-[200]"></div>
-      <div className="bg-white h-[60%] w-[90%] max-w-[600px] sm:h-[60%] sm:w-[80%] absolute z-[250] opacity-100 pt-4 pl-4 pr-4 sm:pt-8 sm:pl-8 sm:pr-8 flex flex-col justify-center items-center rounded gap-8">
-        <div className="w-full h-full flex flex-col justify-center items-center rounded gap-8  relative">
+      <div className="bg-white overflow-y-auto h-[80%] w-[90%] max-w-[600px] sm:h-[65%] sm:w-[80%] absolute z-[250] opacity-100 pt-4 pl-4 pr-4 sm:pt-8 sm:pl-8 sm:pr-8 flex flex-col justify-center items-center rounded gap-8">
+        <div className="w-full h-full flex flex-col justify-center items-center rounded gap-8 relative">
           <div className="text-[60px] sm:text-[100px] border-8 border-green-500 rounded-full p-4 text-green-500">
             <FaCheck />
           </div>

@@ -3260,4 +3260,217 @@ export const Data = [
       },
     ],
   },
+  {
+    id: 22,
+    vendorType: "Photographers",
+    featured: false,
+    sample: false,
+    name: "Candid Chaser Photography",
+    email: "candidchaser1@gmail.com",
+    phone: "0481465074",
+    facebook: "https://www.facebook.com/candid.chaser.3?mibextid=ZbWKwL",
+    instagram: "https://www.instagram.com/candid_chaser/",
+    website: "https://candidchaser.com.au/",
+    location: "Bondi Junction, NSW",
+    city: "Sydney",
+    state: "NSW",
+    category: "Traditional", // limit this to [Traditional, Photojournalistic, Candid, Cultural]
+    rating: 4.9,
+    review_count: 56,
+    min_price: 2100, // packages starting from
+    short_description:
+      "Hello there, If you are looking to create something that’s more than an image, a  beautiful piece of art that is uniquely yours, then you have come to the right place!\n\nFrom my photoshoot experience, I have learnt that the best photoshoots that I have done are the ones where clients and I had good communication and connection. We also had similar expectation and effort to create some art and not just take photographs. Anyone can take photos these days but there are few that create good art and that’s a team effort. So send me your ideas and let’s create fun memories and art you love! I want you to cherish those sweet memories when you look back at your photographs!",
+    img: [
+      "candid1",
+      "candid5",
+      "candid6",
+      "candid4",
+      "candid2",
+      "candid3",
+      "candid7",
+      "candid8",
+      "candid9",
+    ],
+    features: [
+      "Photo Editing",
+      "Candid Shots",
+      "Portrait Sessions",
+      "Custom Albums",
+      "Drone Photography",
+      "Receptions",
+      "Ceremonies",
+    ], // limit this to - ["Photo Editing", "Candid Shots", "Portrait Sessions", "Custom Albums", "Drone Photography", "Receptions", "Ceremonies", "Multiple Shooters"]
+    faqs: [
+      {
+        id: 1,
+        question:
+          "How can I become more natural in front of the camera and be confident?",
+        answer:
+          "The short answer is you need to enjoy the moment, bit of practice and you knowing your photographer.  I highly recommend a pre-wedding or Engagement shoot to know your photographer, get comfortable showing your emotions, and practice posing. This also helps you understand if you like the style of his/her photography. Once you are comfortable with the photographer, your focus shifts towards enjoying time with your partner and posing becomes natural. This helps me capture beautiful candid moments and naturally posed pictures.",
+      },
+      {
+        id: 2,
+        question: "Do we get all the raw photos as well as the edited ones?",
+        answer:
+          "Thats a big NO... and the reason why is - a raw file is not my finished photograph, taking a photograph is the easy part, but the editing process is where the magic begins. Secondly, RAW files are too big in size to share.  Thirdly, every picture needs to meet certain standards for it to be eidted and handed to the clients.",
+      },
+      {
+        id: 3,
+        question:
+          "We like your photography and would Like to book. How do we proceed?",
+        answer:
+          "Firstly, Let's confirm on the package you prefer. We can talk about pre-wedding shoot or a meet up or if you are too busy, at least a zoom call to get to know each other and to listen to your ideas and expectations. Then I will send you the contract document that shows you the package, policies and booking fee. This document contains the entire understanding between the Clients and the Photographer. Booking Fee is 50% of the amount agreed, with the balance of the amount agreed due 30 days before the day of the wedding. Your dates will not be held until booking fee has been paid.",
+      },
+      {
+        id: 4,
+        question:
+          "How long will it take to receive the images and photobook for weddings?",
+        answer:
+          "Photobook will take up to 6 weeks after the date of wedding. Within couple of days, I will send you some images to post on social media or to share with your family. The whole image gallery will be sent to you in a USB with in 4 weeks after the date of wedding.",
+      },
+      {
+        id: 5,
+        question:
+          "How long will it take to receive the images for couples, engagement and portrait photoshoots? Could I have a photobook for my photoshoot?",
+        answer:
+          "I will send you the agreed number of edited JPEG images within 3 days through WeTransfer or google drive website. You are more than welcome to add photobook to any package, and I will personally curate a beautful image gallery for your photobook.",
+      },
+    ], //limit this to 5
+    workWith: [2, 3, 4, 5], //limit this to 4
+    packages: [
+      {
+        title: "Package 1",
+        name: "Bronze Package",
+        days: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        description: "",
+        disclaimer:
+          "Pricing and package details are subject to customisation based on individual preferences and venue requirements. Additional enhancements or substitutions may be accommodated at an additional cost.",
+        priceStarting: 2100,
+        preWeddingInclusions: ["Consultation Meeting", "Customised Shot List"],
+        weddingDayInclusions: [
+          "5 hour Coverage",
+          "Ceremony & Reception Coverage",
+          "Digital Image Gallery",
+        ],
+        postWeddingInclusions: [
+          "400 edited high resolution JPEG images through designed USB",
+        ],
+      },
+      {
+        title: "Package 2",
+        name: "Silver Package",
+        days: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        description: "",
+        disclaimer:
+          "Pricing and package details are subject to customisation based on individual preferences and venue requirements. Additional enhancements or substitutions may be accommodated at an additional cost.",
+        priceStarting: 2900,
+        preWeddingInclusions: ["Consultation Meeting", "Customised Shot List"],
+        weddingDayInclusions: [
+          "7 hour Coverage",
+          "Ceremony & Reception Coverage",
+          "Digital Image Gallery",
+        ],
+        postWeddingInclusions: [
+          "600 edited high resolution JPEG images through designed USB",
+        ],
+      },
+      {
+        title: "Package 3",
+        name: "Gold Package",
+        days: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        description: "",
+        disclaimer:
+          "Pricing and package details are subject to customisation based on individual preferences and venue requirements. Additional enhancements or substitutions may be accommodated at an additional cost.",
+        priceStarting: 4100,
+        preWeddingInclusions: ["Consultation Meeting", "Customised Shot List"],
+        weddingDayInclusions: [
+          "10 hour Coverage",
+          "Ceremony & Reception Coverage",
+          "Digital Image Gallery",
+        ],
+        postWeddingInclusions: [
+          "900 edited high resolution JPEG images through designed USB",
+        ],
+      },
+      {
+        title: "Package 4",
+        name: "Diamond Package",
+        days: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        description: "",
+        disclaimer:
+          "Pricing and package details are subject to customisation based on individual preferences and venue requirements. Additional enhancements or substitutions may be accommodated at an additional cost.",
+        priceStarting: 4900,
+        preWeddingInclusions: ["Consultation Meeting", "Customised Shot List"],
+        weddingDayInclusions: [
+          "12 hour Coverage",
+          "Ceremony & Reception Coverage",
+          "Digital Image Gallery",
+        ],
+        postWeddingInclusions: [
+          "1000 edited high resolution JPEG images through designed USB",
+        ],
+      },
+      {
+        title: "Package 5",
+        name: "Priority Wedding Package and Photobook",
+        days: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        description: "",
+        disclaimer:
+          "Pricing and package details are subject to customisation based on individual preferences and venue requirements. Additional enhancements or substitutions may be accommodated at an additional cost.",
+        priceStarting: 6000,
+        preWeddingInclusions: ["Consultation Meeting", "Customised Shot List"],
+        weddingDayInclusions: [
+          "8-12 hour Coverage",
+          "Ceremony & Reception Coverage",
+          "Digital Image Gallery",
+          "Offering different styles that the couple can choose from",
+        ],
+        postWeddingInclusions: [
+          "Sneak peak images will be shared on the next day of the wedding",
+          "The full gallery will be edited in Colour and BNW and will be sent within a week",
+          "The best images of your preference will be made into a photobook",
+        ],
+      },
+    ],
+  },
 ];

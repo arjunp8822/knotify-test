@@ -23,13 +23,12 @@ const AdditionalInfo = ({ formData, setFormData, page, setPage }: Props) => {
     // email to me
 
     try {
-      const response = await emailjs.sendForm(
+      await emailjs.sendForm(
         "service_mmx23ii",
         "template_3xei8kd",
         form.current!,
         "twcfsdyMRI2RLLHE1"
       );
-      console.log(response);
     } catch (e) {
       console.log(e);
     }
@@ -207,6 +206,20 @@ const AdditionalInfo = ({ formData, setFormData, page, setPage }: Props) => {
           type="text"
           name="packageLinks"
           value={formData.packageLinks}
+          className="hidden"
+          readOnly
+        />
+        <input
+          type="text"
+          name="packageLinks"
+          value={formData.categories}
+          className="hidden"
+          readOnly
+        />
+        <input
+          type="text"
+          name="packageLinks"
+          value={formData.features}
           className="hidden"
           readOnly
         />

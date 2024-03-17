@@ -68,8 +68,6 @@ const Images = ({ formData, setFormData, page, setPage }: Props) => {
     }
   };
 
-  console.log(formData);
-
   return (
     <div>
       <div className="flex flex-col gap-4 mb-6">
